@@ -1,0 +1,102 @@
+/*
+* HEADER
+*/
+
+header {
+	background-color: black;
+	color: white;
+	font-size: 18px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+.logo h1 {
+	font-family: 'Mountains of Christmas', cursive;
+	font-weight: 600;
+	text-align: center;
+	font-size: 95px;
+	color: yellow;
+	margin-top: 0;
+	padding-top: 20px;
+}
+
+.nav > li > a, a {
+	color: #fff;
+}
+
+.nav > li  {
+	padding-right: 30px;
+}
+
+.nav li>a:hover, a:active, a:visited, a:focus{
+	background-color: transparent !important;
+}
+
+span.user a{
+	float: right;
+	color: white;
+	padding-top: 10px;
+}
+
+.glyphicon-search{
+	color: black;
+}
+
+.navbar {
+	font-size: 18px;
+}
+
+.navbar-nav>li>a {
+	font-size: 25px;
+}
+
+/*
+* Content
+*/
+.content,footer{
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+img {
+	max-width: 100%;
+}
+
+.img-small img {
+	width: 50%;
+	float: left;
+	padding-top: 20px;
+}
+
+.img-small img:first-child {
+	padding-right: 20px;
+}
+
+/* 
+* Footer
+*/
+
+footer {
+	clear: both;
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 18px;
+}
+
+.fa-facebook-square {
+	color: blue;
+}
+
+.fa-twitter-square {
+	color: blue;
+}
+
+.fa-google-plus-square {
+	color: red;
+}
+
+.fa-rss-square {
+	color: orange;
+}
