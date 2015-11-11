@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/order.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+<body>
+
+<div class="container">
+		
+		<label class ="info">Product: 
+			<label class = "nameOfProduct"> Wool Sweater </label>
+		</label><br>
+		<label class = "info">Color:    
+			<button type="button" class="btn btn-default btn-lg"></button>
+			<button type="button" class="btn btn-default btn-lg" style = "background-Color: #80CCFF"></button>
+			<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #FFCCCC"></button>
+			<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #CC99FF"></button>
+			<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #993333"></button>
+			<button type="button" class="btn btn-default btn-lg" style = "background-Color: #999966"></button>
+		</label><br>
+		
+		<div style = "Width:40%; margin-left: -15px">
+			<div class="col-sm-3 col-md-6"  >
+				<label class = "info" >Quantity:</label>
+			</div>
+			<div class="col-sm-9 col-md-6 " style = "margin-left: -135px; Width: 150px">
+				<input class="form-control" id="inputdefault" type="text" style ="position: left">
+			</div>
+			<label class = "info"> Price: $14 </label><br>
+		</div>
+		
+		<div class="row"style = "Width:40%">
+			<div class="col-sm-3 col-md-6"  >
+				<label class = "info">Size:</label>
+			</div>
+		<div class="col-sm-9 col-md-6" style = "margin-left: -135px; Width: 150px">
+		 <select class="form-control" >
+			<option>S</option>
+			<option>M</option>
+			<option>L</option>
+			<option>XL</option>
+		  </select>
+		</div>
+		</div><br>
+	</d>
+	<p class = "cus-Info"> Customer's information </p>
+	<div class="row">
+		<div class= "col-md-6 form-group" style = "width: 35%">
+			<input type="text" class="form-control" id="email" placeholder="Your full name"><br>
+			<input type="email" class="form-control" id="pwd" placeholder="Email">
+			<p style = "font-style: italic; font-size: 16px; color: #00802b">* Storm.com confirms following that email </p>
+			<div class="col-sm-6" " >
+				<select class="form-control" style = "margin-left: -15px; width:175px" placeholder = "Provincial/ City">
+				<option>Ha Noi</option>
+				<option>Bac Ninh</option>
+				<option>Hai Phong</option>
+				<option>Thai Binh</option>
+			  </select>
+			</div>
+			<div class="col-sm-6" ">
+				 <select class="form-control" style = "width:175px" placeholder = "Provincial/ City">
+				<option>Cau Giay</option>
+				<option>Yen Phong</option>
+				<option>Thanh Xuan</option>
+				<option>Long Bien</option>
+			  </select>
+			</div>
+			<br><br>
+			<input type="text" class="form-control" id="pwd" placeholder="House number, neighbor, village">
+		
+		</div>
+		<div class="col-md-6 form-group " style = "width: 35% ; height: 90px;  border: 1px solid black;border-style: dashed; margin-left: 100px;background-color:lavender;">
+			<input type="text" class="form-control" id="email" placeholder="Recipient information"style=" margin-top: 10px; margin-bottom: -10px; border-style: dashed ; background-Color: #d9b3ff"><br>
+			<label><input type="checkbox"> Recipient information similar Buyer's</label>
+		</div>
+	</div>
+	
+
+	<br><br>
+	 <div class="posiOfButton ">
+	<button type="button" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal" style = "margin-left: 20px">Order detail</button>
+	<button type="button" class="btn btn-success btn-lg" ">Buy Now</button>
+  </div>
+	
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Order</h4>
+        </div>
+        <div class="modal-body">
+			<div class="row">
+				 <div class="col-sm-6">
+					<label class ="infor-details">Customer: </label><br>
+					<label class ="infor-details">Recipient: </label><br>
+					<label class ="infor-details">Address:	</label><br>
+					<label class ="infor-details">Product: 	</label><br>
+					<label class ="infor-details">Color:		</label><br>
+					<label class ="infor-details">Size:	</label><br> 
+					<label class ="infor-details">Price: <br>
+					<label class ="infor-details">Fee Transition: <br>
+					<label class ="infor-details">Total Payment: 
+				</div>
+				<div class="col-sm-6"  >
+					<img id="profile-picture" src="img/order.jpg" style= " width: 200px; height: 200px">
+				</div>
+			</div>
+		</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+</div>
+
+</body>
+</html>

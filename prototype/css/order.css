@@ -1,0 +1,33 @@
+/**/
+.info{
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+.nameOfProduct{
+	color:  #0066FF;
+}
+.posiOfButton{
+	margin-left: 35%;
+	z-index: 1;
+}
+.list{
+	border-bottom: 1px solid #D6D6C2;
+	margin-bottom: 0px;
+}
+.infor-details{
+	font-size: 16px;
+	font-weight: normal;
+}
+.cus-Info{
+	font-style: italic; 
+	font-size: 16px;
+	color: #ff33cc
+}
+.posOfDiv{
+	margin-left: -135px; Width: 150px;
+}
+.repci {
+	z-index:1;
+	width: 30vw ; height: 90px;  border: 1px solid black;border-style: dashed; margin-left: 100px;background-color:lavender;
+}
