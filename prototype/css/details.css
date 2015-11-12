@@ -1,0 +1,231 @@
+﻿a.highlight:hover {
+	color: red;
+	
+}
+b.thanh {
+	font-size:20px;
+	color:blue;
+}
+body.fontwordall{
+	font-family:Roman;
+}
+img.photodetails{
+	
+	width:600px;
+	height:700px;
+	padding-top:50px;
+	margin-left:200px;
+	
+	
+}
+
+p.money {
+	color:red;
+	font-size:30px;
+}
+#main{
+margin-left:100px;
+}
+p.fontwordfirst {
+	padding-top:80px;
+	font-size:30px;
+	
+}
+p.fontword {
+	
+	font-size:30px;
+	
+	
+}
+input.order {
+	font-size:20px;
+	color:white;
+	background-color:black
+}
+p.pad{
+	padding-top:20px;
+	font-size: 20px;
+}
+p.pad1{
+	padding-top:15px;
+	font-size: 20px;
+	padding-left:1px;
+}
+input.cmt{
+	color:white;
+	background-color:#757575;
+}
+input.cmt1{
+	background-color:#B8B894;
+	color:white;
+	font-size: 20px;
+}
+input.cmt2{
+	background-color:white;
+	color:black;
+	font-size: 20px;
+}
+p.detail{
+	padding-top:10px;
+	font-size:30px;
+	color:black;
+}
+img.photosame{
+	width:200px;
+	height:300px;
+	padding-top:10px;
+	
+}
+p.vote{
+	color:black;
+	font-size:20px;
+	font-family:Roman;
+	padding-top:30px;
+}
+#slideshow {
+
+    position:relative;
+    height:500px;
+	width:400px;
+}
+ 
+#slideshow IMG {
+	
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+	height:500px;
+	width:400px
+}
+ 
+#slideshow IMG.active {
+    z-index:10;
+}
+ 
+#slideshow IMG.last-active {
+    z-index:9;
+}
+#wrap{
+   border: 1px solid #f3f3ed; 
+   width:600px;
+   height:200px;
+  margin-left:150px;
+}
+#wrap1{
+   
+   width:400px;
+   height:150px;
+  
+}
+
+#left{
+   width:200px;
+   float:left;
+	text-align:center;
+}
+#left1{
+   width:100px;
+   float:left;
+    padding-top:5px;
+
+}
+#cen{
+  width:20px;
+  float:left;
+  padding-top:5px;
+}
+#right{
+  width:350px;
+  float:right;
+}
+#right1{
+  width:200px;
+  float:right;
+  margin-right: 35px;
+  padding-top:5px;
+}
+
+
+#wrapbutton {
+	border: 1px solid #f3f3ed; 
+   width:200px;
+   height:50px;
+   background:#f2f2f2;
+   text-align:center;
+   font-size:30px;
+}
+table.fontsize{
+	 border=1;
+	 cellspacing=20;
+	 cellpadding=20;
+	 align=left ;
+	 width="400px"
+}
+#wrap2{
+   
+   width:300px;
+   height:400px;
+  
+}
+p.name {
+	padding-top:10px;
+	
+	font-size:18px;
+	color: #000000;
+	font-family:Arial;
+	text-align:center;
+}
+
+input.Order {
+	width:150px;
+   height:60px;
+   color:#ffffff;
+   background:#fd9900;
+   text-align:center;
+  
+   font-size:30px;
+}
+#orderhighlight:hover{
+	background-color:#cc0000;
+	color:#000000;
+}
+#wrapguide{
+	border: 1px solid #f3f3ed; 
+   width:280px;
+   height:50px;
+   background:#a4a4a4;
+   text-align:center;
+   font-size:30px;
+   color:#ffffff;
+  }
+ #wrapphoto {
+	width:250px;
+   height:350px;
+   background:#f3f3ed;
+   text-align:center;
+ }
+  
+#wraporder{
+	border: 1px solid #f3f3ed; 
+   width:150px;
+   height:50px;
+   background:#ffa31a;
+   text-align:center;
+   font-size:30px;
+   color:#ffffff;
+}
+ul.word{
+	font-size:18px;
+}
+p.wordVote{
+	font-size:18px;
+}
+input.vote {
+	background:#f2f2f2;
+	color:#000000;
+}
+img.photoslide {
+	 width:450px;
+   height:550px;
+}
