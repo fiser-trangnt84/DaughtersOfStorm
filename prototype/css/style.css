@@ -31,9 +31,14 @@ img{
 	overflow: auto;
 	padding-left: 5%;
 }
-.trang{
+.button{
 	float: right;
 	padding-right: 8%;
+	color: orange;
 }
-
-
+.sapxep{
+	color: purple;
+}
+.ten{
+	color: green;
+}
