@@ -2,60 +2,98 @@
 <html>
 <head>
 	<title>Profile</title>
-	<script src= "http://code.jquery.com/jquery-2.1.4.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  	<script src="js/index.js"></script>
+  	<script src="js/mybag.js"></script>
+  	<script src="js/personal.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/personal.css">
+	<link rel="stylesheet" type="text/css" href="css/mybag.css">
 </head>
 <body>	
-	<div class="row container">
-		<div class="col-md-3 profile">				
-			<div class="border">
-				<p id="username"><strong>trang2uet</strong></p>
-				<img id="profile-picture" src="img/personal/avatar.png">
-			</div>
-			<div class= "link">
-				<a id="link1" href="#" onclick="">Profile</a>
-				<a id="link2" href="#" onclick="">My bag</a>
-				<a id="link3" href="#" onclick="">My favorite</a>
-			</div>
+	<header>
+		<div class="user">
+			<span><a href="login-signup.html" id="loginform">Login</a> | <a href="login-signup.html" id="registerform">Register</a></span>
+			<a href="Mybag.html" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
+			</a>
 		</div>
-		
-		<div class="col-md-9 infor"> 
-			<div class="row">
-				<div class="col-md-3">
-					<a id="name" href=""><strong>User Name:</strong></a>
-				</div>
-				<div class="col-md-3">Nguyen Thi Trang</div>
-			</div>
-				</br></br>
-			<div class="row">
-				<div class="col-md-3">
-					<a id="email" href=""><strong>Email:</strong></a>
-				</div>
-				<div class="col-md-3">trangabc@gmail.com</div>
-			</div>
-				</br></br>
-			<div class="row">
-				<div class="col-md-3">
-					<a id="phone" href=""><strong>Phone Number:</strong></a>
-				</div>
-				<div class="col-md-3">1234567890</div>
-			</div>
-				</br></br>
-			<div class="row">
-				<div class="col-md-3">
-					<a id="adress" href=""><strong>Adress:</strong></a>
-				</div>
-				<div class="col-md-3">Ha Noi, Viet Nam</div>
-			</div>
-				</br></br>
+		<div class="logo"><h1>STORM</h1></div>
+		<nav class="navbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="index.html">Home</a></li>
+	        <li><a href="#">New</a></li>
+	        <li><a href="#">Hot</a></li>
+	        <li><a href="#">Clothes</a></li>
+	        <li><a href="#">Dress</a></li>
+	        <li><a href="#">Shoes</a></li>
+	        <li><a href="#">Sale</a></li>
+	        <li>
+	        	 <div class="form-group has-feedback">
+		            <input type="text" id="name"  placeholder="Search..." class="form-control">
+		            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+       			 </div>
+	        </li>
+	      </ul>
+		</nav>
+	</header>
 
-				<div class="">
-					<a class="btn" href="">Edit</a>
+	<div class="content">
+		<div class="row">
+			<div class="col-md-3 profile">				
+				<div class="border">
+					<p id="username"><strong>abcxx</strong></p>
+					<img id="profile-picture" src="img/personal/avatar.png">
+				</div>
+				<div class= "link">
+					<a id="linkactive" href="personal.html" onclick="">Profile</a>
+					<a id="link2" href="Mybag.html" onclick="">My bag</a>
+					<a id="link3" href="#" onclick="">My favorite</a>
+				</div>
+			</div>
+			
+			<div class="col-md-9 infor inforprofile">
+				<div class="row">
+					<div class="col-md-3">
+						<a id="name" href=""><strong>User Name:</strong></a>
+					</div>
+					<div class="col-md-9 edit">Nguyen Thi Trang</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-md-3">
+						<a id="email" href=""><strong>Email:</strong></a>
+					</div>
+					<div class="col-md-9 edit">trangabc@gmail.com</div>
+				</div>
+					
+				<div class="row">
+					<div class="col-md-3">
+						<a id="phone" href=""><strong>Phone Number:</strong></a>
+					</div>
+					<div class="col-md-9 edit">1234567890</div>
+				</div>
+					
+				<div class="row">
+					<div class="col-md-3">
+						<a id="adress" href=""><strong>Adress:</strong></a>
+					</div>
+					<div class="col-md-9 edit">Ha Noi, Viet Nam</div>
+				</div>
+				<div class="editButton">
+					<a class="btn" href=""><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
 				</div>	
 			</div>	
 		</div>		
-	</div>
+	</div>				
+		
+	
 </body>
 </html> 

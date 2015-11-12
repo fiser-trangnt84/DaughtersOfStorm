@@ -4,13 +4,14 @@ $(document).ready(function(){
 
     $(".icon a").click(function(event){
         event.preventDefault();
-        $(this).parent().parent().hide();
+        $(this).parent().parent().fadeOut(400);;
         numItems--;
         $('h5.countItems').text("The number of items: " + numItems);
 
     });
     var username= $('#username').text();
 
-    $('.user span a').text(username);
+    $('.user span #registerform').text("");
+    $('.user span #loginform').text(username);
 
 });
