@@ -5,7 +5,8 @@ $('input[type="submit"]').mouseup(function(){
   $(this).css('background', '#1abc9c');
 });
 
-$('#loginform').click(function(){
+$('#loginform').click(function(e){
+  e.preventDefault();
   $('.login').fadeToggle('slow');
   $(this).toggleClass('green');
 });
@@ -24,7 +25,8 @@ $(document).mouseup(function (e)
     }
 });
 
-$('#registerform').click(function(){
+$('#registerform').click(function(e){
+  e.preventDefault();
   $('.register').fadeToggle('slow');
   $(this).toggleClass('green');
 });

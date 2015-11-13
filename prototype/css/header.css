@@ -9,6 +9,7 @@ header {
 	font-size: 18px;
 	padding-left: 8%;
 	padding-right: 8%;
+  position: relative;
 }
 
 .logo h1 {
@@ -32,9 +33,10 @@ a:focus {
 .nav > li > a, a {
 	color: #0664C2;
 }
-a:hover, a:active, a:focus{
+.nav > li a:hover, .nav > li a:active,.nav > li a:focus{
   text-decoration: underline !important;
 }
+
 
 .nav > li  {
 	padding-right: 30px;
@@ -48,6 +50,9 @@ a:hover, a:active, a:focus{
 .user {
 	text-align: right;
 	padding-top: 10px;
+}
+.user span a {
+  text-decoration: none !important;
 }
 
 .glyphicon-search{
