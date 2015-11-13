@@ -3,7 +3,7 @@
 	width: 120px;
 	height: 120px;
 	font-style: arial;
-	font-size: 120%;
+	font-size:30px;
 }
 
 .btn {
@@ -33,7 +33,9 @@
 	background-color: #fafafa;
 	padding: 30px;
 }	
-
+.font{
+	font-size: 20px;
+}
 .infor .row {
 	padding-top: 10px;
 	padding-bottom: 10px;
