@@ -22,19 +22,21 @@ img.photodetails{
 p.money {
 	color:red;
 	font-size:30px;
+	padding-left:20px;
 }
 #main{
 margin-left:100px;
 }
 p.fontwordfirst {
-	padding-top:150px;
+	padding-top:120px;
 	font-size:30px;
+	padding-left:20px;
 	
 }
 p.fontword {
 	
 	font-size:30px;
-	
+	padding-left:20px;
 	
 }
 input.order {
@@ -228,4 +230,7 @@ input.vote {
 img.photoslide {
 	 width:450px;
    height:550px;
+}
+#order{
+	padding-left:20px;
 }
