@@ -2,7 +2,7 @@
 	color: red;
 	
 }
-b.thanh {
+b.bar {
 	font-size:20px;
 	color:blue;
 }
@@ -10,13 +10,8 @@ body.fontwordall{
 	font-family:Roman;
 }
 img.photodetails{
-	
-	width:600px;
-	height:700px;
 	padding-top:50px;
 	margin-left:200px;
-	
-	
 }
 
 p.money {
