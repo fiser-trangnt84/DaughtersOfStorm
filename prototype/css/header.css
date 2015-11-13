@@ -21,6 +21,10 @@ header {
 	margin-top: -25px;
 }
 
+.logo a:hover, .logo a:focus{
+  text-decoration: none !important;
+} 
+
 a:focus {
 	outline: none;
 }
