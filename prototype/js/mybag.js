@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
     var username= $('#username').text();
 
-    $('.user span #registerform').text("");
+    $('.user span #registerform').text("Log Out");
     $('.user span #loginform').text(username);
 
 });
