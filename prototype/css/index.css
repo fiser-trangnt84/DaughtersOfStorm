@@ -1,5 +1,5 @@
-nav li.active {
-  text-decoration: underline; 
+header li.active a {
+    color: #00cc99;
 }
 /*
 * Content
@@ -92,7 +92,7 @@ footer .row {
 }
 
 footer a:hover {
-	color: #fff;
+	color: #00cc99;
 	text-decoration: none;
 }
 
@@ -104,7 +104,7 @@ footer .shipping {
 	color: white;
 	border-radius: 2px;
 	padding: 5px;
-    border-radius: 20%;
+  border-radius: 20%;
 } 
 
 .fa-facebook {
