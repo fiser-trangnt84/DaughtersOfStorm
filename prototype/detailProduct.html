@@ -3,9 +3,9 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/details.css">
+	<link rel="stylesheet" type="text/css" href="css/stylelogin.css">
 	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
@@ -15,6 +15,7 @@
   	<script src="js/index.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/jslogin.js"></script>
 	<script>	
 		
 		function VOTE1() {
@@ -60,31 +61,63 @@
 	</script>
 
 </head>	
-<body class="fontwordall">
-	<header>
+<body >
+	   	<header>
 		<div class="user">
-			<span><a href="login-signup.html" id="loginform">Login</a> | <a href="login-signup.html" id="registerform">Register</a>
-			<a href="Mybag.html" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart-shopping-cart" style="top:-18px; font-size:30px;">			
+			<span><a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a></span>
+			<a href="Mybag.html" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
 			</a>
-				</span>
 		</div>
-		<div class="logo"><h1>STORM</h1></div>
+		<!-- Login form -->
+		 <div class="login">
+		      <div class="arrow-up1"></div>
+		      <div class="formholder">
+		        <div class="randompad">
+		             <label name="username">Username</label>
+		             <input type="text"/>
+		             <label name="password">Password</label>
+		             <input type="password" />
+		             <input type="submit" value="Login" />
+        		</div>
+      		</div>
+      	</div>
+
+	      <!--Register Form -->
+	    <div class="register">
+		      <div class="arrow-up2"></div>
+		      <div class="formregister">
+		        <div class="randompad">
+		             <label name="email">Email</label>
+		             <input type="email" placeholder="example@example.com" />
+		             <label name="username"></label>
+		             <input type="text" />
+		             <label name="password">Password</label>
+		             <input type="password" />
+		             <input type="submit" value="Register" />
+		 
+		        </div>
+	      		</div>
+	    </div>
+	    
+	    <script src="js/jslogin.js"></script>
+
+		<div class="logo"><a href="index.html"><h1>STORM</h1></a></div>
 		<nav class="navbar">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="index.html">Home</a></li>
-	        <li><a href="#">New</a></li>
-	        <li><a href="#">Hot</a></li>
-	        <li><a href="#">Clothes</a></li>
-	        <li><a href="#">Dress</a></li>
-	        <li><a href="#">Shoes</a></li>
-	        <li><a href="#">Sale</a></li>
-	        <li>
-	        	 <div class="form-group has-feedback">
-		            <input type="text" id="name"  placeholder="Search..." class="form-control">
-		            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-       			 </div>
-	        </li>
-	      </ul>
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="index.html" class="hvr-underline-from-center">Home</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">New</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">Hot</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">Clothes</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">Dress</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">Shoes</a></li>
+		        <li><a href="listProducts.html" class="hvr-underline-from-center">Sale</a></li>
+		        <li>
+		        	 <div class="form-group has-feedback">
+			            <input type="text" id="name"  placeholder="Search..." class="form-control">
+			            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	       			 </div>
+		        </li>
+		      </ul>
 		</nav>
 	</header>
 	<div id="main">
@@ -173,6 +206,10 @@
 				<p class="money"> $50</p>
 				<p class="fontword"> Status: Sold out </p>
 				<p class="fontword"> 126 people bought</p>
+				<p class="icon-add">
+			    	<a href="" class="hvr-icon-wobble-vertical"></a>
+			    	<a href="" class="hvr-icon-pulse-grow"></a>
+	    		</p>
 				<p style ="padding-top:45px"></p>
 				<div id="order"><a href = "Order.html"  style="text-decoration: none"> <div id="wraporder">ORDER</div></a></div>
 			</div>
