@@ -103,54 +103,14 @@ p.vote{
 #slideshow IMG.last-active {
     z-index:9;
 }
-#wrap{
-   border: 1px solid #f3f3ed; 
-   width:600px;
-   height:200px;
-  margin-left:150px;
-}
-#wrap1{
-   
-   width:400px;
-   height:150px;
-  
-}
-
-#left{
-   width:200px;
-   float:left;
-	text-align:center;
-}
-#left1{
-   width:100px;
-   float:left;
-    padding-top:5px;
-
-}
-#cen{
-  width:20px;
-  float:left;
-  padding-top:5px;
-}
-#right{
-  width:350px;
-  float:right;
-}
-#right1{
-  width:200px;
-  float:right;
-  margin-right: 35px;
-  padding-top:5px;
-}
-
 
 #wrapbutton {
-	border: 1px solid #f3f3ed; 
    width:200px;
    height:50px;
-   background:#f2f2f2;
+   background:#ffffff;
    text-align:center;
    font-size:30px;
+   
 }
 table.fontsize{
 	 border=1;
@@ -159,12 +119,7 @@ table.fontsize{
 	 align=left ;
 	 width="400px"
 }
-#wrap2{
-   
-   width:300px;
-   height:400px;
-  
-}
+
 p.name {
 	padding-top:10px;
 	
@@ -214,6 +169,7 @@ input.Order {
 }
 ul.word{
 	font-size:18px;
+	padding-left:50px;
 }
 p.wordVote{
 	font-size:18px;
@@ -385,4 +341,41 @@ img.photoslide {
 	font-size: 20px;
 	margin-top: -15px;
 	margin-left: 30px;
+}
+.starRating:not(old){
+  display        : inline-block;
+  width          : 12.5em;
+  height         : 2.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('sao2.png');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 2.5em;
+  height          : 2.5em;
+  background      : url('sao1.png');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
 }

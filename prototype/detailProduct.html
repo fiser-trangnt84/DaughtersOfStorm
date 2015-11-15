@@ -16,50 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="js/jslogin.js"></script>
-	<script>	
-		
-		function VOTE1() {
-			var Num = new Number($("#VeryGood").val());
-			var Sum = new Number($("#SumVote").val());
-			Num = Num + 1;
-			Sum = Sum + 1;
-			$("#VeryGood").val(Num);
-			$("#SumVote").val(Sum);
-		}
-		function VOTE2() {
-			var Num = new Number($("#Good").val());
-			var Sum = new Number($("#SumVote").val());
-			Num = Num + 1;
-			Sum = Sum + 1;
-			$("#Good").val(Num);
-			$("#SumVote").val(Sum);
-		}
-		function VOTE3() {
-			var Num = new Number($("#Medium").val());
-			var Sum = new Number($("#SumVote").val());
-			Num = Num + 1;
-			Sum = Sum + 1;
-			$("#Medium").val(Num);
-			$("#SumVote").val(Sum);
-		}
-		function VOTE4() {
-			var Num = new Number($("#NotGood").val());
-			var Sum = new Number($("#SumVote").val());
-			Num = Num + 1;
-			Sum = Sum + 1;
-			$("#NotGood").val(Num);
-			$("#SumVote").val(Sum);
-		}
-		function VOTE5() {
-			var Num = new Number($("#Bad").val());
-			var Sum = new Number($("#SumVote").val());
-			Num = Num + 1;
-			Sum = Sum + 1;
-			$("#Bad").val(Num);
-			$("#SumVote").val(Sum);
-		}
-	</script>
-
+	
 </head>	
 <body ><header>
 		<div class="user">
@@ -130,38 +87,27 @@
 					</a>
 				  </div>
 				</div>
-
-				<script>
-				$(document).ready(function(){
-					// Enable Carousel Indicators
-					$(".item1").click(function(){
-						$("#myCarousel").carousel(0);
-					});
-					$(".item2").click(function(){
-						$("#myCarousel").carousel(1);
-					});
-					$(".item3").click(function(){
-						$("#myCarousel").carousel(2);
-					});
-					// Enable Carousel Controls
-					$(".left").click(function(){
-						$("#myCarousel").carousel("prev");
-					});
-					$(".right").click(function(){
-						$("#myCarousel").carousel("next");
-					});
-					
-				});
-				</script>
+				<script src="js/details.js"></script>
 				<p class="pad1">
-				<p class="pad1">
-				<p class="pad1">
+				
 				<div class="row">
-					<div class="col-sm-5">
-					<a href = "#details"  style="text-decoration: none"><div id="wrapbutton">DETAILS</div></a>
+					<div class="col-sm-3" style="padding-left: 135px">
+					<div id="wrapbutton">Rating:</div>
 					</div>
-					<div class="col-sm-2">
-						<a href = "#VOTE"  style="text-decoration: none"> <div id="wrapbutton">VOTE</div></a>
+					<div class="col-sm-5 " style="padding-left: 160px; padding-top: 3px">
+						<span class="starRating">
+							<input id="5" type="radio" name="rating" value="5" onclick="chay(id)" checked>
+							<label for="5"></label>
+							<input id="4" type="radio" name="rating" value="4" onclick="chay(id)">
+							<label for="4"></label>
+							<input id="3" type="radio" name="rating" value="3" onclick="chay(id)">
+							<label for="3"></label>
+							<input id="2" type="radio" name="rating" value="2" onclick="chay(id)">
+							<label for="2"></label>
+							<input id="1" type="radio" name="rating" value="1" onclick="chay(id)">
+							<label for="1"></label>
+							<input id="Medium" value="5">
+						 </span>
 					</div>
 				</div>
 				<p>
@@ -217,10 +163,7 @@
 		
 		
 		<fieldset>
-		<p style="padding-top:50px"></p>
-		<div id="details">
-		
-		<legend>DETAILS</legend>
+		<legend><div id="wrapbutton">DETAILS</div></legend>
 		
 		<ul class="word">
 			<li>Name/product code: Overcoat</li>
@@ -229,10 +172,10 @@
 		</ul>
 		<br>
 		<p>
-		<b style="font-size:20px">Suggestions size:</b>
+		<b style="font-size:20px;padding-left:35px">Suggestions size:</b>
 		</p>
-		<p>
-		<Table border="1" align="left"  width="400px" >
+		<p style ="padding-left: 35px">
+		<Table border="1" align="left"  width="400px">
 			<TR align="center"> <TD>Size</TD> <TD>Bust</TD> <TD>Waist</TD> <TD>Hips</TD> </TR>
 			<TR align="center"> <TD>M</TH> <TD>84-88 </TD> <TD>66-70</TD> <TD>88-92</TD> </TR>
 			<TR align="center"> <TD>L</TH> <TD>89-92</TD> <TD>71-75</TD> <TD>93-97</TD> </TR>
@@ -280,50 +223,9 @@
 			
               
 		</div>
-	</div>
+	
 	</fieldset>
-	<div id="main">
-		<div id="VOTE">	
-			<fieldset>
-				<legend style="padding-top:50px">VOTE</legend>
-					<div id="wrap" >
-					   <div id="left" align="center" style="padding-top:45px">
-							<h3>Total</h3>
-						  <h3> <p>	<input id="SumVote" type="button" value = "0"> VOTE</h3>
-					   </div>
-					  
-					   <div id="right">
-							<div id = "wrap1">
-								<div id="left1">
-								  <p class="wordVote">Very Good </p>
-								  <p class="wordVote">Good 	   </p>
-								  <p class="wordVote">Medium   </p>
-								  <p class="wordVote">Not Good </p>
-								  <p class="wordVote">Bad       </p>
-								 </div>
-						   
-								<div id = "cen">
-								  <p><input id="VeryGood" type="button" value = "0"></input></p>
-								  <p><input id="Good" type="button" value = "0"></input></p>
-								  <p><input id="Medium" type="button" value = "0"></input></p>
-								  <p><input id="NotGood" type="button" value = "0"></input></p>
-								  <p><input id="Bad" type="button" value = "0"></input></p>
-								</div>
-
-								<div id = "right1">
-									  <p><input type="button" value = "VOTE" onclick="VOTE1()"></input></p>
-									  <p><input type="button" value = "VOTE" onclick="VOTE2()"></input></p>
-									  <p><input type="button" value = "VOTE" onclick="VOTE3()"></input></p>
-									  <p><input type="button" value = "VOTE" onclick="VOTE4()"></input></p>
-									  <p><input type="button" value = "VOTE" onclick="VOTE5()"></input></p>
-								</div>
-							</div>
-				  </div>
-			</fieldset>
-			
-		</div>
-	</div>
-	</div>
+	
 	<div></div> 
 </body>
 </html>
