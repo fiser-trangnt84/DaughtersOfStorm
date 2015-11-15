@@ -1,4 +1,5 @@
 ﻿$(document).ready(function(){
+					$("#myCarousel").carousel();
 					// Enable Carousel Indicators
 					$(".item1").click(function(){
 						$("#myCarousel").carousel(0);
