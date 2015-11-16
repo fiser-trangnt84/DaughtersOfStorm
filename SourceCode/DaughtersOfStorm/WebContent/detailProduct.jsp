@@ -89,13 +89,13 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active" >
-							<img src="img/details/Anh1.png">
+							<img id="item" src="img/details/Anh1.jpg">
 						</div>
 						<div class="item" >
-							<img src="img/details/Anh2.png">
+							<img id="item" src="img/details/Anh2.jpg">
 						</div>
 						<div class="item">
-							<img src="img/details/Anh3.png">
+							<img id="item" src="img/details/Anh3.jpg">
 						</div>
 					</div>
 
@@ -123,6 +123,7 @@
 					$(".item3").click(function(){
 						$("#myCarousel").carousel(2);
 					});
+
 					// Enable Carousel Controls
 					$(".left").click(function(){
 						$("#myCarousel").carousel("prev");
@@ -225,37 +226,44 @@
 	
 	<div class="row">
 		<div class="col-md-8">
-			<img class="photodetails" src="img/details/Anh5.png">
-			<img class="photodetails" src="img/details/Anh6.png">
-			<img class="photodetails" src="img/details/Anh7.png">
+			<img class="photodetails" src="img/details/Anh1.jpg">
+			<img class="photodetails" src="img/details/Anh2.jpg">
+			<img class="photodetails" src="img/details/Anh3.jpg">
+			<img class="photodetails" src="img/details/Anh4.jpg">
+			<img class="photodetails" src="img/details/Anh5.jpg">
 			<a href = "#danhgia">
 		</div>
 		<div class="col-md-4">
 			<p style="margin-left:20px" class="fontword">The same product</p>
 		      
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same1.png">
+				<img class="photosame" src="img/details/same1.jpg">
 				<p class="name">Overcoat long</p>
 			</div>
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same2.png">
-				<p class="name">Nice Overcoat Red</p>
+				<img class="photosame" src="img/details/same2.jpg">
+				<p class="name">Nice Overcoat Black</p>
 			</div>
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same4.png">
+				<img class="photosame" src="img/details/same3.jpg">
 				<p class="name">Leather Jacket long</p>
 			</div>
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same5.png">
+				<img class="photosame" src="img/details/same4.jpg">
 				<p class="name">Anorak long</p>
 			</div>
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same6.png">
-				<p class="name">Nice Overcoat Red </p>
+				<img class="photosame" src="img/details/same5.jpg">
+				<p class="name">Nice Overcoat Black </p>
 			</div>
 			<div id="wrapphoto">
-				<img class="photosame" src="img/details/same11.png">
+				<img class="photosame" src="img/details/same6.jpg">
 				<p class="name">Leather Jacket</p>
+			</div>
+			
+			<div id="wrapphoto">
+				<img class="photosame" src="img/details/same7.jpg">
+				<p class="name">Brown Coat</p>
 			</div>
 			
               

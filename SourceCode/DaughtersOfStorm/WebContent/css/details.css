@@ -1,4 +1,4 @@
-﻿a.highlight:hover {
+a.highlight:hover {
 	color: red;
 	
 }
@@ -12,6 +12,8 @@ b.bar {
 img.photodetails{
 	padding-top:50px;
 	margin-left:200px;
+	width: 450px;
+	height: auto;
 }
 
 p.money {
@@ -385,4 +387,9 @@ img.photoslide {
 	font-size: 20px;
 	margin-top: -15px;
 	margin-left: 30px;
+}
+
+#item {
+	width: 450px;
+	height: 550px;
 }
