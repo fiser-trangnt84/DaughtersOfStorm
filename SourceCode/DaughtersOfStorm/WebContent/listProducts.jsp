@@ -131,11 +131,11 @@
 
  
  	<div class="button">
- 		<a href="listProducts.html" > <button>1</button> </a>
- 		<a href="listProducts.html" > <button>2</button> </a>
- 		<a href="listProducts.html" > <button>3</button> </a>
- 		<a href="listProducts.html" > <button>4</button> </a>
- 		<a href="listProducts.html" > <button>5</button> </a>
+ 		<a href="listProducts.jsp" > <button>1</button> </a>
+ 		<a href="listProducts.jsp" > <button>2</button> </a>
+ 		<a href="listProducts.jsp" > <button>3</button> </a>
+ 		<a href="listProducts.jsp" > <button>4</button> </a>
+ 		<a href="listProducts.jsp" > <button>5</button> </a>
 
 
  	</div>

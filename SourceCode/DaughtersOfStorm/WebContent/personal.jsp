@@ -29,9 +29,9 @@
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
-					<a id="linkactive" href="personal.html" onclick="">Profile</a>
-					<a id="link2" href="Mybag.html" onclick="">My bag</a>
-					<a id="link3" href="favorite.html" onclick="">My favorite</a>
+					<a id="linkactive" href="personal.jsp" onclick="">Profile</a>
+					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
+					<a id="link3" href="favorite.jsp" onclick="">My favorite</a>
 				</div>
 			</div>
 

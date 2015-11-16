@@ -37,8 +37,8 @@
 		             <input  name="username" type="text"/>
 		             <label name="password">Password</label>
 		             <input   name="password" type="password" />
-		             <input method="excute" type="submit" value="Login" />
-		         <form>
+		             <input type="submit" value="Login" />
+		         </form>
         		</div>
       		</div>
       	</div>
