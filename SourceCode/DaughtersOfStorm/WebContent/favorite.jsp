@@ -27,9 +27,9 @@
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
-					<a id="link1" href="personal.html" onclick="">Profile</a>
-					<a id="link2" href="Mybag.html" onclick="">My bag</a>
-					<a id="linkactive" href="favorite.html" onclick="">My favorite</a>
+					<a id="link1" href="personal.jsp" onclick="">Profile</a>
+					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
+					<a id="linkactive" href="favorite.jsp" onclick="">My favorite</a>
 				</div>
 			</div>
 			
@@ -45,10 +45,10 @@
 						<p class="state">In Stock</p>
 					</div>
 					<div class="col-md-2">
-						<a class="btn " href="detailProduct.html">Details</a>
+						<a class="btn " href="detailProduct.jsp">Details</a>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.html">Buy Now</a>
+						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
 					</div>
 					<div class="col-md-2 icon">
 						<a href=""><i class="fa fa-trash-o"></i></a>
@@ -66,10 +66,10 @@
 						<p class="state">Sold Out</p>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="detailProduct.html">Details</a>
+						<a class="btn w3-margin-bottom" href="detailProduct.jsp">Details</a>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.html">Buy Now</a>
+						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
 					</div>
 					<div class="col-md-2 icon">
 						<a href="#"><i class="fa fa-trash-o"></i></a>
@@ -88,10 +88,10 @@
 						<p class="state">In Stock</p>
 					</div>
 					<div class="col-md-2">
-						<a class="btn " href="detailProduct.html">Details</a>
+						<a class="btn " href="detailProduct.jsp">Details</a>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.html">Buy Now</a>
+						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
 					</div>
 					<div class="col-md-2 icon">
 						<a href=""><i class="fa fa-trash-o"></i></a>
@@ -109,10 +109,10 @@
 						<p class="state">Sold Out</p>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="detailProduct.html">Details</a>
+						<a class="btn w3-margin-bottom" href="detailProduct.jsp">Details</a>
 					</div>
 					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.html">Buy Now</a>
+						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
 					</div>
 					<div class="col-md-2 icon">
 						<a href="#"><i class="fa fa-trash-o"></i></a>
