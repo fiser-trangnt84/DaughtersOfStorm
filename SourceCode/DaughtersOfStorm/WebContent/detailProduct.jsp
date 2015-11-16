@@ -149,7 +149,7 @@
 				
 			</div>
 			<div class="col-sm-3" >
-				<p class="fontwordfirst">Overcoat</p>
+				<p class="fontwordfirst">Trench Coat Zipper Loose Jacket</p>
 				<p class="money"> $50</p>
 				<p class="fontword"> Status: Sold out </p>
 				<p class="fontword"> 126 people bought</p>
@@ -204,8 +204,10 @@
 		<legend>DETAILS</legend>
 		
 		<ul class="word">
-			<li>Name/product code: Overcoat</li>
-			<li>Made in: Korea</li>
+			<li>Name/product code: Trench Coat Zipper Loose Jacket</li>
+			<li>Material: Woolen</li>
+			<li>Color: Navy blue</li>
+			<li>Sleeve Type: Long Sleeve</li>
 			<li>Design: coordinate beautifully stylized feathers, long form of fashion and style </li>
 		</ul>
 		<br>

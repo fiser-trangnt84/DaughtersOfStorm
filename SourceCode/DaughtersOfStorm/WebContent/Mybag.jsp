@@ -38,15 +38,15 @@
 				<h5 class="countItems"></h5> 
 				<div class="row list-item">
 					<div class="col-md-3">
-						<a href=""><img id="clothe1" src="img/personal/kaki-mangto.jpg"></a>
+						<a href="detailProduct.jsp"><img id="clothe1" src="img/personal/trench-jacket.jpg"></a>
 					</div>
 					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Mangto Coat</strong></a>
+						<a id="name" href="detailProduct.jsp"><strong>Trench Coat Zipper Loose Jacket </strong></a>
 						<p class="price">100$</p>
 						<p class="state">In Stock</p>
 					</div>
 					<div class="col-md-2">
-						<a class="btn " href="detailProduct.jsp">Details</a>
+						<a class="btn" href="detailProduct.jsp">Details</a>
 					</div>
 					<div class="col-md-2">
 						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
@@ -59,10 +59,10 @@
 
 				<div class="row list-item">
 					<div class="col-md-3">
-						<a href=""> <img id="clothe2" src="img/personal/kaki-blaze.jpg"></a>
+						<a href="detailProduct.jsp"> <img id="clothe2" src="img/personal/kaki-blaze.jpg"></a>
 					</div>
 					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Blaze Coat</strong></a>
+						<a id="name" href="detailProduct.jsp"><strong>Kaki Blaze Coat</strong></a>
 						<p class="price">250$</p>
 						<p class="state">Sold Out</p>
 					</div>
@@ -81,10 +81,10 @@
 				<!--Copy -->
 				<div class="row list-item">
 					<div class="col-md-3">
-						<a href=""><img id="clothe1" src="img/personal/kaki-mangto.jpg"></a>
+						<a href="detailProduct.jsp"><img id="clothe1" src="img/personal/trench-jacket.jpg"></a>
 					</div>
 					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Mangto Coat</strong></a>
+						<a id="name" href="detailProduct.jsp"><strong>Trench Coat Zipper Loose Jacket </strong></a>
 						<p class="price">100$</p>
 						<p class="state">In Stock</p>
 					</div>
@@ -102,10 +102,10 @@
 
 				<div class="row list-item">
 					<div class="col-md-3">
-						<a href=""> <img id="clothe2" src="img/personal/kaki-blaze.jpg"></a>
+						<a href="detailProduct.jsp"> <img id="clothe2" src="img/personal/kaki-blaze.jpg"></a>
 					</div>
 					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Blaze Coat</strong></a>
+						<a id="name" href="detailProduct.jsp"><strong>Kaki Blaze Coat</strong></a>
 						<p class="price">250$</p>
 						<p class="state">Sold Out</p>
 					</div>

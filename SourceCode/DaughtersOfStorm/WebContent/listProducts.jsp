@@ -35,7 +35,7 @@
 
 <div class="row">
     <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress1.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress1.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
@@ -50,7 +50,7 @@
     </div>
 
      <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress2.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress2.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -65,7 +65,7 @@
     </div>
 
   	<div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress3.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress3.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -83,7 +83,7 @@
 
 <div class="row">
     <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress1.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress1.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
@@ -98,7 +98,7 @@
     </div>
 
      <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress2.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress2.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -113,7 +113,7 @@
     </div>
 
   	<div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress3.jpg"> </a>
+    	<a href="detailProduct.html"><img id="1" src="img/dress3.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -131,11 +131,11 @@
 
  
  	<div class="button">
- 		<a href="listProducts.jsp" > <button>1</button> </a>
- 		<a href="listProducts.jsp" > <button>2</button> </a>
- 		<a href="listProducts.jsp" > <button>3</button> </a>
- 		<a href="listProducts.jsp" > <button>4</button> </a>
- 		<a href="listProducts.jsp" > <button>5</button> </a>
+ 		<a href="listProducts.html" > <button>1</button> </a>
+ 		<a href="listProducts.html" > <button>2</button> </a>
+ 		<a href="listProducts.html" > <button>3</button> </a>
+ 		<a href="listProducts.html" > <button>4</button> </a>
+ 		<a href="listProducts.html" > <button>5</button> </a>
 
 
  	</div>
