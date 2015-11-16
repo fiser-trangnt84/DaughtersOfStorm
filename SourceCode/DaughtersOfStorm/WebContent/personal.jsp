@@ -31,7 +31,7 @@
 				<div class= "link">
 					<a id="linkactive" href="personal.jsp" onclick="">Profile</a>
 					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
-					<a id="link3" href="favorite.jsp" onclick="">My favorite</a>
+					<a id="link3" href="following.jsp" onclick="">Following</a>
 				</div>
 			</div>
 
