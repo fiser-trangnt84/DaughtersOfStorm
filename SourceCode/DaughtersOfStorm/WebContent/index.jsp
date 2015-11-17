@@ -71,24 +71,24 @@
 		<div class="row introType">
 			<div class="col-md-8">
 				<div class="row"> 
-					<div class="col-md-7">
+					<div class="col-md-6">
 						<a id="link-image" href="listProducts.jsp"><img class="hvr-bounce-to-right" src="img/home/type/top.jpg"></a>
 						<button class="btn btn-default type-button">TOP</button>
 					</div>
-					<div class="col-md-5">
-						<a id="link-image" href="listProducts.jsp"><img src="img/home/type/supercheap.jpg"></a>
+					<div class="col-md-6">
+						<a id="link-image" href="listProducts.jsp"><img src="img/home/type/shirt.jpg"></a>
 						<button class="btn btn-default type-button">CHEAP</button>
 					
 					</div>
 				</div>
 				<div class="row play">
 					<a id="link-image" href="listProducts.jsp"><img src="img/home/type/player.jpg"></a>
-					<button class="btn btn-default type-button play-button">PLAY</button>
+					<button class="btn btn-default type-button play-button">SPORT</button>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<a id="link-image" href="listProducts.jsp"><img src="img/home/type/art.jpg"></a>
-				<button class="btn btn-default type-button">ART</button>
+				<button class="btn btn-default type-button">STYLE</button>
 			</div>
 			
 		</div>
@@ -98,13 +98,17 @@
 
 	<footer>
 		<div class="row">
-			<div class="col-md-4"><a href="">Contact</a></div>
-			<div class="col-md-4 shipping"><a href="">Shipping Services</a></div>
+			<div class="col-md-4 shipping"><a href=""><span>SHIPPING SERVICE</span></a></div>
 			<div class="col-md-4 social">
 				<a href=""><i class="fa fa-facebook"></i></a>
 				<a href=""><i class="fa fa-twitter"></i></a>
 				<a href=""><i class="fa fa-google-plus"></i></a>
 				<a href=""><i class="fa fa-rss"></i></a>
+			</div>
+			<div class="col-md-4 service">
+				<a href=""><span>CUSTOMER SERVICE</span></a>
+				<i class="fa fa-phone"></i>
+				<span class="phone"> 888 888 888</span>
 			</div>
 
 		</div>

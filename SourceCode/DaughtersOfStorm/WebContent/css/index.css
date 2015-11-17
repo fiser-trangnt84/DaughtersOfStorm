@@ -73,17 +73,17 @@ button.type-button {
 .play-button {
 	top: 80% !important;
 }
-/* 
-* Footer
-*/
+/******************************************************* 
+* FOOTER
+********************************************************/
 
 footer {
 	margin-top: 50px;
 	clear: both;
-	background-color: #EFECDD;
-	color: white;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	background-color: #EAEAEA;
+	color: #888888;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-size: 18px;
 }
 
@@ -92,19 +92,27 @@ footer .row {
 }
 
 footer a:hover {
-	color: #00cc99;
 	text-decoration: none;
 }
 
-footer .shipping {
-	text-align: center;
-}
+footer .shipping span, .service span{
+	color: #888888;
+	text-align: left;
+	font-size: 12px;
+} 
 
+footer .service {
+	font-size: 12px !important;
+	text-align: right;
+}
+.fa-phone {
+	color: #888888 !important;
+}
 .fa {
 	color: white;
 	border-radius: 2px;
 	padding: 5px;
-  border-radius: 20%;
+  	border-radius: 20%;
 } 
 
 .fa-facebook {
@@ -125,7 +133,8 @@ footer .shipping {
 }
 
 .social {
-	text-align: right;
+	text-align: center;
+	font-size: 18px;
 }
 
 /* Effect of images type */

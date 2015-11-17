@@ -15,7 +15,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jslogin.js"></script>
-
 </head>
 <body>
    <jsp:include page="header.jsp" />
@@ -39,8 +38,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
@@ -54,8 +53,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
@@ -69,8 +68,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
@@ -87,8 +86,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
@@ -102,8 +101,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
@@ -117,8 +116,8 @@
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
-		    	<a href="" class="hvr-icon-wobble-vertical"></a>
-		    	<a href="" class="hvr-icon-pulse-grow"></a>
+		    	<a href=""><i class="fa fa-bookmark"></i></a>
+		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
