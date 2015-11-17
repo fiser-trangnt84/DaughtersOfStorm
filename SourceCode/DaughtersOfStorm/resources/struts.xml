@@ -20,6 +20,12 @@
             <result name="success">header.jsp</result>
             <result name="error">index.jsp</result>
         </action>
+	
+	<action name="register"
+            class="com.storm.demo.RegisterAction">
+            <result name="success">header.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
         
        
     </package>
