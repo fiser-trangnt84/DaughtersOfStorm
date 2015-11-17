@@ -5,6 +5,9 @@
 .nameOfProduct{
 	color:  #0066FF;
 }
+.color{
+	margin-left: 0px;
+}
 .posiOfButton{
 	margin-left: 35%;	z-index: 1;
 }
@@ -39,11 +42,12 @@
 	margin-left: -390px; Width: 150px; margin-top: 10px
 }
 #order-picture{
+	max-height: 300px;
+	max-width: 300px;
 	margin-left: 50px;	padding-top: 10px;
+	z-index: 1;
 	}
-#orderdetail-picture{
-	width: 200px; height: 200px
-}
+
 .input-quantity{
 	margin-left: -130px;	Width: 150px;	margin-top: 10px
 }
@@ -55,13 +59,15 @@
 }
 .infor-recpi{
 	width: 35% ; 
-	height: 90px;  
+	padding-bottom: 10px;
 	border: 1px solid black;
 	border-style: dashed;
 	margin-left: 100px;
 	background-color:lavender;
 }
-.input-recpi{
+
+.input-repci{
+	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: -10px; 
 	border-style: dashed ; 
