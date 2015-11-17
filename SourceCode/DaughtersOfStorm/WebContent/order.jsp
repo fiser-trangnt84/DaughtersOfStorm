@@ -13,9 +13,37 @@
 	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+
+		//Hide div w/id extra
+	   $("#repci").css("display","none");
+		$("#form-repci").click(function(){
+			$("#repci").show("fast");
+		});
+		// Add onclick handler to checkbox w/id checkme
+	   $("#checkme").click(function(){
+	
+		// If checked
+		if ($("#checkme").is(":checked"))
+		{
+			//show the hidden div
+			$("#repci").hide("fast");
+		}
+		else
+		{
+			//otherwise, hide it
+			$("#repci").show("fast");
+		}
+	  });
+
+	});
+	 
+	 
+	</script>
   </head>
 <body>
-		<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 
 	<div class="container">
 		<div class = "row" style = "padding: 10px">
@@ -23,49 +51,64 @@
 				<label class ="info">Product: 
 					<label class = "nameOfProduct"> Wool Sweater </label>
 				</label><br>
-				<label class = "info">Color:    
-					<button type="button" class="btn btn-default btn-lg" style = "background-Color: #80CCFF"></button>
-					<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #FFCCCC"></button>
-					<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #CC99FF"></button>
-					<button type="button" class="btn btn-default btn-lg" style = "background-Color:  #993333"></button>
-					<button type="button" class="btn btn-default btn-lg" style = "background-Color: #999966"></button>
-				</label><br>
-				
-				<div class="col-sm-3 col-md-6" style = "margin-left: -15px; margin-top: 5px"  >
-					<label class = "info" >Quantity:</label>
+				<label class = "info" style = "margin-left:0px" > Price: $129</label><br>
+				<div class="row">
+					<div class="col-md-4" >
+						<label class = "info" >Quantity:</label>
+					</div>
+					<div class="col-md-8 input-quantity" >
+						<input class="form-control" id="inputdefault" type="text" style ="position: left"></input>
+					</div>
 				</div>
-				<div class="col-sm-9 col-md-6 input-quantity" >
-					<input class="form-control" id="inputdefault" type="text" style ="position: left"></input>
+				<div class="row">
+					<div class="col-md-4"  >
+						<label class = "info size " >Size:</label>
+					</div>
+					<div class="col-md-8 resultOfSize">
+						<select class="form-control" >
+							<option>S</option>
+							<option>M</option>
+							<option>L</option>
+							<option>XL</option>
+						</select>
+					</div>
 				</div>
-				
-				<label class = "info" > Price: $14 </label><br>
-				<div class="col-sm-3 col-md-6"  >
-					<label class = "info size " >Size:</label>
+				<div class="row">
+					<div class=" col-md-4"  >
+						<label class = "info size " >Color:</label>
+					</div>
+					<div class="col-md-8 resultOfSize">
+						<select class="form-control" >
+							<option style = "background-Color: #80CCFF">Blue</option>
+							<option style = "background-Color:  #FFCCCC">Pink</option>
+							<option style = "background-Color:  rgba(22, 25, 27, 0.75);">Dark gray</option>
+							<option style = "background-Color:  #FFF">White</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-sm-9 col-md-6 resultOfSize">
-					<select class="form-control" >
-						<option>S</option>
-						<option>M</option>
-						<option>L</option>
-						<option>XL</option>
-					</select>
-				</div>
+			
 			</div>
 			<div class = " col-md-7">
-				<img id="order-picture" src="img/order.jpg">
+				<img id="order-picture" src="img/dress3.jpg">
 			</div>
 		</div>	
 	<p class = "cus-Info"> Customer's information </p>
 	<div class="row">
-		<div class= "col-md-6 form-group" style = "width: 35%">
+		<div class= "col-md-6 form-group " style = "width: 35%">
 			<input type="text" class="form-control" id="email" placeholder="Your full name"><br>
-			<input type="email" class="form-control" id="pwd" placeholder="Phone number"><br>
+			<input type="text" class="form-control" id="pwd" placeholder="Phone number"><br>
 			<input type="email" class="form-control" id="pwd" placeholder="Email"><br>
 			<input type="text" class="form-control" id="pwd" placeholder="Address">
 		</div>
-		<div class="col-md-6 form-group infor-recpi " >
-			<input type="text" class="form-control input-recpi"  placeholder="Recipient information"><br>
-			<label><input type="checkbox"> Recipient information similar Buyer's</label>
+		<div class="col-md-6 form-group infor-recpi " id = "test">
+			<label  id = "form-repci"class="form-control input-repci" >Recipient information</label><br>
+			<label><input type="checkbox" id = "checkme" value = ""> Recipient information similar Buyer's</label>
+			<div id = "repci">
+			<input type="text" class="form-control" id="email" placeholder="Full name"><br>
+			<input type="text" class="form-control" id="pwd" placeholder="Phone number"><br>
+			<input type="email" class="form-control" id="pwd" placeholder="Email"><br>
+			<input type="text" class="form-control" id="pwd" placeholder="Address">
+			</div>
 		</div>
 	</div>
 	
@@ -99,7 +142,7 @@
 							<label class ="infor-details">Total Payment: 
 						</div>
 						<div class="col-sm-6"  >
-							<img id="profile-picture orderdetail-picture" src="img/order.jpg" >
+							<img id="order-picture" src="img/dress3.jpg">
 						</div>
 					</div>
 				</div>
@@ -114,7 +157,7 @@
   </div>
   
  
-</div>
+
 
 </body>
 </html>

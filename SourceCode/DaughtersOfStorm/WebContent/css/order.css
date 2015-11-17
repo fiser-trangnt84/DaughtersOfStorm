@@ -1,24 +1,35 @@
 /**/
 .info{
-	font-size: 20px;	font-weight: normal;	margin-top: 10px;
+	font-size: 20px;	
+	font-weight: normal;	
+	margin-top: 10px;
 }
 .nameOfProduct{
 	color:  #0066FF;
 }
+.color{
+	margin-left: 0px;
+}
 .posiOfButton{
-	margin-left: 35%;	z-index: 1;
+	margin-left: 35%;	
+	z-index: 1;
 }
 .list{
-	border-bottom: 1px solid #D6D6C2;	margin-bottom: 0px;
+	border-bottom: 1px solid #D6D6C2;	
+	margin-bottom: 0px;
 }
 .infor-details{
-	font-size: 16px;	font-weight: normal;
+	font-size: 16px;	
+	font-weight: normal;
 }
 .cus-Info{
-	font-style: italic;	font-size: 16px;	color: #ff33cc
+	font-style: italic;	
+	font-size: 16px;	
+	color: #ff33cc
 }
 .posOfDiv{
-	margin-left: -135px; Width: 150px;
+	margin-left: -135px; 
+	Width: 150px;
 }
 .repci {
 	z-index:1;
@@ -30,46 +41,62 @@
 	background-color:lavender;
 }
 .btn-x{
-	font-size: 22px;	width: 150px;	margin-left: 20px;
+	font-size: 22px;	
+	width: 150px;	
+	margin-left: 20px;
+}
+input#inputdefault, select.form-control {
+    width: 90px !important;
 }
 .size{
-	margin-left: -225px;Width: 150px; margin-top: 10px
+	Width: 9px; 
+	
 }
 .resultOfSize{
-	margin-left: -390px; Width: 150px; margin-top: 10px
+	 Width: 150px; 
+	
 }
 #order-picture{
-	margin-left: 50px;	padding-top: 10px;
+	max-height: 300px;
+	max-width: 300px;
+	margin-left: 50px;	
+	padding-top: 10px;
+	z-index: 1;
 	}
-#orderdetail-picture{
-	width: 200px; height: 200px
-}
+
 .input-quantity{
-	margin-left: -130px;	Width: 150px;	margin-top: 10px
+	width: 90px;	
+	
 }
 .province{
-	margin-left: -15px;	width:175px
+	margin-left: -15px;	
+	width:175px
 }
 .district{
 	width:175px;
 }
 .infor-recpi{
 	width: 35% ; 
-	height: 90px;  
+	padding-bottom: 10px;
 	border: 1px solid black;
 	border-style: dashed;
 	margin-left: 100px;
 	background-color:lavender;
 }
-.input-recpi{
+
+.input-repci{
+	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: -10px; 
 	border-style: dashed ; 
 	background-Color: #d9b3ff
 }
 .footer-button {
-	margin-left: 36% ; width: 150px
+	margin-left: 36% ; 
+	width: 150px
 }
 .note{
-	font-style: italic; font-size: 16px; color: #00802b
+	font-style: italic; 
+	font-size: 16px; 
+	color: #00802b
 }
