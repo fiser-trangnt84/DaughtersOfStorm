@@ -18,7 +18,7 @@ CREATE TABLE products (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE profiles (
-  profileId int(11) NOT NULL,
+  profileId int(11) NOT NULL AUTO_INCREMENT,
   fullName varchar(45) NOT NULL,
   phoneNumber varchar(45) NOT NULL,
   addressLine1 varchar(50) NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE users (
  ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
  
 CREATE TABLE orders (
-  orderNumber int(11) NOT NULL,
+  orderNumber int(11) NOT NULL AUTO_INCREMENT,
   orderDate date NOT NULL,
   shippedDate date DEFAULT NULL,
   status varchar(15) NOT NULL,
