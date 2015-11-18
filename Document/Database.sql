@@ -3,7 +3,7 @@ CREATE DATABASE sale;
 USE sale;
 
 CREATE TABLE products (
-  productCode int(11) NOT NULL,
+  productCode int(11) NOT NULL AUTO_INCREMENT,
   productName varchar(70) NOT NULL,
   productType varchar(50) NOT NULL,
   productDescription text NOT NULL,
