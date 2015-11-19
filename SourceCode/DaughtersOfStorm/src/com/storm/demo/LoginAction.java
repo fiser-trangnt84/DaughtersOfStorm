@@ -1,10 +1,8 @@
 package com.storm.demo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
-import com.storm.demo.ConnectionDB;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport{
@@ -18,34 +16,15 @@ public class LoginAction extends ActionSupport{
     public String execute() {
     	
         String ret = ERROR;
-        Connection conn = null;
-
-        try {      	  
-          	conn = ConnectionDB.getConnection();
-          	String sql = "SELECT username FROM users WHERE"
-        		  	+ " username = ? AND password = ?";
-          	PreparedStatement ps = conn.prepareStatement(sql);
-          	ps.setString(1, username);
-          	ps.setString(2, password);
-          	ResultSet rs = ps.executeQuery();
-
-          	while (rs.next()) {
-            	name = rs.getString("username");
-             	System.out.println(name);
-             	ret = SUCCESS;
-          	}
-        } catch (Exception e) {
-      	  	System.out.print(e.toString());
-      	  	ret = ERROR;
-        } finally {
-           	if (conn != null) {
-              	try {
-                	conn.close();
-              	} catch (Exception e) {
-              		e.printStackTrace();
-            	}
-           	}
-        }
+        ResultSet rs = ConnectionDB.checkLogin(this);
+        try {
+			if(rs != null && rs.next()){
+				ret = SUCCESS;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         return ret;
     }
  
@@ -63,5 +42,13 @@ public class LoginAction extends ActionSupport{
  
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public void setName(String name){
+    	this.name = name;
+    }
+    
+    public String getName() {
+    	return name;
     }
 }

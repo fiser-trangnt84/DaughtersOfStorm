@@ -1,8 +1,5 @@
 package com.storm.demo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
@@ -15,35 +12,11 @@ public class RegisterAction extends ActionSupport {
 	public String execute() {
 		
         String ret = ERROR;
-        Connection conn = null;
+        int rs = ConnectionDB.addUser(this);
         
-        try {        	
-      	  	conn = ConnectionDB.getConnection();
-      	  	String sql = "INSERT INTO users(username, password, email)"
-        	  		+ " VALUES (?, ?, ?)";
-      	  	PreparedStatement ps = conn.prepareStatement(sql);
-      	  	ps.setString(1, username);
-      	  	ps.setString(2, password);
-      	  	ps.setString(3, email);
-      	  	int rs = ps.executeUpdate();
-                              
-      	  	while(rs != 0){
-      	  		ret = SUCCESS;
-      	  	}
-
-        } catch (Exception e) {
-        	e.printStackTrace();
-        	ret = ERROR;
-        } finally {
-        	if (conn != null) {
-        		try {
-        			conn.close();
-        		} catch (Exception e) {
-        			e.printStackTrace();
-        		}
-        	}
-        }
-
+        if (rs != 0){
+        	ret = SUCCESS;
+        }       
         return ret;
 	}
 	
