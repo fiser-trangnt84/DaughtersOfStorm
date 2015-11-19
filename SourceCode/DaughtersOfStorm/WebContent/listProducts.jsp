@@ -34,7 +34,7 @@
 
 <div class="row">
     <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress1.jpg"> </a>
+    	<a href="detail?ProductCode=2"><img id="1" src="img/dress1.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
@@ -49,7 +49,7 @@
     </div>
 
      <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress2.jpg"> </a>
+    	<a href="detail?ProductCode=4"><img id="1" src="img/dress2.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -64,7 +64,7 @@
     </div>
 
   	<div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress3.jpg"> </a>
+    	<a href="detail?ProductCode=5"><img id="1" src="img/dress3.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -82,7 +82,7 @@
 
 <div class="row">
     <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress1.jpg"> </a>
+    	<a href="detail?ProductCode=2"><img id="1" src="img/dress1.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt</span>
 	    	<span class="icon-add">
@@ -97,7 +97,7 @@
     </div>
 
      <div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress2.jpg"> </a>
+    	<a href="detail?ProductCode=4"><img id="1" src="img/dress2.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">
@@ -112,7 +112,7 @@
     </div>
 
   	<div class="col-md-4" >
-    	<a href="detailProduct.jsp"><img id="1" src="img/dress3.jpg"> </a>
+    	<a href="detail?ProductCode=5"><img id="1" src="img/dress3.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
 	    	<span class="icon-add">

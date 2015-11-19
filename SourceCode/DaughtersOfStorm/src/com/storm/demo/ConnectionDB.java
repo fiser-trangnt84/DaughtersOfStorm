@@ -7,13 +7,15 @@ import java.sql.Connection;
 public class ConnectionDB {
 	static Connection conn = null;
 
-	public static Connection getConnection(){
-	String URL = "jdbc:mysql://localhost:3306/sale";
+	static{
+	String URL = "jdbc:mysql://localhost:3306/quynhtrangcute";
 	String username = "root";
-	String password = "1234";
+	String password = "sql123";
     try {
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(URL, username, password);
+		System.out.println((conn==null) + "di ngu di");
+		
 	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -22,6 +24,14 @@ public class ConnectionDB {
 		e.printStackTrace();
 	}
      
-     return conn;
+    
+	}
+	public static Connection getConnection(){
+		return conn;
+	}
+	public static void main(String[] args) {
+		Connection A = getConnection();
+		System.out.println(A==null);
+		
 	}
 }
