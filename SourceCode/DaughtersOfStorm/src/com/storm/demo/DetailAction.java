@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class DetailAction extends ActionSupport {
 	private String ProductName;
 	private String ProductCode;
-	private double BuyPrice;
+	private int BuyPrice;
 	String imgUrl;
 	public String getImgUrl() {
 		return imgUrl;
@@ -29,7 +29,7 @@ public class DetailAction extends ActionSupport {
 			ResultSet D= B.executeQuery(C);
 			while(D.next()){
 				ProductName = D.getString("productName");
-				BuyPrice = D.getDouble("buyPrice");
+				BuyPrice = D.getInt("buyPrice");
 				imgUrl= D.getString("images");
 				
 			}
@@ -54,10 +54,10 @@ public class DetailAction extends ActionSupport {
 	public void setProductCode(String productCode) {
 		ProductCode = productCode;
 	}
-	public double getBuyPrice() {
+	public int getBuyPrice() {
 		return BuyPrice;
 	}
-	public void setBuyPrice(double buyPrice) {
+	public void setBuyPrice(int buyPrice) {
 		BuyPrice = buyPrice;
 	}
 	public static void main(String arg[]){
