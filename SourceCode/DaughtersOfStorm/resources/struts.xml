@@ -28,6 +28,10 @@
      	<action name="detail" class="com.storm.demo.DetailAction" >
             <result name="success">/detailProduct.jsp</result>
         </action>
+        <action name="listPr" class="com.storm.demo.ListProductAction">
+            <result name="success">/listProducts.jsp
+            </result>
+        </action>
        
     </package>
 </struts>
