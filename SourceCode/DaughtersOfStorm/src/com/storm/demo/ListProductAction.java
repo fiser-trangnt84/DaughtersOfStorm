@@ -1,74 +1,68 @@
 package com.storm.demo;
 
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Connection;
-
-import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+
 import com.opensymphony.xwork2.ActionSupport;
+import com.storm.bean.Product;
 
-import SupportClass.ContainerListPr;
-
-public class ListProductAction extends ActionSupport {
-	ArrayList<ContainerListPr> A = new ArrayList<>();
-
-	public ArrayList<ContainerListPr> getA() {
-		return A;
+public class ListProductAction extends ActionSupport{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String type;
+	public ArrayList<Product> arrProduct= null; 
+	
+	
+	public String getType() {
+		return type;
 	}
 
-	public void setA(ArrayList<ContainerListPr> a) {
-		A = a;
+	public void setType(String type) {
+		this.type = type;
 	}
 
-	public String execute() {
-		Connection connect = ConnectionDB.getConnection();
+	public String execute(){
+		String ret = SUCCESS;
+	    Connection conn = null;
 
-		try {
-
-			Statement B = connect.createStatement();
-			String C = "select productCode,productName, buyPrice,images from products";
-			ResultSet D = B.executeQuery(C);
-			while (D.next()) {
-				String name = D.getString("productName");
-				String img = D.getString("images");
-				double buyPrice = D.getDouble("buyPrice");
-				int id=D.getInt("productCode");
-				ContainerListPr E = new ContainerListPr(name, img, buyPrice,id);
-				A.add(E);
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return "success";
+	      try {
+	    	ConnectionDB cdb = new ConnectionDB();
+	        conn = cdb.getConnection();
+	        arrProduct = new ArrayList<Product>();
+	        String sql = "SELECT * FROM products WHERE ";
+	        sql += "productType =  " +"'"+ type+"'";
+	      
+	        PreparedStatement ps = conn.prepareStatement(sql);
+	        ResultSet rs = ps.executeQuery();
+	        Product p = new Product();
+	        while (rs.next()) {
+	        	p = new Product();
+	           p.setProductCode(rs.getInt("productCode"));
+	           p.setProductName(rs.getString("productName"));
+	           p.setProductType(rs.getString("productType"));
+	           p.setQuantityInStock(rs.getInt("quantityInStock"));
+	           p.setImages(rs.getString("images"));
+	           p.setBuyPrice(rs.getDouble("buyPrice"));
+	           arrProduct.add(p);
+	          
+	        }
+	      } catch (Exception e) {
+	    	  System.out.print(e.toString());
+	         
+	      } finally {
+	         if (conn != null) {
+	            try {
+	               conn.close();
+	            } catch (Exception e) {
+	            }
+	         }
+	      }
+	      return ret;
+		
 	}
-
-	public static void main(String[] args) {
-		Connection connect = ConnectionDB.getConnection();
-		ArrayList<ContainerListPr> A= new ArrayList<>();
-		try {
-
-			Statement B = connect.createStatement();
-			String C = "select productCode,productName, buyPrice,images from products";
-			ResultSet D = B.executeQuery(C);
-			while (D.next()) {
-				String name = D.getString("productName");
-				String img = D.getString("images");
-				double buyPrice = D.getDouble("buyPrice");
-				int id=D.getInt("productCode");
-				ContainerListPr E = new ContainerListPr(name, img, buyPrice,id);
-				A.add(E);
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(A.size());
-	}
-
+	
 }
