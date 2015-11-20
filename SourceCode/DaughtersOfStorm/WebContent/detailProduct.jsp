@@ -71,8 +71,12 @@
 			    	<a href="" class="hvr-icon-pulse-grow"></a>
 	    		</p>
 				<p style ="padding-top:45px"></p>
-				<div id="order"><a href = "Order.html"  style="text-decoration: none"> <div id="wraporder">ORDER</div></a></div>
-			</div>
+				<div id="order"><a href = "
+          			    <s:url namespace='/' action='order'>
+		                    <s:param name="productCode">3</s:param>
+		                    </s:url>" style="text-decoration: none"> </a>
+		                    <div id="wraporder">ORDER</div>
+			    	 </div>
 			<div class="col-sm-4" >
 				
 				<p class="pad">
