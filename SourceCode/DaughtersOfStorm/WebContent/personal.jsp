@@ -38,41 +38,40 @@
 				</div>
 			</div>
 
-				
+	<br/><br/>			
 			<div class="col-md-9 infor inforprofile">
 				<div class="row">
 					<div class="col-md-3">
+						<div>
+						<a  id="name" class = "font" href="#"><strong>ID*:</strong></a>
+						</div>
+						<div>
 						<a  id="name" class = "font" href="#"><strong>User Name:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="Name"/></div>
-				</div>
-		
-				<div class="row">
-					<div class="col-md-3">
-						<a id="email" class = "font" href="#"><strong>Email:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="Email"/></div>
-				</div>
-					
-				<div class="row">
-					<div class="col-md-3">
+						</div>
+						<div>
+					    <a id="email" class = "font" href="#"><strong>Email:</strong></a>
+					    </div>
+					    <div>
 						<a id="phone" class ="font" href="#"><strong>Phone Number:</strong></a>
+						</div>
+						<div>
+						<a id="adress" class = "font" href="#"><strong>Address:</strong></a>
+						</div>
+					</div> 
+                                       
+					<div class="col-md-6" >
+						<s:form action="Editprofile" method="post">
+							<s:textfield name="userId"/>		
+							<s:textfield name="Name"/>
+							<s:textfield name="Email"/>
+							<s:textfield name="phoneNumber"/>
+							<s:textfield name="address"/>
+							<s:submit value="Submit"/> 
+						</s:form>
 					</div>
-					<div class="col-md-9 edit"><s:property value="phoneNumber"/></div>
-				</div>
-					
-				<div class="row">
-					<div class="col-md-3">
-						<a id="adress" class = "font" href="#"><strong>Adress:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="address"/></div>
-				</div>
-				<div class="editButton">
-					<a class="btn" href="#"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
-					
-				</div>	
 <!-- >>>>>> origin/master -->
 			</div>	
+				<a class="font" href="#"><strong>Fields marked  * mustn't change</strong> </a>
 		</div>		
 	</div>				
 		
