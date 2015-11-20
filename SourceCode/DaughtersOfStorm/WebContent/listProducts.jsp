@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html lang="vi">
 <head>
 	<title>Spring Skirt</title>
 	<meta charset="utf-8">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/listProducts.css">
@@ -33,22 +34,43 @@
 	<br/> 
 
 <div class="row">
-    <div class="col-md-4" >
-    	<a href="detail?ProductCode=2"><img id="1" src="img/dress1.jpg"> </a>
+	
+
+	<s:iterator value="A" var="List">
+	<div class="col-md-4" >
+    	<a href="<s:url  action="detail" >
+	<s:param name="productCode"><s:property value="#List.id"/></s:param>
+	</s:url>">
+<img id="1" src="<s:property value="#List.img"/>"> </a>
     	<div class="info">
-	    	<p><span class="nameProduct"> Spring Skirt</span>
+	    	<p><span class="nameProduct"><s:property value="#List.name"/> </span>
 	    	<span class="icon-add">
 		    	<a href=""><i class="fa fa-bookmark"></i></a>
 		    	<a href=""><i class="fa fa-cart-plus"></i></a>
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 879,000 $</p>
-	    	<p class="price"> Bag: 699,000 $</p>
+	    	<p class="price"> Cost:<s:property value="#List.buyPrice"/>  $</p> 
     	</div>
     </div>
+	
+	
+	
+	</s:iterator>
 
-     <div class="col-md-4" >
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+    
+
+    <!--   <div class="col-md-4" >
     	<a href="detail?ProductCode=4"><img id="1" src="img/dress2.jpg"> </a>
     	<div class="info">
 	    	<p><span class="nameProduct"> Spring Skirt, bag</span>
@@ -58,8 +80,8 @@
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 999,000 $</p>
-	    	<p class="price"> Bag: 879,000 $</p>
+	    	<p class="price"> Cost: 999,000 $</p>
+	    	
     	</div>
     </div>
 
@@ -73,8 +95,8 @@
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 999,000 $</p>
-	    	<p class="price"> Bag: 879,000 $</p>
+	    	<p class="price"> Cost: 999,000 $</p>
+	    	
     	</div>
     </div>   
 </div>
@@ -91,8 +113,8 @@
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 879,000 $</p>
-	    	<p class="price"> Bag: 699,000 $</p>
+	    	<p class="price"> Cost: 879,000 $</p>
+	    	
     	</div>
     </div>
 
@@ -106,8 +128,8 @@
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 999,000 $</p>
-	    	<p class="price"> Reduced: 879,000 $</p>
+	    	<p class="price"> Cost: 999,000 $</p>
+	    	
     	</div>
     </div>
 
@@ -121,10 +143,11 @@
 	    	</span>
 	    	</p>
 	    		
-	    	<p class="price"> Coat: 999,000 $</p>
-	    	<p class="price"> Reduced: 879,000 $</p>
+	    	<p class="price"> Cost: 999,000 $</p>
+	    	
     	</div>
-    </div>   
+    </div>  
+    --> 
 </div>
 
 
