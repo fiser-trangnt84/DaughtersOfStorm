@@ -48,10 +48,12 @@
 	<div class="container">
 		<div class = "row" style = "padding: 10px">
 			<div class= "col-md-5 ">
-				<label class ="info">Product: 
-					<label class = "nameOfProduct"> Wool Sweater </label>
-				</label><br>
-				<label class = "info" style = "margin-left:0px" > Price: $129</label><br>
+				<span class = "nameOfProduct"> 
+					Product: </span><s:property value="productName" />
+				<br> 
+				<span class="info" style="margin-left: 0px">
+					Price: </span><s:property value="buyPrice" />
+				<br>
 				<div class="row">
 					<div class="col-md-4" >
 						<label class = "info" >Quantity:</label>
