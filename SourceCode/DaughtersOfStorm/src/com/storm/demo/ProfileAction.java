@@ -15,33 +15,35 @@ public class ProfileAction extends ActionSupport {
 
 	private String Name;
 	
-	private String idUsers;
+	private String userId;
 	private String Email;
 	private String phoneNumber;
 	private String address;
 	private String Username;
-	public String getIdUsers() {
-		return idUsers;
+	
+
+	public String getUserId() {
+		return userId;
 	}
 
 
 
-	public void setIdUsers(String idUsers) {
-		this.idUsers = idUsers;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 
 
 	public String execute(){
 		int id;
-		id = Integer.parseInt(idUsers);
+		id = Integer.parseInt(userId);
 		Connection A= ConnectionDB.getConnection();
 	
 		
 		try {
 			
 			Statement B= A.createStatement();
-			String C="select fullName,email,phoneNumber,address,userName from users where idUsers = "+id  ;
+			String C="select fullName,email,phoneNumber,address,userName from users where userId = "+id  ;
 			ResultSet D= B.executeQuery(C);
 			while(D.next()){
 				Name = D.getString("fullName");
