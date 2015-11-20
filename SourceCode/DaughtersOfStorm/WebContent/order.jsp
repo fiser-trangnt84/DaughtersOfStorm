@@ -48,11 +48,10 @@
 	<div class="container">
 		<div class = "row" style = "padding: 10px">
 			<div class= "col-md-5 ">
-				<span class = "nameOfProduct"> 
-					Product: </span><s:property value="productName" />
-				<br> 
-				<span class="info" style="margin-left: 0px">
-					Price: </span><s:property value="buyPrice" />
+				Product: <s:property value="productName" />
+				 <br> <span class="info" style="margin-left: 0px">
+					Price: </span>
+				<s:property value="buyPrice" />
 				<br>
 				<div class="row">
 					<div class="col-md-4" >
