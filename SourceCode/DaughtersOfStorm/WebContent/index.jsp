@@ -75,25 +75,37 @@
 					<div class="col-md-6">
 						<a id="link-image" href="
 							<s:url namespace='/' action='printListProduct'>
-		        	   		<s:param name="type">Top</s:param>
-		        	   	</s:url>
+		        	   			<s:param name="type">Top</s:param>
+		        	   		</s:url>
 						">
 						<img class="hvr-bounce-to-right" src="img/home/type/top.jpg"></a>
 						<button class="btn btn-default type-button">TOP</button>
 					</div>
 					<div class="col-md-6">
-						<a id="link-image" href="listProducts.jsp"><img src="img/home/type/shirt.jpg"></a>
+						<a id="link-image" href="
+							<s:url namespace='/' action='printListProduct'>
+		        	   			<s:param name="type">Cheap</s:param>
+		        	   		</s:url>
+						"><img src="img/home/type/shirt.jpg"></a>
 						<button class="btn btn-default type-button">CHEAP</button>
 					
 					</div>
 				</div>
 				<div class="row play">
-					<a id="link-image" href="listProducts.jsp"><img src="img/home/type/player.jpg"></a>
+					<a id="link-image" href="
+						<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Sport</s:param>
+		        	   	</s:url>
+					"><img src="img/home/type/player.jpg"></a>
 					<button class="btn btn-default type-button play-button">SPORT</button>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<a id="link-image" href="listProducts.jsp"><img src="img/home/type/art.jpg"></a>
+				<a id="link-image" href="
+					<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Style</s:param>
+		        	</s:url>
+				"><img src="img/home/type/art.jpg"></a>
 				<button class="btn btn-default type-button">STYLE</button>
 			</div>
 			
