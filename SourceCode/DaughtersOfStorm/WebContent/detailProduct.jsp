@@ -74,8 +74,8 @@
 				<div id="order"><a href = "
           			    <s:url namespace='/' action='order'>
 		                    <s:param name="productCode">3</s:param>
-		                    </s:url>" style="text-decoration: none"> </a>
-		                    <div id="wraporder">ORDER</div>
+		                    </s:url>" style="text-decoration: none">
+		                    <div id="wraporder">ORDER</div> </a>
 			    	 </div>
 			<div class="col-sm-4" >
 				
