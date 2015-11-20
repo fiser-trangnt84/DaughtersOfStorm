@@ -18,7 +18,9 @@ b.bar {
 
 img.photodetails{
 	padding-top:50px;
-	margin-left:150px;
+	width: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
 p.money {

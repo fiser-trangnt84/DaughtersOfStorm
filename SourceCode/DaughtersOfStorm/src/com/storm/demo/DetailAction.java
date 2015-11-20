@@ -1,11 +1,7 @@
 package com.storm.demo;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Connection;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 import com.storm.bean.Product;
 import com.opensymphony.xwork2.ActionSupport;
@@ -15,8 +11,26 @@ public class DetailAction extends ActionSupport {
 	private String proName;
 	private int proPrice;
 	private String urlImg;
+	private String design;
+	private int quantitySold;
 	
 	
+	public int getQuantitySold() {
+		return quantitySold;
+	}
+
+	public void setQuantitySold(int quantitySold) {
+		this.quantitySold = quantitySold;
+	}
+
+	public String getDesign() {
+		return design;
+	}
+
+	public void setDesign(String design) {
+		this.design = design;
+	}
+
 	public String getUrlImg() {
 		return urlImg;
 	}
@@ -69,10 +83,10 @@ public class DetailAction extends ActionSupport {
 	           proName = rs.getString("productName");
 	           proPrice = rs.getInt("buyPrice");
 	           urlImg = rs.getString("images");
+	           quantitySold = rs.getInt("quantitySold");
+	           design = rs.getString("productMaterial");
 	          
 	        }
-	       
-	   System.out.println(p.getProductName());
 	       
 	      } catch (Exception e) {
 	    	  System.out.print(e.toString());

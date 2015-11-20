@@ -102,7 +102,7 @@ images,
 reviews,
 productMaterial)
 VALUES
-('Trench Coat Parka', 'Hot', 'Womens Thicken Warm Winter Trench Coat Parka Overcoat Long Jacket Outwear', 'M', 'Brown', '5', '7', '0.1', '15', 'img/dress1.img', '25', 'Felt'),
+('Trench Coat Parka', 'Hot', 'Womens Thicken Warm Winter Trench Coat Parka Overcoat Long Jacket Outwear', 'M', 'Brown', '5', '7', '0.1', '15', 'img/dress1.jpg', '25', 'Felt'),
 ('Dresses Winter', 'New', 'Korean 2015 New Fashion Dresses Winter dress LY09509 Elegant wool women\'s mini dresses', 'S', 'Pink', '50', '6', '0', '45', 'img/dress2.jpg', '71', 'Wool'),
 ('Ponchos', 'Style', '10 Colors Fashion Ponchos A1193 Cape Type Loose wool blend Women\'s Coats', 'M', 'Blue', '10', '4', '0.1', '15', 'img/dress3.jpg', '1', 'Felt'),
 ('Long-sleeved winter','Trend', '2015 spring new European style women long-sleeved winter dress package hip Slim long sweater', 'M', 'Blue navy', '5', '7', '0.1', '15', 'img/dress4.jpg', '25', 'Felt'),
