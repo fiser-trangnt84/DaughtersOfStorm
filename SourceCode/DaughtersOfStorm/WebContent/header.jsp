@@ -22,9 +22,24 @@
 <body>
 	<header>
 		<div class="user">
-			<span><a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a></span>
-			<a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
+			<s:if test="hasActionMessages()">
+			   <div class="messages">
+			      <s:actionmessage/>
+			   </div>
+			   <span>
+			   	<a href="personal.jsp"><s:property value="name" /></a>
+			   	| 
+			   	<a href="" action="logout">Logout</a>
+			   </span>
+			   <a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
 			</a>
+			</s:if>
+			<s:else>
+				<div class="errors">
+			    	<s:actionerror/>
+			   	</div>
+			   	<span><a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a></span>
+			</s:else>
 		</div>
 		
 		<!-- Login form -->
@@ -34,9 +49,9 @@
 		        <div class="randompad">
 		        <s:actionerror />
 		        <form action="login.action" method="post">
-		            <label name="username">Username</label>
+		            <label>Username</label>
 		            <input name="username" type="text" required/>
-		            <label name="password">Password</label>
+		            <label>Password</label>
 		            <input name="password" type="password" required/>
 		            <input type="submit" value="Login" />
 		        </form>
@@ -63,8 +78,10 @@
 		    	</div>
 	      	</div>
 	    </div>
-	    
-	    
+ 	
+	 	<!-- De day khong duoc dong vao link js =))) -->
+	 	<script src="js/jslogin.js"></script>
+		    
 
 		<div class="logo"><a href="index.jsp"><h1>STORM</h1></a></div>
 		<nav class="navbar">
