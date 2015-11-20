@@ -22,14 +22,18 @@
 <body>
 	<header>
 		<div class="user">
-				<s:if test="hasActionMessages()">
+			<s:if test="hasActionMessages()">
 			   <div class="messages">
 			      <s:actionmessage/>
 			   </div>
 			   <span>
 			   	<a href="personal.jsp"><s:property value="name" /></a>
 			   	| 
-			   	<a href="" action="logout">Logout</a>
+			   	<a href=" 
+			   		<s:url namespace='/' action='logout'>
+			   			<s:param name='userId' value='userId'></s:param>
+			   		</s:url>
+			   	" >Logout</a>
 			   </span>
 			   <a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
 			</a>
