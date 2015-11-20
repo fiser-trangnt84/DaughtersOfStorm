@@ -20,15 +20,11 @@
             <result name="success">header.jsp</result>
             <result name="error">index.jsp</result>
         </action>
-	<action name="register"
+		<action name="register"
             class="com.storm.demo.RegisterAction">
             <result name="success">header.jsp</result>
             <result name="error">index.jsp</result>
         </action>
-	<action name="printListProduct" class="com.storm.demo.ListProductAction" 
-            method="execute">
-            <result name="success">/listProducts.jsp</result>
-      	</action>
      	<action name="detail" class="com.storm.demo.DetailAction" >
             <result name="success">/detailProduct.jsp</result>
         </action>
