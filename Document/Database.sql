@@ -9,6 +9,7 @@ CREATE TABLE products (
   productDescription text NOT NULL,
   productSize varchar(5) NOT NULL,
   productColor varchar(10) NOT NULL,
+  quantitySold smallint(6) NOT NULL,
   quantityInStock smallint(6) NOT NULL,
   buyPrice double NOT NULL,
   images VARCHAR(45) NOT NULL,
@@ -17,62 +18,53 @@ CREATE TABLE products (
   PRIMARY KEY (productCode)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE profiles (
-  profileId int(11) NOT NULL AUTO_INCREMENT,
-  fullName varchar(45) NOT NULL,
-  phoneNumber varchar(45) NOT NULL,
-  addressLine1 varchar(50) NOT NULL,
-  addressLine2 varchar(50) DEFAULT NULL,
-  notice text,
-  PRIMARY KEY (profileId)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE users (
+  userId int(11) NOT NULL AUTO_INCREMENT,
+  userName varchar(45) NOT NULL,
+  password varchar(45) NOT NULL,
+  email varchar(45) NOT NULL,
+  status varchar(45) NOT NULL,
+  fullName varchar(45) DEFAULT NULL,
+  phoneNumber varchar(45) DEFAULT NULL,
+  address varchar(100) DEFAULT NULL,
+  PRIMARY KEY (userId)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 CREATE TABLE usercarts (
   cartId int(11) NOT NULL,
   productCode int(11) NOT NULL,
-  notice varchar(45) DEFAULT NULL,
+  userId int(11) NOT NULL,
+  notice text,
   PRIMARY KEY (cartId,productCode),
   KEY productCode_fk1_idx (productCode),
-  CONSTRAINT productCode_fk1 FOREIGN KEY (productCode) REFERENCES products (productCode) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY userIdCart_fk2_idx (userId),
+  CONSTRAINT cartId_fk1 FOREIGN KEY (productCode) REFERENCES products (productCode) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT userIdCart_fk2 FOREIGN KEY (userId) REFERENCES users (userId) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 CREATE TABLE favoritelists (
   favoriteNumber int(11) NOT NULL,
   productCode int(11) NOT NULL,
+  userId int(11) NOT NULL,
   notice varchar(45) DEFAULT NULL,
   PRIMARY KEY (favoriteNumber,productCode),
   KEY productCode (productCode),
-  CONSTRAINT favoritelists_ibfk_1 FOREIGN KEY (productCode) REFERENCES products (productCode) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY userId_fk2 (userId),
+  CONSTRAINT favoritelists_ibfk_1 FOREIGN KEY (productCode) REFERENCES products (productCode) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT userId_fk2 FOREIGN KEY (userId) REFERENCES users (userId) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-CREATE TABLE users (
-   idUsers int(11) NOT NULL AUTO_INCREMENT,
-   userName varchar(45) NOT NULL,
-   password varchar(45) NOT NULL,
-   email varchar(45) NOT NULL,
-   profileId int(11) DEFAULT NULL,
-   cartId int(11) DEFAULT NULL,
-   favoriteId int(11) DEFAULT NULL,
-   PRIMARY KEY (idUsers),
-   KEY cartId_fk1_idx (cartId),
-   KEY favoriteId_fk2_idx (favoriteId),
-   KEY profileId_fk3_idx (profileId),
-   CONSTRAINT cartId_fk1 FOREIGN KEY (cartId) REFERENCES usercarts (cartId) ON DELETE CASCADE ON UPDATE CASCADE,
-   CONSTRAINT favoriteId_fk2 FOREIGN KEY (favoriteId) REFERENCES favoritelists (favoriteNumber) ON DELETE CASCADE ON UPDATE CASCADE,
-   CONSTRAINT profileId_fk3 FOREIGN KEY (profileId) REFERENCES profiles (profileId) ON DELETE CASCADE ON UPDATE CASCADE
- ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
- 
 CREATE TABLE orders (
   orderNumber int(11) NOT NULL AUTO_INCREMENT,
   orderDate date NOT NULL,
   shippedDate date DEFAULT NULL,
   status varchar(15) NOT NULL,
   comments text,
-  idUsers int(11) NOT NULL,
+  userId int(11) NOT NULL,
   PRIMARY KEY (orderNumber),
-  KEY idUsers_fk1_idx (idUsers),
-  CONSTRAINT idUsers_fk1 FOREIGN KEY (idUsers) REFERENCES users (idUsers) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY userIdOrder_fk1_idx (userId),
+  CONSTRAINT userId_fk1 FOREIGN KEY (userId) REFERENCES users (userId) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE orderdetails (
@@ -101,58 +93,50 @@ productType,
 productDescription,
 productSize,
 productColor,
+quantitySold,
 quantityInStock,
 buyPrice,
 images,
 reviews,
 productMaterial)
 VALUES
-('Coat Long', 'Hot', 'That\'s a new product for this season. A great choice for all person', 'M', 'Red', '5', '15', 'img/details/anh1.png', '25', 'Coton'),
-('Dress', 'New', 'good product', 'S', 'Black', '6', '45', 'img/dress1.jpg', '60', 'coton'),
-('Shoes', 'Cheap', 'Like a best choice for student in this year', 'L', 'Blue navy', '0', '20', 'img/home/type/player.jpg', '50', 'vai');
+('Coat Long', 'Hot', 'That\'s a new product for this season. A great choice for all person', 'M', 'Red', '5', '7', '15', 'img/details/anh1.png', '25', 'Coton'),
+('Dress', 'New', 'good product', 'S', 'Black', '50', '6', '45', 'img/dress1.jpg', '60', 'coton'),
+('Shoes', 'Cheap', 'Like a best choice for student in this year', 'L', 'Blue navy', '20', '0', '20', 'img/home/type/player.jpg', '50', 'vai');
+
+INSERT INTO sale.users 
+	(userId, 
+	userName, 
+	password, 
+	email,
+	status,
+	fullName, 
+	phoneNumber, 
+	address) 
+VALUES 
+	('1', 'admin', '1234', 'admin@db', 'offline', 'Doan Thi Hien', '093214', 'van nam, phuc tho, ha noi'),
+	('2', 'hiendoan', '1234', 'hien@db', 'offline', 'Doan Hien', '098309248', 'vu ngoc phan, lang ha, ha noi'),
+	('3', 'trangnguyen', '1234', 'trang@db', 'offline', 'Nguyen Thi Trang', '0183201', 'Ha Dong, Ha Noi');
 
 INSERT INTO sale.usercarts
 	(cartId, 
-	productCode, 
+	productCode,
+	userId, 
 	notice)
 VALUES 
-	('1', '1', 'none'),
-	('2', '2', 'vip'),
-	('3', '3', 'ugly');
-
-INSERT INTO profiles 
-	(profileId, 
-	fullName, 
-	phoneNumber, 
-	addressLine1, 
-	addressLine2, 
-	notice) 
-VALUES 
-	('1', 'Doan Thi Hien', '093214', 'van nam, phuc tho, ha noi', '', 'none'),
-	('2', 'Doan Hien', '098309248', 'vu ngoc phan, lang ha, ha noi', 'uet', 'admin'),
-	('3', 'Nguyen Thi Trang', '0183201', 'Ha Dong, Ha Noi', 'uet', 'vip');
+	('1', '1', '1', 'none'),
+	('2', '2', '2', 'vip'),
+	('3', '3', '3', 'ugly');
 
 INSERT INTO favoritelists 
 	(favoriteNumber, 
-	productCode, 
+	productCode,
+	userId,
 	notice) 
 VALUES 
-	('1', '1', 'admin'),
-	('2', '2', 'none'),
-	('3', '3', 'none');
-
-INSERT INTO sale.users 
-	(idUsers, 
-	userName, 
-	password, 
-	email, 
-	profileId, 
-	cartId, 
-	favoriteId) 
-VALUES 
-	('1', 'admin', '1234', 'admin@db', '1', '1', '1'),
-	('2', 'hiendoan', '1234', 'hien@db', '2', '2', '2'),
-	('3', 'trangnguyen', '1234', 'trang@db', '3', '3', '3');
+	('1', '1', '1', 'admin'),
+	('2', '2', '2', 'none'),
+	('3', '3', '3', 'none');
 
 INSERT INTO sale.orders 
 	(orderNumber, 
@@ -160,7 +144,7 @@ INSERT INTO sale.orders
 	shippedDate, 
 	status, 
 	comments, 
-	idUsers) 
+	userId) 
 VALUES 
 	('1', '2015-05-06', '2015-06-07', 'Shipped', 'good', '1'),
 	('2', '2014-05-29', '2014-06-30', 'Shipped', 'late', '2'), 
