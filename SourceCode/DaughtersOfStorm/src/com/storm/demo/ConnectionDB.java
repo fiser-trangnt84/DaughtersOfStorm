@@ -25,15 +25,16 @@ public class ConnectionDB {
 		}
 	}
 	
-	public static int addUser(RegisterAction rgt){
+	public static int doRegister(RegisterAction rgt){
 		int result = 0;
 		try {
-			String sql = "INSERT INTO users (username, password, email) VALUES(?, ?, ?)";
+			String sql = "INSERT INTO users (username, password, email, status) VALUES(?, ?, ?, ?)";
 			if(conn == null) createConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);  
 			ps.setString(1,rgt.getUsername());  
 			ps.setString(2,rgt.getPassword());  
-			ps.setString(3,rgt.getEmail());  
+			ps.setString(3,rgt.getEmail()); 
+			ps.setString(4, "online");
 			
 			result = ps.executeUpdate();
 		} catch (Exception e){
@@ -42,22 +43,36 @@ public class ConnectionDB {
 		return result;
 	}
 
-	public static ResultSet checkLogin(LoginAction login){
+	public static ResultSet doLogin(LoginAction login){
 		ResultSet rs = null;
 		try{
-			String sql = "SELECT username FROM users WHERE"
-        		  	+ " username = ? AND password = ?";
+			String sql = "SELECT userId FROM users WHERE"
+        		  	+ " username = ? AND password = ? AND status =\"offline\"";
 			if(conn == null) createConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);  
 			ps.setString(1,login.getUsername());  
-			ps.setString(2,login.getPassword());  
-		
+			ps.setString(2,login.getPassword()); 	
 			
 			rs = ps.executeQuery();
 		} catch (Exception e){
 			e.printStackTrace();
 		}
 		return rs;		
+	}
+	
+	public static int doLogout(LogoutAction lgt){
+		int result = 0;
+		try {
+			String sql = "UPDATE users SET status = \"offline\" WHERE userId = ?";
+			if(conn == null) createConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);  
+			ps.setInt(1,lgt.getUserId());  		
+			
+			result = ps.executeUpdate();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return result;
 	}
 	
 	public static Connection getConnection() {

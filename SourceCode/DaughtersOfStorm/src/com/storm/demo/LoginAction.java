@@ -13,13 +13,17 @@ public class LoginAction extends ActionSupport{
     private String name;
     
     // Check login with username and password
-    public String execute() {
+    public String execute(){
     	
         String ret = ERROR;
-        ResultSet rs = ConnectionDB.checkLogin(this);
+        ResultSet rs = ConnectionDB.doLogin(this);
         try {
 			if(rs != null && rs.next()){
 				ret = SUCCESS;
+				name = username;
+				addActionMessage("Welcome to Storm!");
+			} else {
+				addActionError("Invalid account!");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
