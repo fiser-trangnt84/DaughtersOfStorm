@@ -142,57 +142,19 @@
 		</ul>
 		<br>
 		<p>
-		<b style="font-size:20px;padding-left:35px">Suggestions size:</b>
+		<b style="font-size:20px;padding-left:20%">Suggestions size:</b>
 		</p>
-		<p style ="padding-left: 35px">
-		<Table border="1" align="left"  width="400px">
+		<div style ="margin-left: 20%">
+		<Table  border="1"  width="400px">
 			<TR align="center"> <TD>Size</TD> <TD>Bust</TD> <TD>Waist</TD> <TD>Hips</TD> </TR>
 			<TR align="center"> <TD>M</TH> <TD>84-88 </TD> <TD>66-70</TD> <TD>88-92</TD> </TR>
 			<TR align="center"> <TD>L</TH> <TD>89-92</TD> <TD>71-75</TD> <TD>93-97</TD> </TR>
 		</table>
-		</p>
+		</div>
 	</br>
 		
 	</div>
     </div>
-	
-	<div class="row">
-		<div class="col-md-8">
-			<img class="photodetails" src="img/Details/Anh5.png">
-			<img class="photodetails" src="img/Details/Anh6.png">
-			<img class="photodetails" src="img/Details/Anh7.png">
-			<a href = "#danhgia">
-		</div>
-		<div class="col-md-4">
-			<p style="margin-left:20px" class="fontword">The same product</p>
-		      
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same1.png">
-				<p class="name">Overcoat long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same2.png">
-				<p class="name">Nice Overcoat Red</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same4.png">
-				<p class="name">Leather Jacket long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same5.png">
-				<p class="name">Anorak long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same6.png">
-				<p class="name">Nice Overcoat Red </p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same11.png">
-				<p class="name">Leather Jacket</p>
-			</div>
-			
-              
-		</div>
 	
 	</fieldset>
 	
