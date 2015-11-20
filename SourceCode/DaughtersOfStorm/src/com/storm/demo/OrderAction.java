@@ -63,7 +63,7 @@ public class OrderAction extends ActionSupport {
 		finally {
 			 if (conn != null) {
 			 try {
-			 conn.close();
+			 //conn.close();
 			 } catch (Exception e) {
 			 e.printStackTrace();
 			 }

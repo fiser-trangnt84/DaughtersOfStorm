@@ -93,7 +93,7 @@
 			
 			</div>
 			<div class = " col-md-7">
-				<img id="order-picture" src="img/dress3.jpg">
+				<img id="order-picture" src="<s:property value="imgUrl" />" >
 			</div>
 		</div>	
 	<p class = "cus-Info"> Customer's information </p>
@@ -146,7 +146,7 @@
 							<label class ="infor-details">Total Payment: </label>
 						</div>
 						<div class="col-sm-6"  >
-							<img id="order-picture" src="img/dress3.jpg">
+							<img id="order-picture" src="<s:property value="imgUrl" />" >
 						</div>
 					</div>
 				</div>
