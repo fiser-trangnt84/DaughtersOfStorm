@@ -75,44 +75,44 @@ public class OrderAction extends ActionSupport {
 	}
 
 	
-	 public String input() {
+	 //public String input() {
 	
-	 //int id = Integer.parseInt("ProductCode");
-	 Connection conn = ConnectionDB.getConnection();
+	 ////int id = Integer.parseInt("ProductCode");
+	 //Connection conn = ConnectionDB.getConnection();
 	
-	 try {
-		 String sql = 
-	     "insert  into  orderdetails (productcode, quantityordered) values(?,?)";
-		 String sql1 = "select productCode from products WHERE" +
-		 "productsize=? and productcolor=?";
-		 PreparedStatement ps = conn.prepareStatement(sql);
-		 PreparedStatement ps1 = conn.prepareStatement(sql1);
-		 ps1.setString(1, size);
-		 ps1.setString(2, color);
-		 ResultSet rs = ps1.executeQuery(sql1);
-		 while(rs.next()){
-		 ps.setString(1,"1");
-		 ps.setString(2,"quantity");
-		 ps.executeLargeUpdate(sql);
+	 //try {
+		//  String sql = 
+	 //    "insert  into  orderdetails (productcode, quantityordered) values(?,?)";
+		//  String sql1 = "select productCode from products WHERE" +
+		//  "productsize=? and productcolor=?";
+		//  PreparedStatement ps = conn.prepareStatement(sql);
+		//  PreparedStatement ps1 = conn.prepareStatement(sql1);
+		//  ps1.setString(1, size);
+		//  ps1.setString(2, color);
+		//  ResultSet rs = ps1.executeQuery(sql1);
+		//  while(rs.next()){
+		//  ps.setString(1,"1");
+		//  ps.setString(2,"quantity");
+		//  ps.executeLargeUpdate(sql);
 		
-	 }
+	 //}
 	
 	
-	 } catch (Exception e) {
-	 e.printStackTrace();
+	 //} catch (Exception e) {
+	 //e.printStackTrace();
 	
-	 } finally {
-	 if (conn != null) {
-	 try {
-	 //conn.close();
-	 } catch (Exception e) {
-	 e.printStackTrace();
-	 }
-	 }
-	 }
-	 return "success";
+	 //} finally {
+	 //if (conn != null) {
+	 //try {
+	 ////conn.close();
+	 //} catch (Exception e) {
+	 //e.printStackTrace();
+	 //}
+	 //}
+	 //}
+	 //return "success";
 	
-	 }
+	 //}
 	
 
 	public String getProductName() {
