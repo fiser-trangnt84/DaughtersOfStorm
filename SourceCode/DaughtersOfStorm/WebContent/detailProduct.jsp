@@ -69,7 +69,7 @@
 				<p style ="padding-top:45px"></p>
 				<div id="order"><a href = "
           			    <s:url namespace='/' action='order'>
-		                    <s:param name="productCode">3</s:param>
+		                    <s:param name="productCode"><s:property value="productId" /></s:param>
 		                </s:url>" style="text-decoration: none"> 
 		             <div id="wraporder">ORDER</div></a>
 			   </div>
