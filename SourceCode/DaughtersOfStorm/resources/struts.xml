@@ -29,5 +29,8 @@
 		<action name="profile" class="com.storm.demo.ProfileAction">
             <result name="success">personal.jsp</result>
         </action>
+        <action name="order" class="com.storm.demo.OrderAction">
+        	<result name="success">/order.jsp</result>
+        </action>
    </package>
 </struts>
