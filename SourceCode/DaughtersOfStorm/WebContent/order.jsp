@@ -141,9 +141,9 @@
 							<label class ="infor-details">Product: 	</label><br>
 							<label class ="infor-details">Color:		</label><br>
 							<label class ="infor-details">Size:	</label><br> 
-							<label class ="infor-details">Price: <br>
-							<label class ="infor-details">Fee Transition: <br>
-							<label class ="infor-details">Total Payment: 
+							<label class ="infor-details">Price: </label><br>
+							<label class ="infor-details">Fee Transition: </label><br>
+							<label class ="infor-details">Total Payment: </label>
 						</div>
 						<div class="col-sm-6"  >
 							<img id="order-picture" src="img/dress3.jpg">
