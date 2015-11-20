@@ -38,7 +38,7 @@
 				</div>
 			</div>
 
-	</br></br>			
+				
 			<div class="col-md-9 infor inforprofile">
 				<div class="row">
 					<div class="col-md-3">
