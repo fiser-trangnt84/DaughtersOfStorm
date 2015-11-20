@@ -11,6 +11,7 @@ CREATE TABLE products (
   productColor varchar(10) NOT NULL,
   quantitySold smallint(6) NOT NULL,
   quantityInStock smallint(6) NOT NULL,
+  saleOff double NOT NULL,
   buyPrice double NOT NULL,
   images VARCHAR(45) NOT NULL,
   reviews double DEFAULT NULL,
@@ -95,14 +96,21 @@ productSize,
 productColor,
 quantitySold,
 quantityInStock,
+saleOff,
 buyPrice,
 images,
 reviews,
 productMaterial)
 VALUES
-('Coat Long', 'Hot', 'That\'s a new product for this season. A great choice for all person', 'M', 'Red', '5', '7', '15', 'img/details/anh1.png', '25', 'Coton'),
-('Dress', 'New', 'good product', 'S', 'Black', '50', '6', '45', 'img/dress1.jpg', '60', 'coton'),
-('Shoes', 'Cheap', 'Like a best choice for student in this year', 'L', 'Blue navy', '20', '0', '20', 'img/home/type/player.jpg', '50', 'vai');
+('Trench Coat Parka', 'Hot', 'Womens Thicken Warm Winter Trench Coat Parka Overcoat Long Jacket Outwear', 'M', 'Brown', '5', '7', '0.1', '15', 'img/details/anh1.png', '25', 'Felt'),
+('Dresses Winter', 'New', 'Korean 2015 New Fashion Dresses Winter dress LY09509 Elegant wool women\'s mini dresses', 'S', 'Pink', '50', '6', '0', '45', 'img/dress2.jpg', '71', 'Wool'),
+('Ponchos', 'Style', '10 Colors Fashion Ponchos A1193 Cape Type Loose wool blend Women\'s Coats', 'M', 'Blue', '10', '4', '0.1', '15', 'img/dress1.jpg', '1', 'Felt'),
+('Long-sleeved winter dress','Trend', '2015 spring new European style women long-sleeved winter dress package hip Slim long sweater', 'M', 'Blue navy', '5', '7', '0.1', '15', 'img/dress4.jpg', '25', 'Felt'),
+('Long Sleeve Black Dresses', 'Hot', 'Fashion Winter Dress 2015 OL Style Women Work Wear Empire Elegant Bodycon Knee-Length Long Sleeve Black Dresses', 'L', 'Black', '5', '7', '0', '60', 'img/dress5.jpg', '25', 'Cotton'),
+('Shoes', 'Cheap', 'New autumn winter women sneaker Wedges increasing height women sport shoes Leopard print PU leather patchwork Lady casual shoes', 'L','Blue navy', '25', '20', '0', '10', 'img/home/type/player.jpg', '50', 'Felt'),
+('Winter O-neck long sleeve dress', 'Hot', '2015 New vintage floral long dress women\'s autumn winter O-neck long sleeve maxi dress slim plus size color block dress', 'M', 'Black', '10', '15', '0.1', '140', 'img/dress6.jpg', '100', 'Silk'),
+('Trench Coat Parka', 'Hot', 'Womens Thicken Warm Winter Trench Coat Parka Overcoat Long Jacket Outwear', 'M', 'Red', '5', '7', '0.1', '15', 'img/details/anh5.png', '25', 'Felt'),
+('Winter Long-Sleeved Maxi Dress','Top', 'Perfect for dressing down with a pair of Chucks or dressing up with the perfect accessories', 'S', 'Black', '10', '11', '0', '50', 'img/dress6.jpg', '32', 'Silk');
 
 INSERT INTO sale.users 
 	(userId, 
