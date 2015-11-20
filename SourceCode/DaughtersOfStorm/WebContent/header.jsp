@@ -22,7 +22,7 @@
 <body>
 	<header>
 		<div class="user">
-			<s:if test="hasActionMessages()">
+				<s:if test="hasActionMessages()">
 			   <div class="messages">
 			      <s:actionmessage/>
 			   </div>
@@ -41,14 +41,13 @@
 			   	<span><a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a></span>
 			</s:else>
 		</div>
-		
 		<!-- Login form -->
-		<div class="login">
-		    <div class="arrow-up1"></div>
-		    <div class="formholder">
+		 <div class="login">
+		      <div class="arrow-up1"></div>
+		      <div class="formholder">
 		        <div class="randompad">
 		        <s:actionerror />
-		        <form action="login.action" method="post">
+		         <form action="login.action" method="post">
 		            <label>Username</label>
 		            <input name="username" type="text" required/>
 		            <label>Password</label>
@@ -59,7 +58,7 @@
       		</div>
       	</div>
 
-	    <!--Register Form -->
+	      <!--Register Form -->
 	    <div class="register">
 		    <div class="arrow-up2"></div>
 		    <div class="formregister">
@@ -78,27 +77,53 @@
 		    	</div>
 	      	</div>
 	    </div>
- 	
-	 	<!-- De day khong duoc dong vao link js =))) -->
-	 	<script src="js/jslogin.js"></script>
-		    
+	    
+	    <script src="js/jslogin.js"></script>
 
 		<div class="logo"><a href="index.jsp"><h1>STORM</h1></a></div>
 		<nav class="navbar">
-		    <ul class="nav navbar-nav">
+		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="index.jsp" class="hvr-underline-from-center">Home</a></li>
-		        <li><a href="listProducts.jsp" class="hvr-underline-from-center">What's New</a></li>
-		        <li><a href="listProducts.jsp" class="hvr-underline-from-center">Hot</a></li>
-		        <li><a href="listProducts.jsp" class="hvr-underline-from-center">Sale</a></li>
-		        <li><a href="listProducts.jsp" class="hvr-underline-from-center">Trend</a></li>
+		        <li><a class="hvr-underline-from-center"
+		        	   href="
+		        	   	<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">New</s:param>
+		        	   	</s:url>
+		        	   	" >
+		        	   	What's New
+		       	</a></li>
+		        <li><a class="hvr-underline-from-center"
+		        	   href="
+		        	   	<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Hot</s:param>
+		        	   	</s:url>
+		        	   	" >
+		        	   	Hot
+		       	</a></li>
+		        <li><a class="hvr-underline-from-center"
+		        	   href="
+		        	   	<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Sale</s:param>
+		        	   	</s:url>
+		        	   	" >
+		        	   	Sale
+		       	</a></li>
+		       <li><a class="hvr-underline-from-center"
+		        	   href="
+		        	   	<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Trend</s:param>
+		        	   	</s:url>
+		        	   	" >
+		        	   	Trend
+		       	</a></li>
 		        <li><a href="listProducts.jsp" class="hvr-underline-from-center">About Us</a></li>
 		        <li>
-		        	<div class="form-group has-feedback">
+		        	 <div class="form-group has-feedback">
 			            <input type="text" id="name"  placeholder="Search..." class="form-control">
 			            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-	       			</div>
+	       			 </div>
 		        </li>
-		    </ul>
+		      </ul>
 		</nav>
 	</header>
 </body>

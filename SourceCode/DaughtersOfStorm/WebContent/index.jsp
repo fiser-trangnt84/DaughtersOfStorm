@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,7 +73,12 @@
 			<div class="col-md-8">
 				<div class="row"> 
 					<div class="col-md-6">
-						<a id="link-image" href="listProducts.jsp"><img class="hvr-bounce-to-right" src="img/home/type/top.jpg"></a>
+						<a id="link-image" href="
+							<s:url namespace='/' action='printListProduct'>
+		        	   		<s:param name="type">Top</s:param>
+		        	   	</s:url>
+						">
+						<img class="hvr-bounce-to-right" src="img/home/type/top.jpg"></a>
 						<button class="btn btn-default type-button">TOP</button>
 					</div>
 					<div class="col-md-6">
