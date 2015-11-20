@@ -12,6 +12,7 @@ public class Product {
 	private String images;
 	private double reviews;
 	private String productMaterial;
+	private double saleOff;
 	public int getProductCode() {
 		return productCode;
 	}
@@ -79,6 +80,11 @@ public class Product {
 		this.productMaterial = productMaterial;
 	}
 	
-	
+	public double getSaleOff() {
+		return saleOff*100;
+	}
 
+	public void setSaleOff(double saleOff) {
+		this.saleOff = saleOff;
+	}
 }
