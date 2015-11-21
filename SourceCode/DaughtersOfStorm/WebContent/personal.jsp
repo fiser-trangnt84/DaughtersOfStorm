@@ -28,7 +28,7 @@
 		<div class="row">
 			<div class="col-md-3 profile">				
 				<div class="border">
-					<p id="username"><strong>${sessionScope.username}</strong></p>
+					<p id="username"><strong><s:property value="Username"/></strong></p>
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
@@ -38,46 +38,92 @@
 				</div>
 			</div>
 
-	<br/><br/>			
-			<div class="col-md-9 infor inforprofile">
-				<div class="row">
-					<div class="col-md-3">
-						<a  id="name" class = "font" href="#"><strong>Name:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="Name"/></div>
+	<br/><br/>	
+        
+        <s:set name="web" value="check"/>
+        <s:if test="%{#web=='form2'}">
+                ${print}
+                <form action="Editprofile" method="post">
+                <div class="col-md-9 infor inforprofile">
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a  id="name" class = "font" href="#"><strong>Name:</strong></a>
+                            </div>
+                            <input type="text" name="Name" value="<s:property value="Name"/>" />
+                           
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="email" class = "font" href="#"><strong>Email:</strong></a>
+                            </div>
+                            <input type="text"  name="Email" value="<s:property value="Email"/>" /> 
+                          
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="phone" class ="font" href="#"><strong>Phone Number:</strong></a>
+                            </div>
+                           <input type="text" name="phoneNumber" value="<s:property value="phoneNumber"/>" /> 
+                           
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="adress" class = "font" href="#"><strong>Adress:</strong></a>
+                            </div>
+                          <input type="text" name="address" value="<s:property value="address"/>" /> 
+                           
+                    </div>
+  							<br/>
+  							<div style="padding-right:100px">
+                          		<input  class="editButton" type="submit" value="Submit"/>
+                          	</div>
+                          
 				</div>
-		
-				<div class="row">
-					<div class="col-md-3">
-						<a id="email" class = "font" href="#"><strong>Email:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="Email"/></div>
-				</div>
-					
-				<div class="row">
-					<div class="col-md-3">
-						<a id="phone" class ="font" href="#"><strong>Phone Number:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="phoneNumber"/></div>
-				</div>
-					
-				<div class="row">
-					<div class="col-md-3">
-						<a id="adress" class = "font" href="#"><strong>Adress:</strong></a>
-					</div>
-					<div class="col-md-9 edit"><s:property value="address"/></div>
-				</div>
-				<div >
-					<a class="btn" href="
-						<s:url namespace='/' action='editProfile'>
-		        	   		<s:param name="userId"><s:property value="userId"/></s:param>
-		        	   	</s:url>
-					">
-					<i class="fa fa-pencil-square-o">
-					</i>Edit Profile</a>
-					
-				</div>	
-			</div>	
+                </form>
+        </s:if>
+        <s:elseif test="%{#web=='form1'}">
+            
+            
+               <div class="col-md-9 infor inforprofile">
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a  id="name" class = "font" href="#"><strong>Name:</strong></a>
+                            </div>
+                            <div class="col-md-9 edit"><s:property value="Name"/></div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="email" class = "font" href="#"><strong>Email:</strong></a>
+                            </div>
+                            <div class="col-md-9 edit"><s:property value="Email"/></div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="phone" class ="font" href="#"><strong>Phone Number:</strong></a>
+                            </div>
+                            <div class="col-md-9 edit"><s:property value="phoneNumber"/></div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-3">
+                                    <a id="adress" class = "font" href="#"><strong>Address:</strong></a>
+                            </div>
+                            <div class="col-md-9 edit"><s:property value="address"/></div>
+                    </div>
+                
+            	<s:form action="edit1">
+            		<br/>
+            		<div style="padding-right:100px">
+                		<input class="editButton" type="submit" value="Edit Profile"/>
+                	</div>
+            	</s:form>
+            	</div>
+        </s:elseif>
 		</div>		
 	</div>				
 		

@@ -7,13 +7,18 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.Statement;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 public class EditProfileAction extends ActionSupport {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	private String Username;
 	private String Name;
 	
 	private String userId;
@@ -22,7 +27,24 @@ public class EditProfileAction extends ActionSupport {
 	private String address;
 	private String check;
 	
+        private String print;
 
+    public String getUsername() {
+			return Username;
+		}
+
+		public void setUsername(String username) {
+			Username = username;
+		}
+
+	public String getPrint() {
+        return print;
+    }
+
+    public void setPrint(String print) {
+        this.print = print;
+    }
+        
 	public String getCheck() {
 		return check;
 	}
@@ -83,11 +105,18 @@ public class EditProfileAction extends ActionSupport {
 		this.address = address;
 	}
 	
+	public void getSS(){
+        HttpServletRequest request=ServletActionContext.getRequest();  
+        HttpSession session=request.getSession();  
+        Username =(String)session.getAttribute("username"); 
+        userId = (String)session.getAttribute("userId");
+    }
 
 	public String execute(){
+			getSS();
+            check = "form1";
             String ret = ERROR;
 	        Connection conn = null;
-                
 		try {
                   
 			conn = ConnectionDB.getConnection();
@@ -108,7 +137,7 @@ public class EditProfileAction extends ActionSupport {
         } finally {
         	if (conn != null) {
         		try {
-        			conn.close();
+        			
         		} catch (Exception e) {
         			e.printStackTrace();
         		}
@@ -117,6 +146,4 @@ public class EditProfileAction extends ActionSupport {
 
         return ret;
 	}
-	
-	
 }
