@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
 		<div class="row">
 			<div class="col-md-3 profile">				
 				<div class="border">
-					<p id="username"><strong>abcxx</strong></p>
+					<p id="username"><strong><s:property value="Username"/></strong></p>
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
@@ -37,13 +38,18 @@
 				<h5 class="countItems"></h5> 
 				<div class="row list-item">
 					<div class="col-md-3">
-						<a href=""><img id="clothe1" src="img/personal/kaki-mangto.jpg"></a>
+						<a href="<s:url namespace='/' action='detailProduct'>
+			  					 <s:param name="productId"> <s:property value="productCode" /></s:param>
+		   						 </s:url>
+								 ">
+	 					<img src="<s:property value="images" />">
+	 					</a>
 					</div>
 					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Mangto Coat</strong></a>
-						<p class="price">100$</p>
-						<p class="state">In Stock</p>
-						<p class="sale"> Sale: 10%</p>
+						<a id="name"><strong><s:property value="productName" /> </strong></a>
+						<p class="price"><s:property value="buyPrice" /> $</p>
+						<p class="state"><s:property value="quantityInStock" /></p>
+						<p class="sale"><s:property value="saleOff"/> %</p>
 					</div>
 					<div class="col-md-2">
 						<a class="btn " href="detailProduct.jsp">Detail</a>
@@ -56,75 +62,11 @@
 					</div>
 					<hr>
 				</div>
-
-				<div class="row list-item">
-					<div class="col-md-3">
-						<a href="#"> <img id="clothe2" src="img/personal/kaki-blaze.jpg"></a>
-					</div>
-					<div class="col-md-3">
-						<a id="name" href=""><strong>Rosemary Dress</strong></a>
-						<p class="price">250$</p>
-						<p class="state">Sold Out</p>
-						<p class="sale"> Sale: 5%</p>
-					</div>
-					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="detailProduct.jsp">Detail</a>
-					</div>
-					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
-					</div>
-					<div class="col-md-2 icon">
-						<a href="#"><i class="fa fa-trash-o" data-toggle="modal" data-target="#myModal" ></i></a>
-					</div>
-					<hr>
-				</div>
-
-				<div class="row list-item">
-					<div class="col-md-3">
-						<a href="#"><img id="clothe1" src="img/personal/trench-jacket.jpg"></a>
-					</div>
-					<div class="col-md-3">
-						<a id="name" href=""><strong>Kaki Blaze Coat</strong></a>
-						<p class="price">100$</p>
-						<p class="state">In Stock</p>
-						<p class="sale"> Sale: 15%</p>
-					</div>
-					<div class="col-md-2">
-						<a class="btn " href="detailProduct.jsp">Detail</a>
-					</div>
-					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
-					</div>
-					<div class="col-md-2 icon">
-						<a href="#"><i class="fa fa-trash-o i" data-toggle="modal" data-target="#myModal"></i></a>
-					</div>
-
-					<hr>
-				</div>
-
-				<div class="row list-item">
-					<div class="col-md-3">
-						<a href="#"> <img id="clothe2" src="img/personal/kaki-mangto.jpg"></a>
-					</div>
-					<div class="col-md-3">
-						<a id="name" href=""><strong>Softly Vee Sweater</strong></a>
-						<p class="price">250$</p>
-						<p class="state">Sold Out</p>
-						<p class="sale"> Sale: 15%</p>
-					</div>
-					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="detailProduct.jsp">Detail</a>
-					</div>
-					<div class="col-md-2">
-						<a class="btn w3-margin-bottom" href="order.jsp">Buy Now</a>
-					</div>
-					<div class="col-md-2 icon">
-						<a href="#"><i class="fa fa-trash-o i" data-toggle="modal" data-target="#myModal"></i></a>
-					</div>
-					<hr>
-				</div>
 			</div>				
 		</div>
 	</div>
 </body>
 </html>
+
+
+  

@@ -35,5 +35,8 @@
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>
+        <action name="following" class="com.storm.demo.FollowingAction">
+        	<result name="success">/following.jsp</result>
+        </action>
    </package>
 </struts>
