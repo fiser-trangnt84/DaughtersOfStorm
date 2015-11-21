@@ -17,34 +17,43 @@
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
   	<script src="js/index.js"></script>
   	<script src="js/jslogin.js"></script>
-
+  	<script src="js/header.js"></script>
 </head>
 <body>
 	<header>
 		<div class="user">
-			<s:if test="hasActionMessages()">
-			   <div class="messages">
-			      <s:actionmessage/>
-			   </div>
-			   <span>
-			   	<a href="personal.jsp"><s:property value="name" /></a>
-			   	| 
-			   	<a href=" 
-			   		<s:url namespace='/' action='logout'>
-			   			<s:param name='userId' value='userId'></s:param>
-			   		</s:url>
-			   	" >Logout</a>
-			   </span>
-			   <a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
-			</a>
-			</s:if>
-			<s:else>
-				<div class="errors">
-			    	<s:actionerror/>
-			   	</div>
-			   	<span><a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a></span>
-			</s:else>
+		
+		<!-- Error -->
+		   <div class="messages">
+		      <s:actionmessage/>
+		   </div>
+		   <div class="errors">
+		    	<s:actionerror/>
+		   </div>
+		  
+		  <!-- After login success -->
+		   <div id="afterLogin">
+	   		<a href="
+		   		<s:url namespace='/' action='profile'>
+	        		<s:param name="userId">${sessionScope.userId}</s:param>
+	        	</s:url>
+	   		" id ="username">${sessionScope.username}</a>
+	   		| 
+		   	<a href=" 
+		   		<s:url namespace='/' action='logout'>
+		   			<s:param name='userId'>${sessionScope.userId}</s:param>
+		   		</s:url>
+		   	" >Logout</a>
+		   	<a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
+			</a>		
+		   </div>
+		   
+		   <!-- Before login-->
+		   <div id='beforeLogin'>
+		   		<a href="" id="loginform">Login</a> | <a href="" id="registerform">Register</a>
+		   </div>
 		</div>
+		
 		<!-- Login form -->
 		 <div class="login">
 		      <div class="arrow-up1"></div>
