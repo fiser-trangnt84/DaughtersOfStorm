@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-3 profile">				
 				<div class="border">
-					<p id="username"><strong>abcxx</strong></p>
+					<p id="username"><strong>${sessionScope.username}</strong></p>
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">

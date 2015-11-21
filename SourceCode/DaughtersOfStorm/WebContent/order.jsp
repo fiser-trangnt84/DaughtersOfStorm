@@ -16,34 +16,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-	<script>
-	$(document).ready(function(){
-
-		//Hide div w/id extra
-	   $("#repci").css("display","none");
-		$("#form-repci").click(function(){
-			$("#repci").show("fast");
-		});
-		// Add onclick handler to checkbox w/id checkme
-	   $("#checkme").click(function(){
+	<script src="js/order.js"></script>
 	
-		// If checked
-		if ($("#checkme").is(":checked"))
-		{
-			//show the hidden div
-			$("#repci").hide("fast");
-		}
-		else
-		{
-			//otherwise, hide it
-			$("#repci").show("fast");
-		}
-	  });
-
-	});
-	 
-	 
-	</script>
   </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -146,7 +120,7 @@
 							<label class ="infor-details">Total Payment: </label>
 						</div>
 						<div class="col-sm-6"  >
-							<img id="order-picture" src="<s:property value="imgUrl" />" >
+							<img id="order-picture" src="<s:property value="imgUrl" />">
 						</div>
 					</div>
 				</div>
