@@ -137,7 +137,13 @@ VALUES
 ('Long-sleeved winter','Style', '2015 spring new European style women long-sleeved winter dress package hip Slim long sweater', 'M', 'Blue navy', '5', '7', '0.1', '15', 'img/dress4.jpg', '25', 'Felt'),
 ('Long Sleeve Black', 'Style', 'Fashion Winter Dress 2015 OL Style Women Work Wear Empire Elegant Bodycon Knee-Length Long Sleeve Black Dresses', 'L', 'Black', '5', '7', '0', '60', 'img/dress5.jpg', '25', 'Cotton'),
 ('Cool parka', 'Style', 'Keep you warm and cozy even in the most chilliest days, long length and official khaki green or olive color', 'M', 'Black', '5', '7', '0', '108', 'img/jacket3.jpg', '25', 'Polyester' ),
-('Women\'s jackets cozy outerwear', 'Style', 'A product that\'s quirky, polished, bright and versatile design, which is not only fashionable, but also functional', 'S', 'Black', '5', '27','0', '150', 'img/jacket1.jpg', '50', 'Felt');
+('Women\'s jackets cozy outerwear', 'Style', 'A product that\'s quirky, polished, bright and versatile design, which is not only fashionable, but also functional', 'S', 'Black', '5', '27','0', '150', 'img/jacket1.jpg', '50', 'Felt'),
+('Raincoat style', 'Sale', 'Here we see a brightly red design, which has a traditional fit and comes with front zipped', 'S', 'Red', '5', '7', '0', '18', 'img/coat1.jpg', '25', 'Polyester'),
+('Cool parka', 'Sale', 'Keep you warm and cozy even in the most chilliest days, long length and official khaki green or olive color', 'M', 'Black', '5', '7', '0', '108', 'img/jacket3.jpg', '25', 'Polyester' ),
+('Cool parka blue', 'Sale', 'Keep you warm and cozy even in the most chilliest days, long length and official khaki green or olive color', 'M', 'Blue', '5', '7', '0', '108', 'img/jacket2.jpg', '25', 'Polyester'),
+('Sweater dress in loose sleeveless', 'Sale', 'Verragee new high-end European and American temperament autumn sweater dress in loose sleeveless dress large size women female H', 'S', 'Red', '190', '7', '0', '91', 'img/dress9.jpg', '25', 'Cotton'),
+('Slim long organza dress', 'Sale', 'Verragee long dress 2015 Hitz European and American temperament Slim long organza dress length dress big yards female female', 'L', 'Black', '5', '7', '0', '118', 'img/dress10.jpg', '25', 'Polyester,Lanon'),
+('Raincoat style', 'Sale', 'Here we see a brightly red design, which has a traditional fit and comes with front zipped', 'S', 'Red', '5', '7', '0', '18', 'img/coat1.jpg', '25', 'Polyester');
 
 INSERT INTO sale.users 
 	(userId, 
