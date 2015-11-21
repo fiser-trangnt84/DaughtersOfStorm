@@ -46,10 +46,10 @@ public class ConnectionDB {
 	public static ResultSet doLogin(LoginAction login){
 		ResultSet rs = null;
 		try{
-			String sql = "SELECT userId FROM users WHERE"
+			String sql = "SELECT * FROM users WHERE"
         		  	+ " username = ? AND password = ? AND status =\"offline\"";
 			if(conn == null) createConnection();
-			PreparedStatement ps = conn.prepareStatement(sql);  
+			PreparedStatement ps = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);  
 			ps.setString(1,login.getUsername());  
 			ps.setString(2,login.getPassword()); 	
 			
