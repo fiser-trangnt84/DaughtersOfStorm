@@ -63,9 +63,17 @@
 				<p class="fontword"> Status: Sold out </p>
 				<p class="fontword"> <s:property value="quantitySold" /> people bought</p>
 				<p class="icon-add">
-			    	<a href=""><i class="fa fa-bookmark"></i></a>
-		    		<a href=""><i class="fa fa-cart-plus"></i></a>
-	    		</p>
+			    	<a href="
+				    	<s:url namespace='/' action='addFavorite'>
+			        		<s:param name="productCode"><s:property value="productId"/></s:param>
+			        	</s:url>
+		        	"><i class="fa fa-bookmark"></i></a>
+			    	<a href="
+				    	<s:url namespace='/' action='addCart'>
+			        		<s:param name="productCode"><s:property value="productId"/></s:param>
+			        	</s:url>
+		        	"><i class="fa fa-cart-plus"></i></a>
+		    	</p>
 				<p style ="padding-top:45px"></p>
 				<div id="order"><a href = "
           			    <s:url namespace='/' action='order'>

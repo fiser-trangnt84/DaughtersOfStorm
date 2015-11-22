@@ -34,8 +34,16 @@
 		 	<div class="info">
 		 		<p><span class="nameProduct"> <s:property value="productName" /> </span>
 				<span class="icon-add">
-			    	<a href=""><i class="fa fa-bookmark"></i></a>
-			    	<a href=""><i class="fa fa-cart-plus"></i></a>
+			    	<a href="
+				    	<s:url namespace='/' action='addFavorite'>
+			        		<s:param name="productCode"><s:property value="productCode"/></s:param>
+			        	</s:url>
+		        	"><i class="fa fa-bookmark"></i></a>
+			    	<a href="
+				    	<s:url namespace='/' action='addCart'>
+			        		<s:param name="productCode"><s:property value="productCode"/></s:param>
+			        	</s:url>
+		        	"><i class="fa fa-cart-plus"></i></a>
 		    	</span>
 		    	<p class="price"><s:property value="buyPrice" /> $ </p>
 				
