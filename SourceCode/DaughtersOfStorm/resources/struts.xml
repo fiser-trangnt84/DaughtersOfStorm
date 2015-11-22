@@ -32,9 +32,7 @@
 	<action name="cart" class="com.storm.demo.CartAction">
 		<reuslt name="success">Mybag.jsp</result>
 	</action>
-        <action name="Editprofile" class="com.storm.demo.EditProfileAction">
-            <result name="success">personal.jsp</result>
-        </action>
+       
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>
