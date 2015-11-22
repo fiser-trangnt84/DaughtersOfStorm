@@ -39,7 +39,7 @@
 		        		<s:param name="userId">${sessionScope.userId}</s:param>
 		        	</s:url>
 					" onclick="">My bag</a>
-					<a id="link" href="
+					<a id="link3" href="
 					<s:url namespace='/' action='following'>
 		        		<s:param name="userId">${sessionScope.userId}</s:param>
 		        	</s:url>

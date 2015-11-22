@@ -26,19 +26,24 @@
       	<action name="detailProduct" class="com.storm.demo.DetailAction" method="execute">
       		<result name="success">/detailProduct.jsp</result>
       	</action>
-		<action name="profile" class="com.storm.demo.ProfileAction">
+		<action name="profile" class="com.storm.demo.ProfileAction" method="execute">
             <result name="success">personal.jsp</result>
+            <result name="error">personal.jsp</result>
         </action>
-        <action name="Editprofile" class="com.storm.demo.EditProfileAction">
+        <action name="updateProfile" class="com.storm.demo.EditProfileAction">
             <result name="success">personal.jsp</result>
         </action>
         
-        <action name="edit1" class="com.storm.demo.ProfileAction" method="edit">
-            <result name="ok">personal.jsp</result>
+        <action name="editProfile" class="com.storm.demo.ProfileAction" method="edit">
+            <result name="success">personal.jsp</result>
         </action>
-	<action name="cart" class="com.storm.demo.CartAction">
-		<reuslt name="success">Mybag.jsp</result>
-	</action>
+		<action name="cart" class="com.storm.demo.CartAction">
+			<result name="success">Mybag.jsp</result>
+		</action>
+		
+		<action name="following" class="com.storm.demo.FollowingAction">
+			<result name="success">Mybag.jsp</result>
+		</action>
        
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
