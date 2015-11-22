@@ -28,46 +28,37 @@
 		<div class="row">
 			<div class="col-md-3 profile">				
 				<div class="border">
-					<p id="username"><strong>${sessionScope.username}</strong></p>
+					<p id="username"><strong><s:property value="Username"/></strong></p>
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
-					<a id="linkactive" href="
-					<s:url namespace='/' action='profile'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
-		        	</s:url>
-					" onclick="">Profile</a>
-					<a id="link1" href="
-					<s:url namespace='/' action='cart.action'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
-		        	</s:url>
-					" onclick="">My bag</a>
-					<a id="link2" href="
-					<s:url namespace='/' action='following'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
-		        	</s:url>
-					" onclick="">Following</a>
+					<a id="linkactive" href="personal.jsp" onclick="">Profile</a>
+					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
+					<a id="link3" href="following.jsp" onclick="">Following</a>
 				</div>
 			</div>
 
 	<br/><br/>	
         
         <s:set name="web" value="check"/>
-        <s:if test="%{#web.equals('form2')}">
-                <form action="updateProfile" method="post">
+        <s:if test="%{#web=='form2'}">
+                ${print}
+                <form action="Editprofile" method="post">
                 <div class="col-md-9 infor inforprofile">
                     <div class="row">
                             <div class="col-md-3">
-                                    <a id="name" class = "font" href="#"><strong>Name:</strong></a>
+                                    <a  id="name" class = "font" href="#"><strong>Name:</strong></a>
                             </div>
-                            <input type="text" name="fullName" value="<s:property value="Name"/>" />                           
+                            <input type="text" name="Name" value="<s:property value="Name"/>" />
+                           
                     </div>
 
                     <div class="row">
                             <div class="col-md-3">
                                     <a id="email" class = "font" href="#"><strong>Email:</strong></a>
                             </div>
-                            <input type="text"  name="email" value="<s:property value="Email"/>" /> 
+                            <input type="text"  name="Email" value="<s:property value="Email"/>" /> 
+                          
                     </div>
 
                     <div class="row">
@@ -87,13 +78,14 @@
                     </div>
   							<br/>
   							<div style="padding-right:100px">
-                          		<input class="editButton" type="submit" value="Submit"/>
+                          		<input class="ed"  type="submit" value="Submit"/>
                           	</div>
                           
 				</div>
                 </form>
         </s:if>
-        <s:else>        
+        <s:elseif test="%{#web=='form1'}">
+            
             
                <div class="col-md-9 infor inforprofile">
                     <div class="row">
@@ -124,14 +116,14 @@
                             <div class="col-md-9 edit"><s:property value="address"/></div>
                     </div>
                 
-            	<s:form action="editProfile">
+            	<form action="edit1">
             		<br/>
             		<div style="padding-right:100px">
-                		<input class="editButton" type="submit" value="Edit Profile"/>
+                		<input class="ed" type="submit" value="Edit Profile"/>
                 	</div>
-            	</s:form>
+            	</form>
             	</div>
-        </s:else>
+        </s:elseif>
 		</div>		
 	</div>				
 		
