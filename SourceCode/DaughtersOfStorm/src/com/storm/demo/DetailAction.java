@@ -68,11 +68,10 @@ public class DetailAction extends ActionSupport {
 	    Connection conn = null;
 
 	      try {
-	    
-	    	ConnectionDB cdb = new ConnectionDB();
-		    conn = cdb.getConnection();
-	        String sql = "SELECT * FROM products WHERE productCode = " + productId;
+		    conn = ConnectionDB.getConnection();
+	        String sql = "SELECT * FROM products WHERE productCode = ?";
 	        PreparedStatement ps = conn.prepareStatement(sql);
+	        ps.setInt(1, productId);
 	        ResultSet rs = ps.executeQuery();
 	        Product p = new Product();
 	        while (rs.next()) {
@@ -84,22 +83,14 @@ public class DetailAction extends ActionSupport {
 	           proPrice = rs.getInt("buyPrice");
 	           urlImg = rs.getString("images");
 	           quantitySold = rs.getInt("quantitySold");
-	           design = rs.getString("productMaterial");
-	          
+	           design = rs.getString("productMaterial");	          
 	        }
 	       
-	      } catch (Exception e) {
-	    	  System.out.print(e.toString());
+	    } catch (Exception e) {
+	    	System.out.print(e.toString());
 	         
-	      } finally {
-	         if (conn != null) {
-	            try {
-	            	
-	            } catch (Exception e) {
-	            }
-	         }
-	      }
-	      return ret;
+	    } 
+	    return ret;
 	
 	}
 }
