@@ -5,7 +5,7 @@
 <struts>
 <constant name="struts.devMode" value="true" />
    <package name="default" extends="struts-default">
-   		 <action name="login"
+   		<action name="login"
             class="com.storm.demo.LoginAction">
             <result name="success">index.jsp</result>
             <result name="error">index.jsp</result>
@@ -42,7 +42,14 @@
 		<action name="following" class="com.storm.demo.FollowingAction">
 			<result name="success">following.jsp</result>
 		</action>
-       
+       	<action name="addFavorite" class="com.storm.demo.AddFavoriteAction">
+			<result name="success">%{currentPage}</result>
+			<result name="error">%{currentPage}</result>
+		</action>
+		<action name="addCart" class="com.storm.demo.AddCartAction">
+			<result name="success">%{currentPage}</result>
+			<result name="error">%{currentPage}</result>
+		</action>
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>
