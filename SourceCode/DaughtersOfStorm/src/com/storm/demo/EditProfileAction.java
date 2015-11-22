@@ -134,6 +134,14 @@ public class EditProfileAction extends ActionSupport {
         } catch (Exception e) {
         	e.printStackTrace();
         	ret = ERROR;
+        } finally {
+        	if (conn != null) {
+        		try {
+        			
+        		} catch (Exception e) {
+        			e.printStackTrace();
+        		}
+        	}
         }
 
         return ret;
