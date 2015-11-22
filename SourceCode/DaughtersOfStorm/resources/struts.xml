@@ -32,9 +32,8 @@
         <action name="Editprofile" class="com.storm.demo.EditProfileAction">
             <result name="success">personal.jsp</result>
         </action>
-        
         <action name="edit1" class="com.storm.demo.ProfileAction" method="edit">
-            <result name="ok">personal.jsp</result>
+            <result name="success">personal.jsp</result>
         </action>
 		<action name="cart" class="com.storm.demo.CartAction">
 			<result name="success">Mybag.jsp</result>

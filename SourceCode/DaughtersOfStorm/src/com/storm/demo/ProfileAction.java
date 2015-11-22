@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.struts2.ServletActionContext;
 import java.sql.*;
 import java.util.Map;  
-import static org.apache.jasper.compiler.ELFunctionMapper.map;// mat cai tren do chu gi uk 
+import static org.apache.jasper.compiler.ELFunctionMapper.map;
 import org.apache.struts2.dispatcher.SessionMap;  
 import org.apache.struts2.interceptor.SessionAware;  
 import java.sql.Statement;
@@ -87,7 +87,7 @@ public class ProfileAction implements SessionAware {
         getSS();
         execute();
         check = "form2";
-        return "ok";
+        return "success";
     }
 
     public void getSS(){
