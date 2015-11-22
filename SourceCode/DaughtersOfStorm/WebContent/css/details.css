@@ -24,7 +24,7 @@ img.photodetails{
 }
 
 p.money {
-	color:red;
+	color:black;
 	font-size:30px;
 	padding-left:20px;
 }
@@ -115,7 +115,7 @@ p.vote{
 #wrapbutton {
    width:200px;
    height:50px;
-   background:#ffffff;
+  
    text-align:center;
    font-size:30px;
    
@@ -169,7 +169,7 @@ input.Order {
 #wraporder{
 	border: 1px solid #f3f3ed; 
    width:150px;
-   background:#ffa31a;
+   background:#0664C2;
    text-align:center;
    font-size:25px;
    color:#ffffff;
