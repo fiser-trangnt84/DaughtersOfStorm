@@ -4,12 +4,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;  
 import org.apache.struts2.ServletActionContext;
 import java.sql.*;
+import java.util.Map;  
+import static org.apache.jasper.compiler.ELFunctionMapper.map;// mat cai tren do chu gi uk 
+import org.apache.struts2.dispatcher.SessionMap;  
+import org.apache.struts2.interceptor.SessionAware;  
+import java.sql.Statement;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class ProfileAction extends ActionSupport {
-
+public class ProfileAction implements SessionAware {
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
-
+        SessionMap<String,String> sessionmap;
 	private String Name;
 	
 	private String userId;
@@ -42,46 +49,50 @@ public class ProfileAction extends ActionSupport {
 	public String execute(){
         check ="form1";
 		int id;
-		String ret = ERROR;
-		id = Integer.parseInt(userId);       
-		Connection conn = null;	
+		System.out.println("userID = " + userId);
+		id = Integer.parseInt(userId);
+        sessionmap.put("userId", userId);         
+		Connection A= ConnectionDB.getConnection();
+		System.out.println("userID1 = " + userId);
 		try {
-			conn = ConnectionDB.getConnection();
-			String sql ="SELECT * FROM users WHERE userId = " + id;
-			PreparedStatement ps = conn.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while(rs.next()){
-				Name = rs.getString("fullName");
-				Email = rs.getString("email");
-				phoneNumber = rs.getString("phoneNumber");
-				address = rs.getString("address");
-				Username = rs.getString("userName");
-				ret = SUCCESS;
+			
+			Statement B= A.createStatement();
+			String C="select fullName,email,phoneNumber,address,userName from users where userId = "+id  ;
+			ResultSet D= B.executeQuery(C);//
+			while(D.next()){
+				Name = D.getString("fullName");
+				Email = D.getString("email");
+				phoneNumber = D.getString("phoneNumber");
+				address = D.getString("address");
+				Username = D.getString("userName");
+				sessionmap.put("username", Username);
 			}
  
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			addActionError("Fail to connect!");
 		}
-		return ret;
+		
+		return "success";
 		
 	}
-
-    public String edit(){        
-        getSession();
-        String ret = execute();
-        if (ret.equals("success")) {
-        	check = "form2";
-        } else {
-        	addActionError ("Cannot change to form Edit!");
-        }
-        return ret;
+        @Override
+    public void setSession(Map<String, Object> map) {
+        sessionmap=(SessionMap)map;  
+        
+    }
+    
+    public String edit(){
+        
+        getSS();
+        execute();
+        check = "form2";
+        return "ok";
     }
 
-    public void getSession(){
-        HttpServletRequest request = ServletActionContext.getRequest();  
-        HttpSession session = request.getSession();  
+    public void getSS(){
+        HttpServletRequest request=ServletActionContext.getRequest();  
+        HttpSession session=request.getSession();  
         userId =(String)session.getAttribute("userId"); 
         
     }

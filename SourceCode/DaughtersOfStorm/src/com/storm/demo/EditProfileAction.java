@@ -1,7 +1,12 @@
 package com.storm.demo;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.DriverManager;
 import java.sql.Connection;
+import java.sql.Statement;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -13,38 +18,66 @@ public class EditProfileAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String fullName;
-	private String email;
+	private String Username;
+	private String Name;
+	
+	private String userId;
+	private String Email;
 	private String phoneNumber;
 	private String address;
-	private String userId;
 	private String check;
 	
-    public String getfullName() {
-			return fullName;
+       
+
+    public String getUsername() {
+			return Username;
 		}
 
-	public void setUsername(String fullName) {
-		this.fullName = fullName;
+		public void setUsername(String username) {
+			Username = username;
+		}
+
+        
+	public String getCheck() {
+		return check;
 	}
+
+
+
+	public void setCheck(String check) {
+		this.check = check;
+	}
+
+
+
+	public String getUserId() {
+		return userId;
+	}
+
+
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	
 
 	public String demo(){
 		return SUCCESS;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 
 	
 	public String getName() {
-		return fullName;
+		return Name;
 	}
 	public void setName(String Name) {
-		this.fullName = Name;
+		this.Name =Name;
 	}
 	
 	
@@ -65,53 +98,45 @@ public class EditProfileAction extends ActionSupport {
 		this.address = address;
 	}
 	
-	public void getSession(){
+	public void getSS(){
         HttpServletRequest request=ServletActionContext.getRequest();  
         HttpSession session=request.getSession();  
+        Username =(String)session.getAttribute("username"); 
         userId = (String)session.getAttribute("userId");
     }
 
 	public String execute(){
-			getSession();
-            setCheck("form1");
+			getSS();
+            check = "form1";
             String ret = ERROR;
 	        Connection conn = null;
 		try {
                   
 			conn = ConnectionDB.getConnection();
 			
-			String sql="UPDATE users SET fullName = ?,email=?, phoneNumber=?, address=? where userId = ?" ;
+			String sql="UPDATE users set fullName = ?,email=?, phoneNumber=?, address=? where userId = ?" ;
 			PreparedStatement ps = conn.prepareStatement(sql);
-      	  	ps.setString(1, fullName);
-      	  	ps.setString(2, email);
+      	  	ps.setString(1, Name);
+      	  	ps.setString(2, Email);
       	  	ps.setString(3, phoneNumber); 
             ps.setString(4, address); 
             ps.setString(5, userId); 
-      	  	int rs = ps.executeUpdate();
-      	  	if (rs != 0){
-      	  		ret = SUCCESS;
-      	  		addActionMessage("Update success!");
-      	  	}
+      	  	ps.executeUpdate();
+      	  	ret = SUCCESS;
       	  		
         } catch (Exception e) {
         	e.printStackTrace();
+        	ret = ERROR;
+        } finally {
+        	if (conn != null) {
+        		try {
+        			
+        		} catch (Exception e) {
+        			e.printStackTrace();
+        		}
+        	}
         }
+
         return ret;
-	}
-
-	public String getFullName() {
-		return fullName;
-	}
-
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
-
-	public String getCheck() {
-		return check;
-	}
-
-	public void setCheck(String check) {
-		this.check = check;
 	}
 }
