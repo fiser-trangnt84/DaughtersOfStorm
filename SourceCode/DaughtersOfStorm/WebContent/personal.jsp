@@ -71,7 +71,7 @@
 
                     <div class="row">
                             <div class="col-md-3">
-                                    <a id="adress" class = "font" href="#"><strong>Adress:</strong></a>
+                                    <a id="address" class = "font" href="#"><strong>Address:</strong></a>
                             </div>
                           <input type="text" name="address" value="<s:property value="address"/>" /> 
                            
