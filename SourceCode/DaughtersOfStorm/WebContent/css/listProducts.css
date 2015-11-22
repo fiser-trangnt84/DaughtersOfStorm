@@ -14,8 +14,14 @@
 .list{
 	padding-right: 7%;
 }
+
+#images{
+	width: 100%;
+	height: 500px;
+}
 img{
 	width: 100%;
+	height: 500px;
 	padding-bottom: 5%;
 }
 .row{

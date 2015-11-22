@@ -29,7 +29,7 @@
 			  <s:param name="productId"> <s:property value="productCode" /></s:param>
 		    </s:url>
 		">
-	 		<img src="<s:property value="images" />">
+	 		<img id="images" src="<s:property value="images" />">
 	 	</a>
 		 	<div class="info">
 		 		<p><span class="nameProduct"> <s:property value="productName" /> </span>
