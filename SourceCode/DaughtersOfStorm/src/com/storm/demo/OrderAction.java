@@ -41,36 +41,29 @@ public class OrderAction extends ActionSupport {
 	}
 
 	public String execute() {
+		String ret = ERROR;
 
 		//int id = Integer.parseInt(productCode);
 		Connection conn = ConnectionDB.getConnection();
 		//System.out.println(productCode);
 		try {
 			Statement ps = conn.createStatement();
-			String sql = "SELECT productname,buyprice,images FROM products WHERE productcode="+ productCode;
+			String sql = "SELECT * FROM products WHERE productcode="+ productCode;
 			ResultSet rs = ps.executeQuery(sql);
 
 			while (rs.next()) {
 				productName = rs.getString("productName");
 				buyPrice = rs.getInt("buyPrice");
 				imgUrl = rs.getString("images");
+				ret = SUCCESS;
 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 
 		}
-		finally {
-			 if (conn != null) {
-			 try {
-			// conn.close();
-			 } catch (Exception e) {
-			 e.printStackTrace();
-			 }
-			 }
-		 }
 		
-		return "success";
+		return ret;
 
 	}
 

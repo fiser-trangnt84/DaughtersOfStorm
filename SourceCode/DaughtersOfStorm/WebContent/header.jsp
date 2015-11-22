@@ -44,7 +44,11 @@
 		   			<s:param name='userId'>${sessionScope.userId}</s:param>
 		   		</s:url>
 		   	" >Logout</a>
-		   	<a href="Mybag.jsp" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
+		   	<a href="
+			   	<s:url namespace='/' action='cart.action'>
+	        		<s:param name="userId">${sessionScope.userId}</s:param>
+	        	</s:url>
+		   	" class="hvr-icon-bounce glyphicon glyphicon-shopping-cart">
 			</a>		
 		   </div>
 		   

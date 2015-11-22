@@ -32,8 +32,7 @@ public class ListProductAction extends ActionSupport{
 	      try {
 	    	
 	        arrProduct = new ArrayList<Product>();
-	        String sql = "SELECT * FROM products WHERE ";
-	        sql += "productType =  " +"'"+ type+"'";
+	        String sql = "SELECT * FROM products WHERE productType =  " +"'"+ type+"'";
 	      
 	        PreparedStatement ps = conn.prepareStatement(sql);
 	        ResultSet rs = ps.executeQuery();
@@ -49,17 +48,9 @@ public class ListProductAction extends ActionSupport{
 	           arrProduct.add(p);
 	          
 	        }
-	      } catch (Exception e) {
-	    	  System.out.print(e.toString());
-	         
-	      } finally {
-	         if (conn != null) {
-	            try {
-	              
-	            } catch (Exception e) {
-	            }
-	         }
-	      }
+      	} catch (Exception e) {
+    		System.out.print(e.toString());	         
+      	} 
 	      return ret;
 		
 	}

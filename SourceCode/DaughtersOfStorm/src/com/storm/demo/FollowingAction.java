@@ -17,11 +17,11 @@ public class FollowingAction extends ActionSupport{
 		String ret= "ERROR";
 		Connection conn = ConnectionDB.getConnection();
 		try {	
-		    String sql = "SELECT productName, buyPrice, quantityInStock, images, saleOff"
-		        	+ "FROM products JOIN favoritelists"
-		        	+ "WHERE userId ="+ UserId +" and favoriteNumber ="+FavoriteNumber
-		        	+ "productCode ="+ ProductCode;
+			int id = userId;
+		    String sql = "SELECT P.* FROM products P JOIN favoritelists F"
+		        	+ "ON P.productCode = F.productCode WHERE userId = ?";
 		    PreparedStatement ps = conn.prepareStatement(sql);
+		    ps.setInt(id);
 		    ResultSet rs = ps.executeQuery();
 		    Product p = new Product();
 
@@ -37,14 +37,7 @@ public class FollowingAction extends ActionSupport{
 		        }
 		} catch (Exception e) {
 		    System.out.print(e.toString());
-		         
-		    } finally {
-		        if (conn != null) {
-		        	try {  
-		            } catch (Exception e) {
-		            	}
-		        }
-		    }
+		} 
 		return ret;
 	}
 

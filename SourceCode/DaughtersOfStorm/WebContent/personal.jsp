@@ -26,17 +26,29 @@
 	<jsp:include page="header.jsp" />
 	<div class="content">
 		<div class="row">
-			<div class="col-md-3 profile">				
-				<div class="border">
-					<p id="username"><strong><s:property value="Username"/></strong></p>
-					<img id="profile-picture" src="img/personal/avatar.png">
-				</div>
-				<div class= "link">
-					<a id="linkactive" href="personal.jsp" onclick="">Profile</a>
-					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
-					<a id="link3" href="following.jsp" onclick="">Following</a>
-				</div>
-			</div>
+			<div class="col-md-3 profile">               
+                <div class="border">
+                    <p id="username"><strong>${sessionScope.username}</strong></p>
+                    <img id="profile-picture" src="img/personal/avatar.png">
+                </div>
+                <div class= "link">
+                    <a id="linkactive" href="
+                    <s:url namespace='/' action='profile'>
+                        <s:param name="userId">${sessionScope.userId}</s:param>
+                    </s:url>
+                    " onclick="">Profile</a>
+                    <a id="link2" href="
+                    <s:url namespace='/' action='cart.action'>
+                        <s:param name="userId">${sessionScope.userId}</s:param>
+                    </s:url>
+                    " onclick="">My bag</a>
+                    <a id="link3" href="
+                    <s:url namespace='/' action='following'>
+                        <s:param name="userId">${sessionScope.userId}</s:param>
+                    </s:url>
+                    " onclick="">Following</a>
+                </div>
+            </div>
 
 	<br/><br/>	
         

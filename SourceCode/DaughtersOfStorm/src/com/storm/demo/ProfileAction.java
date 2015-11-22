@@ -47,6 +47,7 @@ public class ProfileAction implements SessionAware {
 
 
 	public String execute(){
+		String ret = ERROR;
         check ="form1";
 		int id;
 		id = Integer.parseInt(userId);
@@ -56,7 +57,7 @@ public class ProfileAction implements SessionAware {
 		try {
 			
 			Statement B= A.createStatement();
-			String C="select fullName,email,phoneNumber,address,userName from users where userId = "+id  ;
+			String C="select * from users where userId = "+id  ;
 			ResultSet D= B.executeQuery(C);//
 			while(D.next()){
 				Name = D.getString("fullName");
@@ -70,9 +71,10 @@ public class ProfileAction implements SessionAware {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			ret = SUCCESS;
 		}
 		
-		return "success";
+		return ret;
 		
 	}
         @Override
