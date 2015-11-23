@@ -55,28 +55,33 @@
 							  <s:param name="productId"><s:property value="productCode" /></s:param>
 						    </s:url>
 						"><img id='image' src="<s:property value="images" />">
-					 	<strong><s:property value="productName"/></strong>
-					 	</a>					 	
+						</a>
+					</div>
+					<div class="col-md-3">
+						<a id="name" href="<s:url namespace='/' action='detailProduct'>
+							  <s:param name="productId"><s:property value="productCode" /></s:param>
+						    </s:url>"><strong><s:property value="productName"/></strong></a>						 	
 						<p class="price"><s:property value="buyPrice"/>$</p>
 						<p class="state">
-						<s:if test="<s:property value='quantityInStock'/> == 0">
-						Sold Out
-						</s:if>
-						<s:else>
-						In Stock
-						</s:else>
+							<s:if test="<s:property value='quantityInStock'/> == 0">
+							Sold Out
+							</s:if>
+							<s:else>
+							In Stock
+							</s:else>
 						</p>
+						<p class="sale">Sale : <s:property value="saleOff"/> %</p>
 					</div>
 					<div class="col-md-2">
-						<a href="
+						<a class="btn" href="
 						 	<s:url namespace='/' action='detailProduct'>
 							  <s:param name="productId"><s:property value="productCode" /></s:param>
 						    </s:url>
-						">Detail
+						">Following
 					 	</a>
 					</div>
 					<div class="col-md-2">
-						<a href="
+						<a class="btn" href="
 						 	<s:url namespace='/' action='order'>
 							  <s:param name="productId"><s:property value="productCode"/></s:param>
 						    </s:url>

@@ -94,3 +94,7 @@ p.price, p.state {
 .icon .hvr-icon-bounce:before {
   content: "\f014" !important;
 }
+.sale{
+	font-size: 16px;
+    color: #FF0000;
+}

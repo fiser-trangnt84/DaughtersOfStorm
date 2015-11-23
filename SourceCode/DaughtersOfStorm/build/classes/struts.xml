@@ -26,15 +26,13 @@
       	<action name="detailProduct" class="com.storm.demo.DetailAction" method="execute">
       		<result name="success">/detailProduct.jsp</result>
       	</action>
-		<action name="profile" class="com.storm.demo.ProfileAction" method="execute">
-            <result name="success">personal.jsp</result>
-            <result name="error">personal.jsp</result>
-        </action>
-        <action name="updateProfile" class="com.storm.demo.EditProfileAction">
+		<action name="profile" class="com.storm.demo.ProfileAction">
             <result name="success">personal.jsp</result>
         </action>
-        
-        <action name="editProfile" class="com.storm.demo.ProfileAction" method="edit">
+        <action name="Editprofile" class="com.storm.demo.EditProfileAction">
+            <result name="success">personal.jsp</result>
+        </action>
+        <action name="edit1" class="com.storm.demo.ProfileAction" method="edit">
             <result name="success">personal.jsp</result>
         </action>
 		<action name="cart" class="com.storm.demo.CartAction">
@@ -42,7 +40,7 @@
 		</action>
 		
 		<action name="following" class="com.storm.demo.FollowingAction">
-			<result name="success">Mybag.jsp</result>
+			<result name="success">following.jsp</result>
 		</action>
        
         <action name="order" class="com.storm.demo.OrderAction">

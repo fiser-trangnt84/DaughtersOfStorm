@@ -81,10 +81,10 @@ public class Product {
 	}
 	
 	public double getSaleOff() {
-		return saleOff*100;
+		return saleOff;
 	}
 
 	public void setSaleOff(double saleOff) {
-		this.saleOff = saleOff;
+		this.saleOff = saleOff*100;
 	}
 }

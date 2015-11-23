@@ -40,7 +40,7 @@
 		</action>
 		
 		<action name="following" class="com.storm.demo.FollowingAction">
-			<result name="success">Mybag.jsp</result>
+			<result name="success">following.jsp</result>
 		</action>
        
         <action name="order" class="com.storm.demo.OrderAction">
