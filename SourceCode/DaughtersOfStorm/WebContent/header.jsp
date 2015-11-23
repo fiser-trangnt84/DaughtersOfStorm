@@ -86,8 +86,6 @@
 		            <input name="username" type="text" required/>
 		            <label>Password</label>
 		            <input name="password" type="password" required/>
-		            <label>Confirm Password</label>
-		            <input name="confirmPw" type="password" required/>
 		            <input type="submit" value="Register" />
 		 		</form>
 		    	</div>
