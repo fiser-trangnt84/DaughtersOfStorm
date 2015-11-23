@@ -116,7 +116,7 @@
 
 	<footer>
 		<div class="row">
-			<div class="col-md-4 shipping"><a href=""><span>SHIPPING SERVICE</span></a></div>
+			<div class="col-md-4 shipping"><a href="contact.jsp"><span>CONTACT</span></a></div>
 			<div class="col-md-4 social">
 				<a href=""><i class="fa fa-facebook"></i></a>
 				<a href=""><i class="fa fa-twitter"></i></a>
