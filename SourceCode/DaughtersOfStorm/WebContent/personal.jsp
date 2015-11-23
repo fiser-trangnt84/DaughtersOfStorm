@@ -32,9 +32,18 @@
 					<img id="profile-picture" src="img/personal/avatar.png">
 				</div>
 				<div class= "link">
-					<a id="linkactive" href="personal.jsp" onclick="">Profile</a>
-					<a id="link2" href="Mybag.jsp" onclick="">My bag</a>
-					<a id="link3" href="following.jsp" onclick="">Following</a>
+					<a id="linkactive" href="
+					<s:url namespace='/' action='profile'>
+		        	</s:url>
+					" onclick="">Profile</a>
+					<a id="link1" href="
+					<s:url namespace='/' action='cart.action'>
+		        	</s:url>
+					" onclick="">My bag</a>
+					<a id="link2" href="
+					<s:url namespace='/' action='following'>
+		        	</s:url>
+					" onclick="">Following</a>
 				</div>
 			</div>
 

@@ -30,17 +30,14 @@
 				<div class= "link">
 					<a id="link1" href="
 					<s:url namespace='/' action='profile'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
 		        	</s:url>
 					" onclick="">Profile</a>
 					<a id="link2" href="
 					<s:url namespace='/' action='cart.action'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
 		        	</s:url>
 					" onclick="">My bag</a>
 					<a id="linkactive" href="
 					<s:url namespace='/' action='following'>
-		        		<s:param name="userId">${sessionScope.userId}</s:param>
 		        	</s:url>" onclick="">Following</a>
 				</div>
 			</div>
