@@ -1,27 +1,39 @@
 package com.storm.demo;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
-public class RegisterAction extends ActionSupport {
+public class RegisterAction extends ActionSupport implements SessionAware {
+    private Map<String, Object> sessionMap;
 	private static final long serialVersionUID = 1L;
 	private String username;
 	private String password;
 	private String email;
-	private String name;
 	
 	
 	public String execute() {
 		
         String ret = ERROR;
-        int rs = ConnectionDB.doRegister(this);
+        ResultSet rs = ConnectionDB.doRegister(this);
         
-        if (rs != 0){
-        	ret = SUCCESS;
-        	setName(username);
-        	addActionMessage("Register success!");
-        } else {
-        	addActionError("Fail to register!");
-        }
+        try {
+			if (rs != null && rs.next()){
+				ret = SUCCESS;
+				sessionMap.put("username", username);
+				sessionMap.put("userId", rs.getInt(1));
+				addActionMessage("Register success!");
+			} else {
+				addActionError("Fail to register!");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         return ret;
 	}
 	
@@ -44,12 +56,14 @@ public class RegisterAction extends ActionSupport {
 		this.email = email;
 	}
 
-	public String getName() {
-		return name;
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		this.sessionMap = arg0;
+		
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Map<String, Object> getSessionMap() {
+		return sessionMap;
 	}
-	
 }

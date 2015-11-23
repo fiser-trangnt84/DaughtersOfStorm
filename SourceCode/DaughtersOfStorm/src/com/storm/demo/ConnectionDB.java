@@ -25,18 +25,26 @@ public class ConnectionDB {
 		}
 	}
 	
-	public static int doRegister(RegisterAction rgt){
-		int result = 0;
+	public static ResultSet doRegister(RegisterAction rgt){
+		ResultSet result = null;
 		try {
-			String sql = "INSERT INTO users (username, password, email, status) VALUES(?, ?, ?, ?)";
 			if(conn == null) createConnection();
+			String sql = "SELECT userId FROM users WHERE email = " + rgt.getEmail();
 			PreparedStatement ps = conn.prepareStatement(sql);  
+			result = ps.executeQuery();
+			// If email exist
+			if (result.next()) return result;
+			//else
+			sql = "INSERT INTO users (username, password, email, status) VALUES(?, ?, ?, ?)";		
+			ps = conn.prepareStatement(sql);
 			ps.setString(1,rgt.getUsername());  
 			ps.setString(2,rgt.getPassword());  
 			ps.setString(3,rgt.getEmail()); 
 			ps.setString(4, "online");
+			ps.executeUpdate();
 			
-			result = ps.executeUpdate();
+			// get last id 
+			result = ps.executeQuery("SELECT MAX(userId)FROM users");
 		} catch (Exception e){
 			e.printStackTrace();
 		}
