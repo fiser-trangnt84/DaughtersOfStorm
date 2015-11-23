@@ -4,12 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.storm.bean.Product;
 
-public class CartAction extends ActionSupport{
-
+public class CartAction extends ActionSupport implements SessionAware{
+	
+	private Map<String, Object> sessionMap;
 	private static final long serialVersionUID = 1L;
 	private int userId;
 	public ArrayList<Product> arrProduct= null; 
@@ -19,7 +23,7 @@ public class CartAction extends ActionSupport{
 	    Connection conn = ConnectionDB.getConnection();
 
 	      try {
-	    	
+	    	userId = (int) sessionMap.get("userId");
 	        arrProduct = new ArrayList<Product>();
 	        String sql = "SELECT P.* FROM usercarts U JOIN products P "
 	        		+ "ON P.productCode = U.productCode WHERE U.userId = ?";	        
@@ -52,5 +56,15 @@ public class CartAction extends ActionSupport{
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		this.sessionMap = arg0;
+	}
+
+	public Map<String, Object> getSessionMap() {
+		return sessionMap;
+	}
+
 }

@@ -1,25 +1,14 @@
 package com.storm.demo;
 
-import javax.servlet.http.HttpServletRequest;  
-import javax.servlet.http.HttpSession;  
-import org.apache.struts2.ServletActionContext;
 import java.sql.*;
 import java.util.Map;  
-import static org.apache.jasper.compiler.ELFunctionMapper.map;
-import org.apache.struts2.dispatcher.SessionMap;  
 import org.apache.struts2.interceptor.SessionAware;  
 import java.sql.Statement;
-import com.opensymphony.xwork2.ActionSupport;
 
 public class ProfileAction implements SessionAware {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-        SessionMap<String,String> sessionmap;
+	private Map<String, Object> sessionmap;
 	private String Name;
 	
-	private String userId;
 	private String Email;
 	private String phoneNumber;
 	private String address;
@@ -34,28 +23,12 @@ public class ProfileAction implements SessionAware {
         this.check = check;
     }
 
-        
-	public String getUserId() {
-		return userId;
-	}
-
-
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-
 	public String execute(){
         check ="form1";
-		int id;
-		System.out.println("userID = " + userId);
-		id = Integer.parseInt(userId);
-        sessionmap.put("userId", userId);         
+		int id;     
 		Connection A= ConnectionDB.getConnection();
-		System.out.println("userID1 = " + userId);
 		try {
-			
+			id = (int) sessionmap.get("userId");
 			Statement B= A.createStatement();
 			String C="select fullName,email,phoneNumber,address,userName from users where userId = "+id  ;
 			ResultSet D= B.executeQuery(C);//
@@ -78,26 +51,16 @@ public class ProfileAction implements SessionAware {
 	}
         @Override
     public void setSession(Map<String, Object> map) {
-        sessionmap=(SessionMap)map;  
+        this.sessionmap = map;  
         
     }
     
     public String edit(){
-        
-        getSS();
         execute();
         check = "form2";
         return "success";
     }
 
-    public void getSS(){
-        HttpServletRequest request=ServletActionContext.getRequest();  
-        HttpSession session=request.getSession();  
-        userId =(String)session.getAttribute("userId"); 
-        
-    }
-    
-	
 	public String getEmail() {
 		return Email;
 	}
