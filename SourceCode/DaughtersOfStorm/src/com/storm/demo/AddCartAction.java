@@ -13,12 +13,13 @@ public class AddCartAction extends ActionSupport implements SessionAware {
     private Map<String, Object> sessionMap;
 	private static final long serialVersionUID = 1L;
 	private int productCode;
-    private int userId;
+    private Object userId;
 
     
     public String execute(){
         String ret = ERROR;
-        userId = (int) sessionMap.get("userId");
+        if(sessionMap.get("userId")== null) return ret;
+        userId = sessionMap.get("userId");
         Connection conn = ConnectionDB.getConnection();
         try{
         	String sql = "SELECT * FROM usercarts WHERE userId = " + userId;
@@ -34,7 +35,7 @@ public class AddCartAction extends ActionSupport implements SessionAware {
     		ps = conn.prepareStatement(sql);
     		ps.setInt(1, rs.getInt("cartId"));
     		ps.setInt(2, productCode);
-    		ps.setInt(3, userId);
+    		ps.setInt(3, (int)userId);
     		int result = ps.executeUpdate();   
     		
     		if (result != 0){
@@ -56,14 +57,7 @@ public class AddCartAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> getSessionMap() {
 		return sessionMap;
 	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+	
 	public int getProductCode() {
 		return productCode;
 	}
