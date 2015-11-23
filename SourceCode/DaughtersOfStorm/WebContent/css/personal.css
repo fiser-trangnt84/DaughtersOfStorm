@@ -14,6 +14,10 @@
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.form-control{
+	max-width: 300px;
+}
+
 .border img {
 	width: 150px;
 	height: auto;
@@ -31,25 +35,18 @@
 
 .infor {
 	background-color: #fafafa;
-	padding: 30px;
+	padding: 5px;
+	
 }	
 .font{
 	font-size: 18px;
 }
 .infor .row {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-.editButton {
-	padding-bottom:5px;
-	padding-top:5px;
-	padding-left: 15px;
-	padding-right: 15px;
-	text-align: middle;
-	color: white;
-	background-color:#1f1f7a;
-	float:right;
+
 }
 input.ed {
 	padding-bottom:5px;
@@ -62,3 +59,23 @@ input.ed {
 	float:right;
 }
 
+.btn-group-lg>.btn, .btn-lg  {
+	padding: 2px !important;
+	background-color:#0664C2;
+}
+.order {
+	padding-left: 400px;
+}
+.btn-info {
+	background-color: #337ab7 !important;
+}
+.btn:hover {
+    color: white;
+    text-decoration: none;
+}
+.edit {
+	padding-left:350px;
+}
+.submit {
+	padding-left:405px;
+}

@@ -42,14 +42,14 @@
         
         <s:set name="web" value="check"/>
         <s:if test="%{#web=='form2'}">
-                ${print}
+               
                 <form action="Editprofile" method="post">
                 <div class="col-md-9 infor inforprofile">
                     <div class="row">
                             <div class="col-md-3">
                                     <a  id="name" class = "font" href="#"><strong>Name:</strong></a>
                             </div>
-                            <input type="text" name="Name" value="<s:property value="Name"/>" />
+                            <input type="text" class="form-control edit-profile" name = "Name" value="<s:property value="Name"/>">
                            
                     </div>
 
@@ -57,7 +57,7 @@
                             <div class="col-md-3">
                                     <a id="email" class = "font" href="#"><strong>Email:</strong></a>
                             </div>
-                            <input type="text"  name="Email" value="<s:property value="Email"/>" /> 
+                             <input type="text" class="form-control edit-profile" name = "Email" value="<s:property value="Email"/>"> 
                           
                     </div>
 
@@ -65,7 +65,7 @@
                             <div class="col-md-3">
                                     <a id="phone" class ="font" href="#"><strong>Phone Number:</strong></a>
                             </div>
-                           <input type="text" name="phoneNumber" value="<s:property value="phoneNumber"/>" /> 
+                             <input type="text" class="form-control edit-profile" name = "phoneNumber" value="<s:property value="phoneNumber"/>">
                            
                     </div>
 
@@ -73,12 +73,13 @@
                             <div class="col-md-3">
                                     <a id="address" class = "font" href="#"><strong>Address:</strong></a>
                             </div>
-                          <input type="text" name="address" value="<s:property value="address"/>" /> 
+                             <input type="text" class="form-control edit-profile" name = "address" value="<s:property value="address"/>">
                            
                     </div>
-  							<br/>
-  							<div style="padding-right:100px">
-                          		<input class="ed"  type="submit" value="Submit"/>
+  							
+  							<div class="submit">
+                          		
+                          		<button class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal" type="submit" value="Submit">Submit</button>
                           	</div>
                           
 				</div>
@@ -118,8 +119,8 @@
                 
             	<form action="edit1">
             		<br/>
-            		<div style="padding-right:100px">
-                		<input class="ed" type="submit" value="Edit Profile"/>
+            		<div class="edit">
+                		<button class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal" type="submit" value="Edit Profile">Edit Profile</button>
                 	</div>
             	</form>
             	</div>
