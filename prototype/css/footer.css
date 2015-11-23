@@ -1,0 +1,60 @@
+/******************************************************* 
+* FOOTER
+********************************************************/
+
+footer {
+	margin-top: 50px;
+	clear: both;
+	background-color: #EAEAEA;
+	color: #888888;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	padding-left: 8%;
+	padding-right: 8%;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+footer .row {
+	margin: 0;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+footer .shipping span, .service span{
+	color: #888888;
+	text-align: left;
+	font-size: 12px;
+} 
+
+footer .service {
+	font-size: 12px !important;
+	text-align: right;
+}
+
+footer.fa {
+	color: white;
+	border-radius: 2px;
+	padding: 5px;
+  	border-radius: 20%;
+} 
+
+footer .col-md-4 .social {
+	font-size: 18px;
+}
+
+.col-md-4.social {
+    text-align: center;
+}
+
+footer a {
+	color: #85c2bc !important;
+}
+
+footer a:hover {
+	color: #00cc99 !important;
+}
