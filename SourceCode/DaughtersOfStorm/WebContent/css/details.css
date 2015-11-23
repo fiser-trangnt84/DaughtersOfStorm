@@ -29,7 +29,8 @@ p.money {
 	padding-left:20px;
 }
 #main{
-margin-left:100px;
+	margin-left:100px;
+	padding-bottom: 100px;
 }
 p.fontwordfirst {
 	padding-top:120px;

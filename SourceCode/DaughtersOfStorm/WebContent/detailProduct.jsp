@@ -142,46 +142,8 @@
 		
 	</div>
     
-	
-	<div class="row">
-		<div class="col-md-8">
-			<img class="photodetails" src="<s:property value="urlImg" /> ">
-			
-			<a href = "#danhgia"></a>
-		</div>
-		<div class="col-md-4">
-			<p style="margin-left:20px" class="fontword">The same product</p>
-		      
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same1.png">
-				<p class="name">Overcoat long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same2.png">
-				<p class="name">Nice Overcoat Red</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same4.png">
-				<p class="name">Leather Jacket long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same5.png">
-				<p class="name">Anorak long</p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same6.png">
-				<p class="name">Nice Overcoat Red </p>
-			</div>
-			<div id="wrapphoto">
-				<img class="photosame" src="img/Details/same11.png">
-				<p class="name">Leather Jacket</p>
-			</div>
-			
-              
-		</div>
-	
-	
-	</div>
+
+	<jsp:include page="footer.jsp" />
 	
 </body>
 </html>

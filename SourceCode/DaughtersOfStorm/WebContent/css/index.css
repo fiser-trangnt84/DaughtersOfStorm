@@ -1,3 +1,7 @@
+.content {
+    padding-bottom: 100px;
+}
+
 header li.active a {
     color: #00cc99;
 }
@@ -72,69 +76,6 @@ button.type-button {
 
 .play-button {
 	top: 80% !important;
-}
-/******************************************************* 
-* FOOTER
-********************************************************/
-
-footer {
-	margin-top: 50px;
-	clear: both;
-	background-color: #EAEAEA;
-	color: #888888;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 18px;
-}
-
-footer .row {
-	margin: 0;
-}
-
-footer a:hover {
-	text-decoration: none;
-}
-
-footer .shipping span, .service span{
-	color: #0664C2;
-	text-align: left;
-	font-size: 12px;
-} 
-
-footer .service {
-	font-size: 12px !important;
-	text-align: right;
-}
-.fa-phone {
-	color: #888888 !important;
-}
-.fa {
-	color: white;
-	border-radius: 2px;
-	padding: 5px;
-  	border-radius: 20%;
-} 
-
-.fa-facebook {
-	background: #324B88;
-	padding: 5px 8px;
-}
-
-.fa-twitter {
-	background: #25BBF3;
-}
-
-.fa-google-plus {
-	background: #BE1116;
-}
-
-.fa-rss {
-	background-color: orange ;
-}
-
-.social {
-	text-align: center;
-	font-size: 18px;
 }
 
 /* Effect of images type */

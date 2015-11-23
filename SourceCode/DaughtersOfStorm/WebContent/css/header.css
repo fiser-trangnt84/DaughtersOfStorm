@@ -19,6 +19,11 @@ header {
 	font-size: 95px;
 	color: #B02D15;
 	margin-top: -25px;
+  margin-bottom: -10px;
+}
+
+li {
+  list-style: none;
 }
 
 .logo a:hover, .logo a:focus{

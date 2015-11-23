@@ -3,18 +3,21 @@
 ********************************************************/
 
 footer {
-	margin-top: 50px;
 	clear: both;
 	background-color: #EAEAEA;
-	color: #888888;
+	color: #888888 !important;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 2px;
 	font-size: 18px;
 	padding-left: 8%;
 	padding-right: 8%;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+}
+
+footer a {
+	color: #888888;
 }
 
 footer .row {
@@ -25,15 +28,12 @@ footer a:hover {
 	text-decoration: none;
 }
 
-footer .shipping span, .service span{
-	color: #0664C2;
-	text-align: left;
-	font-size: 12px;
-} 
-
 footer .service {
 	font-size: 12px !important;
 	text-align: right;
+}
+footer .shipping {
+	font-size: 12px !important;
 }
 
 footer.fa {
@@ -51,10 +51,4 @@ footer .col-md-4 .social {
     text-align: center;
 }
 
-footer a {
-	color: #85c2bc !important;
-}
 
-footer a:hover {
-	color: #00cc99 !important;
-}

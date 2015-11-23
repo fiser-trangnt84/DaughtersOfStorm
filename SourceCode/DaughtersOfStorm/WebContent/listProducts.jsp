@@ -44,7 +44,7 @@
 			        		<s:param name="productCode"><s:property value="productCode"/></s:param>
 			        	</s:url>
 		        	"><i class="fa fa-cart-plus"></i></a>
-		    	</span>
+		    	</span></p>
 		    	<p class="price"><s:property value="buyPrice" /> $ </p>
 				
 			</div>
@@ -52,5 +52,7 @@
 	</div>
 	</s:iterator>
 	</div>
+
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

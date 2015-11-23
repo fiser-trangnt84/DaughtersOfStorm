@@ -1,3 +1,7 @@
+.col-md-4.itemProduct {
+    padding-bottom: 50px;
+}
+
 .row {
 	margin: 0 !important;
 }
@@ -24,12 +28,7 @@ img{
 	height: 500px;
 	padding-bottom: 5%;
 }
-.row{
-	padding-left: 8%;
-	padding-right: 8%;
-	padding-bottom: 5%;
 
-}
 .row p.price{
 	text-align: right;
 }

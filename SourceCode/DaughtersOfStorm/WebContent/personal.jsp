@@ -47,7 +47,7 @@
 				</div>
 			</div>
 
-	<br/><br/>	
+	
         
         <s:set name="web" value="check"/>
         <s:if test="%{#web=='form2'}">
@@ -136,7 +136,7 @@
         </s:elseif>
 		</div>		
 	</div>				
-		
+	<jsp:include page="footer.jsp" />
 	
 </body>
 </html> 

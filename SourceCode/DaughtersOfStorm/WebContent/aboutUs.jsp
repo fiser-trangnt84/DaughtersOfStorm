@@ -26,7 +26,7 @@
 		<div class="videoBg">
 			<h1> What our clients say about us? </h1>
 			<div class="video" id="container" >
-				<video loop muted id="bgvid">
+				<video loop id="bgvid">
 					<source src="video/flowers.mp4" type="video/mp4">
 				</video>
 				<div class="contentvideo">
@@ -211,23 +211,6 @@
 		</div>
 
 	</div>
-	<footer>
-		<div class="row">
-			<div class="col-md-4 shipping"><a href=""><span>SHIPPING SERVICE</span></a></div>
-			<div class="col-md-4 social">
-				<a href=""><i class="fa fa-facebook"></i></a>
-				<a href=""><i class="fa fa-twitter"></i></a>
-				<a href=""><i class="fa fa-google-plus"></i></a>
-				<a href=""><i class="fa fa-rss"></i></a>
-			</div>
-			<div class="col-md-4 service">
-				<a href=""><span>CUSTOMER SERVICE</span></a>
-				<i class="fa fa-phone"></i>
-				<span class="phone"> 888 888 888</span>
-			</div>
-
-		</div>
-	</footer>
-
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

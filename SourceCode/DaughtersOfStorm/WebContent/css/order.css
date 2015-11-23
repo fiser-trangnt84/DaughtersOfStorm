@@ -1,4 +1,8 @@
-/**/
+.container {
+    width: 1170px;
+    padding-bottom: 100px;
+}
+
 .info{
 	font-size: 20px;	
 	font-weight: normal;	
