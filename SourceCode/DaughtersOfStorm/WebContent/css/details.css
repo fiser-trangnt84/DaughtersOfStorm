@@ -56,9 +56,11 @@ p.pad1{
 	font-size: 20px;
 	padding-left:1px;
 }
-input.cmt{
-	color:white;
-	background-color:#757575;
+.cmt{
+	color:black;
+	background-color:#eaeae1;
+	hieght:-0.1px !important;
+	width:20px;
 }
 input.cmt1{
 	background-color:#B8B894;
@@ -117,9 +119,9 @@ p.vote{
    height:50px;
   
    text-align:center;
-   font-size:30px;
-   
+   font-size:30px; 
 }
+
 table.fontsize{
 	 border=1;
 	 cellspacing=20;
@@ -154,10 +156,10 @@ input.Order {
 	border: 1px solid #f3f3ed; 
    width:280px;
    height:50px;
-   background:#a4a4a4;
+   background:#eaeae1;
    text-align:center;
    font-size:30px;
-   color:#ffffff;
+   color:#2b2b21;
   }
  #wrapphoto {
 	width:250px;
@@ -192,7 +194,13 @@ img.photoslide {
 	padding-left:20px;
 }
 
-
+.guide{
+	margin-left:20px;
+}
+.btn-info {
+	background-color: #337ab7 !important;
+	width:120px !important;
+}
 .icon-add {
 	margin-top: 20px;
     margin-left: 30px

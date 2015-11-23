@@ -79,40 +79,43 @@
           			    <s:url namespace='/' action='order'>
 		                    <s:param name="productCode"><s:property value="productId" /></s:param>
 		                </s:url>" style="text-decoration: none"> 
-		             <div id="wraporder">ORDER</div></a>
+		             <button class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">ORDER</button>
+		             </a>
 			   </div>
 			</div>
 			<div class="col-sm-4" >
 				
 				<p class="pad">
-					<input class="cmt"type="button" value = "1">  Nationwide Delivery
+					<button class="cmt">1 </button> Nationwide delivery
 				</p>
 				<p class="pad1">
-					<input class="cmt"type="button" value = "2">  Payment on delivery
+					<button class="cmt">2</button>  Payment on delivery
 				</p>
 				<p class="pad1">
-					<input class="cmt"type="button" value = "3">  Swap and pay on 7 day
+					<button class="cmt">3</button>  Swap and pay on 7 day
 				</p>
 				<p class="pad1">
-					<input class="cmt"type="button" value = "4">  Immediate cash payment
+					<button class="cmt">4</button>  Immediate cash payment
 				</p>
 				<p class="pad1">
-					<input class="cmt"type="button" value = "5">  Quality guaranteed
+					<button class="cmt">5</button>  Quality guaranteed
 				</p>
 				<p class="pad1">
-					<input class="cmt"type="button" value = "6">  Commitment shaped products
+					<button class="cmt">6</button>  Commitment shaped products
 				</p>
-				
+				<p class="pad1">
 					<div id="wrapguide">Shopping guide </div>
-			
-				<ol style="1">
-					
-					<li ><p style="padding-top:10px;font-size:20px">Direct purchase on the website<p></li>
-					
-					<li><p style="padding-top:10px;font-size:20px">Call 18008168 to Order</li>
-					
-					
-				</ol>
+						<div class="guide">
+							<ol style="1">
+								
+								<li ><p style="padding-top:10px;font-size:20px">Direct purchase on the website<p></li>
+								
+								<li><p style="padding-top:10px;font-size:20px">Call 18008168 to Order</li>
+								
+								
+							</ol>
+						</div>
+				
 				
 			</div>
 		</div>
