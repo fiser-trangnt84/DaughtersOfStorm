@@ -27,18 +27,20 @@ public class AddCartAction extends ActionSupport implements SessionAware {
         	if (rs.next()){
         		int pd = rs.getInt("productCode");
         		if(pd == productCode) return ret;
-        		sql = "INSERT INTO usercarts(cartId, productCode, userId)"
-        				+ " VALUES (?, ?, ?)";
-        		ps = conn.prepareStatement(sql);
-        		ps.setInt(1, rs.getInt("cartId"));
-        		ps.setInt(2, productCode);
-        		ps.setInt(3, userId);
-        		int result = ps.executeUpdate();   
-        		
-        		if (result != 0){
-        			ret = SUCCESS;
-        		}
         	}
+        	
+    		sql = "INSERT INTO usercarts(cartId, productCode, userId)"
+    				+ " VALUES (?, ?, ?)";
+    		ps = conn.prepareStatement(sql);
+    		ps.setInt(1, rs.getInt("cartId"));
+    		ps.setInt(2, productCode);
+    		ps.setInt(3, userId);
+    		int result = ps.executeUpdate();   
+    		
+    		if (result != 0){
+    			ret = SUCCESS;
+    		}
+        
         } catch (Exception e){
         	e.printStackTrace();
         }

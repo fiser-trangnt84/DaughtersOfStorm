@@ -27,18 +27,19 @@ public class AddFavoriteAction extends ActionSupport implements SessionAware {
         	if (rs.next()){
         		int pd = rs.getInt("productCode");
         		if (pd == productCode) return ret;
-        		sql = "INSERT INTO favoritelists(favoriteNumber, productCode, userId)"
-        				+ " VALUES (?, ?, ?)";
-        		ps = conn.prepareStatement(sql);
-        		ps.setInt(1, rs.getInt("favoriteNumber"));
-        		ps.setInt(2, productCode);
-        		ps.setInt(3, userId);
-        		int result = ps.executeUpdate();   
-        		
-        		if (result != 0){
-        			ret = SUCCESS;
-        		}
         	}
+    		sql = "INSERT INTO favoritelists(favoriteNumber, productCode, userId)"
+    				+ " VALUES (?, ?, ?)";
+    		ps = conn.prepareStatement(sql);
+    		ps.setInt(1, rs.getInt("favoriteNumber"));
+    		ps.setInt(2, productCode);
+    		ps.setInt(3, userId);
+    		int result = ps.executeUpdate();   
+    		
+    		if (result != 0){
+    			ret = SUCCESS;
+    		}
+        	
         } catch (Exception e){
         	e.printStackTrace();
         }
