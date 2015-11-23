@@ -1,0 +1,218 @@
+.content {
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+.content h1 {
+	font-family: Exo, sans-serif;
+	background: url("../img/aboutUs/background.png") repeat-x 0 100%;
+    padding-bottom: 24px;
+    color: #85c2bc;
+    padding-top: 35px;
+    margin-bottom: 20px;
+}
+
+/*==================================================================================================================
+VIDEO
+====================================================================================================================*/
+.video{
+	height: 480px;
+	 display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+	max-height: 480px;
+	color: #fff;
+	font-size: 40pt;
+	text-align: center;
+}
+.contentvideo .btn{
+	border-radius: 0px;
+	background-color: transparent;
+
+}
+
+.contentvideo .fa{
+	font-size: 50px;
+}
+
+.vid{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+video{
+	width: 100%;
+}
+
+#container .contentvideo {
+	position: absolute;
+	left: 0;
+	color: #FFF;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	padding: 120px 0;
+	font-weight: bold;
+}
+
+#container {
+    position: relative;
+    overflow: hidden;
+    height: 480px;
+}
+
+.contentvideo h2 {
+    font-family: Chewy;
+    font-size: 60px;
+    color: #fff;
+}
+
+/*==================================================================================================================
+Who we are
+====================================================================================================================*/
+
+img {
+	width: 100%;
+}
+
+
+.info {
+	color: #909090;
+	font-family: Oxygen, sans-serif;
+	text-align: center;
+}
+
+.info .name {
+	font-size: 25px;
+}
+
+.social-links {
+	margin-left: 80px;
+}
+.social-links a{
+    text-align: center;
+	float: left;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #909090;
+	border-radius: 100%;
+	margin-right: 7px; /*space between*/
+} 
+.social-links a i{
+	font-size: 20px;
+    line-height: 30px;
+	color: #909090;
+}
+
+.social-links a i:hover {
+    color: #C0C0C0;
+}
+
+.team2 {
+	padding: 40px;
+	margin-left: 90px;
+}
+
+.team2 .col-md-4 {
+    padding: 30px;
+}
+.team2 .social-links {
+    margin-left: 100px;
+}
+
+/*==================================================================================================================
+Hover image
+====================================================================================================================*/
+figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+
+ figure:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+
+/*==================================================================================================================
+OUR SERVICE
+====================================================================================================================*/
+
+.our-service {
+	padding-bottom: 100px;
+}
+.icon-service a{
+    text-align: center;
+	float: left;
+	width: 100%;
+	height: 65px;
+	border: 1px solid #909090;
+	border-radius: 100%;
+	margin-right: 7px; /*space between*/
+
+} 
+.icon-service a i{
+	font-size: 40px;
+    line-height: 65px;
+	color: #909090;
+}
+
+.our-service .title-service {
+	font-family: Chewy;
+	font-size: 30px;
+	color: #909090;
+}
+
+.service2 {
+	padding-top: 30px;
+}
+
+.icon-service a i:hover {
+    color: #85c2bc;
+}
+
+.icon-service a:hover {
+	border: 1px solid #85c2bc;
+	color: #85c2bc;
+}
+

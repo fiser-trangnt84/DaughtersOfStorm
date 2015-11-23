@@ -13,12 +13,11 @@ header {
 }
 
 .logo h1 {
-	font-family: 'Mountains of Christmas', cursive;
+	font-family: Mountain, sans-serif;
 	font-weight: 600;
 	text-align: center;
 	font-size: 95px;
 	color: #B02D15;
-	//color: #DE831B;
 	margin-top: -25px;
 }
 

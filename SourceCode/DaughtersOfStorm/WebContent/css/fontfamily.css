@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Exo;
+    src: url('font/Exo-Regular.ttf');
+}
+
+@font-face {
+    font-family: Oxygen;
+    src: url('font/Oxygen-Bold.ttf');
+}
+
+@font-face {
+    font-family: Chewy;
+    src: url('font/Chewy.ttf');
+}
+
+@font-face {
+    font-family: Mountain;
+    src: url('font/MountainsofChristmas-Bold.ttf');
+}
