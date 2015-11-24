@@ -62,6 +62,10 @@
 			</result>
 			<result name="error">%{currentPage}</result>
 		</action>
+		<action name="review" class="com.storm.demo.ReviewAction">
+			<result name="success">%{currentPage}</result>
+			<result name="error">%{currentPage}</result>
+		</action>
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>

@@ -39,19 +39,22 @@
 					<div id="wrapbutton">Rating:</div>
 					</div>
 					<div class="col-sm-5 " style="padding-left: 160px; padding-top: 3px">
+					<form name="rating">
 						<span class="starRating">
-							<input id="5" type="radio" name="rating" value="5" onclick="chay(id)" checked>
+							<input id="5" type="radio" name="rating" value="5" onclick="callAction(id)" checked>
 							<label for="5"></label>
-							<input id="4" type="radio" name="rating" value="4" onclick="chay(id)">
+							<input id="4" type="radio" name="rating" value="4" onclick="callAction(id)">
 							<label for="4"></label>
-							<input id="3" type="radio" name="rating" value="3" onclick="chay(id)">
+							<input id="3" type="radio" name="rating" value="3" onclick="callAction(id)">
 							<label for="3"></label>
-							<input id="2" type="radio" name="rating" value="2" onclick="chay(id)">
+							<input id="2" type="radio" name="rating" value="2" onclick="callAction(id)">
 							<label for="2"></label>
-							<input id="1" type="radio" name="rating" value="1" onclick="chay(id)">
+							<input id="1" type="radio" name="rating" value="1" onclick="callAction(id)">
 							<label for="1"></label>
 							<input id="Medium" value="5">
+							<input name ="productId" value="<s:property value="productId"/>">
 						 </span>
+					</form>
 					</div>
 				</div>
 				<p>
