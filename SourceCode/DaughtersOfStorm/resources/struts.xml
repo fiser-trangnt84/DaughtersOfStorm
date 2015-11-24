@@ -69,5 +69,11 @@
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>
+        <action name="order1" class="com.storm.demo.OrderAction" method="execute1">
+        	<result name="success"></result>
+        </action>
+        <action name="order2" class="com.storm.demo.OrderAction" method="execute2">
+        	<result name="success">/order.jsp</result>
+        </action>
    </package>
 </struts>
