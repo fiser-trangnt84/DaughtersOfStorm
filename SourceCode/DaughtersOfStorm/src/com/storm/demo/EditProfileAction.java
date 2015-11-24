@@ -21,7 +21,7 @@ public class EditProfileAction extends ActionSupport {
 	private String Username;
 	private String Name;
 	
-	private String userId;
+	private int userId;
 	private String Email;
 	private String phoneNumber;
 	private String address;
@@ -48,18 +48,13 @@ public class EditProfileAction extends ActionSupport {
 		this.check = check;
 	}
 
-
-
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-
-
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
 
 	public String demo(){
 		return SUCCESS;
@@ -102,7 +97,7 @@ public class EditProfileAction extends ActionSupport {
         HttpServletRequest request=ServletActionContext.getRequest();  
         HttpSession session=request.getSession();  
         Username =(String)session.getAttribute("username"); 
-        userId = (String)session.getAttribute("userId");
+        userId = (int)session.getAttribute("userId");
     }
 
 	public String execute(){
@@ -120,7 +115,7 @@ public class EditProfileAction extends ActionSupport {
       	  	ps.setString(2, Email);
       	  	ps.setString(3, phoneNumber); 
             ps.setString(4, address); 
-            ps.setString(5, userId); 
+            ps.setInt(5, userId); 
       	  	ps.executeUpdate();
       	  	ret = SUCCESS;
       	  		

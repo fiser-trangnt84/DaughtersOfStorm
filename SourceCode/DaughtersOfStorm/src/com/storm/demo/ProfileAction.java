@@ -28,10 +28,10 @@ public class ProfileAction implements SessionAware {
 		int id;     
 		Connection A= ConnectionDB.getConnection();
 		try {
-			id = (int) sessionmap.get("userId");
+			id = (int)sessionmap.get("userId");
 			Statement B= A.createStatement();
 			String C="select fullName,email,phoneNumber,address,userName from users where userId = "+id  ;
-			ResultSet D= B.executeQuery(C);//
+			ResultSet D= B.executeQuery(C);
 			while(D.next()){
 				Name = D.getString("fullName");
 				Email = D.getString("email");
