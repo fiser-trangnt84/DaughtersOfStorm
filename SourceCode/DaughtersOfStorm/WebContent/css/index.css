@@ -1,5 +1,5 @@
-header li a:active {
-    color: #85c2bc;
+header li.active a{
+    color: #85c2bc !important;
 }
 /*
 * Content

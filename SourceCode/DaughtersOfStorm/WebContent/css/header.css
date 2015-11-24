@@ -78,7 +78,9 @@ li a:active, li a:focus {
 	font-size: 20px;
 	text-transform: uppercase;
 }
-
+i.fa.fa-trash-o {
+    font-size: 20px;
+}
 /* Icon Bounce */
 .hvr-icon-bounce {
   display: inline-block;

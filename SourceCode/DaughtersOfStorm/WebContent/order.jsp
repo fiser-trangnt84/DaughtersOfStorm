@@ -46,13 +46,13 @@
 <body>
   <jsp:include page="header.jsp" />
 
-  <div class="container" style="height:500px">
+  <div class="container">
     <div class = "row" style = "padding: 10px">
       <div class= "col-md-5 ">
         <span class="info" style="width:20px">Product: <s:property value="productName" />
          <br> <span class="info" style="margin-left: 0px">
           Price: </span>
-        <s:property value="buyPrice" />
+        <s:property value="buyPrice" /> $
         <br>
         <div class="row">
           <div class="col-md-4" >
@@ -88,21 +88,21 @@
             </select>
           </div>
         </div>
-      
+       <p class ="cus-Info"> Customer's information </p>
+  <div class="row">
+    <div class= "col-md-6 form-group ">
+      <input type="text" class="form-control" id="email" placeholder="Your full name" <s:property value="recipientName"/>><br>
+      <input type="text" class="form-control" id="pwd" placeholder="Phone number" <s:property value="recipientPhoneNumber"/>><br>
+      <input type="text" class="form-control" id="pwd" placeholder="Address" <s:property value="recipientAddress"/>>
+    </div>
+  </div>
       </div>
       <div class = " col-md-7">
         <img id="order-picture" src="<s:property value="imgUrl" />" style="width:300px;hight:13
         00px" >
       </div>
     </div>  
-  <p class = "cus-Info"> Customer's information </p>
-  <div class="row">
-    <div class= "col-md-6 form-group " style = "width: 35%">
-      <input type="text" class="form-control" id="email" placeholder="Your full name" <s:property value="recipientName"/>><br>
-      <input type="text" class="form-control" id="pwd" placeholder="Phone number" <s:property value="recipientPhoneNumber"/>><br>
-      <input type="text" class="form-control" id="pwd" placeholder="Address" <s:property value="recipientAddress"/>>
-    </div>
-  </div>
+ 
   
 
   <br><br>
@@ -154,7 +154,7 @@
     </div>
   </div>
   
- 
+ <jsp:include page="footer.jsp" />
 
 </body>
 </html>
