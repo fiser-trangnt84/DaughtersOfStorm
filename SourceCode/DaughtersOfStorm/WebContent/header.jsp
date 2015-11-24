@@ -97,7 +97,7 @@
 		<div class="logo"><a href="index.jsp"><h1>STORM</h1></a></div>
 		<nav class="navbar">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.jsp" class="hvr-underline-from-center">Home</a></li>
+		        <li><a href="index.jsp" class="hvr-underline-from-center">Home</a></li>
 		        <li><a class="hvr-underline-from-center"
 		        	   href="
 		        	   	<s:url namespace='/' action='printListProduct'>

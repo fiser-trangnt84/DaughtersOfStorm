@@ -72,7 +72,7 @@
 		<div class="row introType">
 			<div class="col-md-8">
 				<div class="row"> 
-					<div class="col-md-6">
+					<div class="col-md-6 figure">
 						<a id="link-image" href="
 							<s:url namespace='/' action='printListProduct'>
 		        	   			<s:param name="type">Top</s:param>
@@ -81,35 +81,113 @@
 						<img class="hvr-bounce-to-right" src="img/home/type/top.jpg"></a>
 						<button class="btn btn-default type-button">TOP</button>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 figure">
 						<a id="link-image" href="
 							<s:url namespace='/' action='printListProduct'>
-		        	   			<s:param name="type">Cheap</s:param>
+		        	   			<s:param name="type">New</s:param>
 		        	   		</s:url>
 						"><img src="img/home/type/shirt.jpg"></a>
-						<button class="btn btn-default type-button">CHEAP</button>
+						<button class="btn btn-default type-button">NEW</button>
 					
 					</div>
 				</div>
-				<div class="row play">
+				<div class="row play figure">
 					<a id="link-image" href="
 						<s:url namespace='/' action='printListProduct'>
-		        	   		<s:param name="type">Sport</s:param>
+		        	   		<s:param name="type">Sale</s:param>
 		        	   	</s:url>
 					"><img src="img/home/type/player.jpg"></a>
-					<button class="btn btn-default type-button play-button">SPORT</button>
+					<button class="btn btn-default type-button play-button">SALE</button>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 figure">
 				<a id="link-image" href="
 					<s:url namespace='/' action='printListProduct'>
-		        	   		<s:param name="type">Style</s:param>
+		        	   		<s:param name="type">Trend</s:param>
 		        	</s:url>
 				"><img src="img/home/type/art.jpg"></a>
-				<button class="btn btn-default type-button">STYLE</button>
+				<button class="btn btn-default type-button">TREND</button>
 			</div>
 			
 		</div>
+		
+		<div class="our-service">
+			<h1> Our Service </h1>
+			<p class="description"></p>
+			<div class="row">
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-shopping-cart"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> Easy shopping
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-comment-o"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> 24/7 Support
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-truck"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> Fast Shipping
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--row2 copy -->
+			<div class="row service2">
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-rocket"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> Update
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-heart"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> Customer is No.1
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+				<div class="row col-md-4">
+					<div class = " col-md-4 icon-service">
+						<a href=""><i class="fa fa-thumbs-o-up"></i></a>
+					</div>
+					<div class= "col-md-8 content-service">
+						<div class="title-service"> Reliable Service
+						</div>
+						<div class="des-service">  Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
 
 	</div>
 
