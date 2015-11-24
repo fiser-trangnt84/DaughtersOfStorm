@@ -33,7 +33,7 @@
 		        	</s:url>
 					" onclick="">Profile</a>
 					<a id="link2" href="
-					<s:url namespace='/' action='cart.action'>
+					<s:url namespace='/' action='cart'>
 		        	</s:url>
 					" onclick="">My bag</a>
 					<a id="linkactive" href="
@@ -86,7 +86,10 @@
 					 	</a>
 					</div>
 					<div class="col-md-2 icon">
-						<a href="#"><i class="fa fa-trash-o"></i></a>
+						<a href="<s:url namespace='/' action='deleteFollowing'>
+			        			<s:param name="productCode"><s:property value="productCode"/></s:param>
+			        			</s:url>">
+			        	<i class="fa fa-trash-o"></i></a>
 					</div>
 					<hr>
 				</div>

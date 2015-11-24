@@ -50,6 +50,18 @@
 			<result name="success">%{currentPage}</result>
 			<result name="error">%{currentPage}</result>
 		</action>
+		<action name="deleteCart" class="com.storm.demo.DeleteCartAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">cart</param>
+			</result>
+			<result name="error">%{currentPage}</result>
+		</action>
+		<action name="deleteFollowing" class="com.storm.demo.DeleteFollowingAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">following</param>
+			</result>
+			<result name="error">%{currentPage}</result>
+		</action>
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">/order.jsp</result>
         </action>

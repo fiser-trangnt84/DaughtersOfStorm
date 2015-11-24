@@ -4,11 +4,9 @@ $(document).ready(function(){
 
     $(".icon a").click(function(event){
         if(confirmDelete()) {
-            event.preventDefault();
             $(this).parent().parent().fadeOut(400);;
             numItems--;
             $('h5.countItems').text("The number of items: " + numItems);
-
         } 
     });
     var username= $('#username').text();

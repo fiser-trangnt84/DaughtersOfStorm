@@ -23,12 +23,12 @@ public class CartAction extends ActionSupport implements SessionAware{
 	    Connection conn = ConnectionDB.getConnection();
 
 	      try {
-	    	userId = (int) sessionMap.get("userId");
+	    	userId = Integer.parseInt(sessionMap.get("userId").toString());
 	        arrProduct = new ArrayList<Product>();
 	        String sql = "SELECT P.* FROM usercarts U JOIN products P "
 	        		+ "ON P.productCode = U.productCode WHERE U.userId = ?";	        
 	        PreparedStatement ps = conn.prepareStatement(sql);
-	        ps.setInt(1, getUserId());
+	        ps.setInt(1, userId);
 	        ResultSet rs = ps.executeQuery();
 	        Product p = new Product();
 	        while (rs.next()) {
