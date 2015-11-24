@@ -10,7 +10,7 @@
 <body>
 	<footer>
 		<div class="row">
-			<div class="col-md-4 shipping"><a href=""><span>CONTACT US</span></a></div>
+			<div class="col-md-4 shipping"><a href="contact.jsp"><span>CONTACT US</span></a></div>
 			<div class="col-md-4 social">
 				<a href=""><i class="fa fa-facebook"></i></a>
 				<a href=""><i class="fa fa-twitter"></i></a>
