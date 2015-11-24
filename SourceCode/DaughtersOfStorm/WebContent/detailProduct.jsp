@@ -36,9 +36,10 @@
 				
 				<div class="row">
 					<div class="col-sm-3" style="padding-left: 135px">
-					<div id="wrapbutton">Rating:</div>
+					<div id="wrapbutton">Rating: <s:property value="average"/></div>
 					</div>
-					<div class="col-sm-5 " style="padding-left: 160px; padding-top: 3px">
+					<br/>
+					<div class="col-sm-5 " style="padding-left: 160px; padding-top: 3px" align="middle">
 					<form name="rating">
 						<span class="starRating">
 							<input id="5" type="radio" name="rating" value="5" onclick="callAction(id)" checked>

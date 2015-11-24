@@ -15,7 +15,6 @@ public class ReviewAction extends ActionSupport{
 	
 	public String execute() {
 		String ret = ERROR;
-		System.out.println(productId + " " + rating);
 		Connection conn = null;
 		try {
 			conn = ConnectionDB.getConnection();
