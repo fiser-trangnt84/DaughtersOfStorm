@@ -198,9 +198,15 @@ img.photoslide {
 .guide{
 	margin-left:20px;
 }
+.btn:hover {
+    color: white;
+    text-decoration: none;
+    border-color: #337ab7 !important;
+}
 .btn-info {
 	background-color: #337ab7 !important;
 	width:120px !important;
+	border-color: #337ab7 !important;
 }
 .icon-add {
 	margin-top: 20px;

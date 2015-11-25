@@ -75,11 +75,15 @@ input.ed {
 .btn:hover {
     color: white;
     text-decoration: none;
+    border-color: #337ab7 !important;
 }
 .edit {
 	padding-left:350px;
 }
 .submit {
 	padding-top:12px;
-	padding-left:388px;
+	padding-left:385px;
+}
+.btn-info{
+	border-color: #337ab7 !important;
 }
