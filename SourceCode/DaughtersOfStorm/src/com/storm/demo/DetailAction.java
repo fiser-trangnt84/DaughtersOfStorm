@@ -49,7 +49,7 @@ public class DetailAction extends ActionSupport implements SessionAware{
 	           urlImg = rs.getString("images");
 	           quantitySold = rs.getInt("quantitySold");
 	           design = rs.getString("productMaterial");	
-	           averageReviews(conn);
+	           setAverage(averageReviews(conn));
 	        }
 	       
 	    } catch (Exception e) {
@@ -60,25 +60,27 @@ public class DetailAction extends ActionSupport implements SessionAware{
 	
 	}
 	
-	public void averageReviews(Connection conn){
+	public double averageReviews(Connection conn){
+		double temp = 0;
 		String sql = "SELECT * FROM votes WHERE productCode =" + productCode;
-		 PreparedStatement ps;
+		PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()){
-				int oneStars = rs.getInt(2);
-				int twoStars = rs.getInt(3);
+				int oneStars = rs.getInt(6);
+				int twoStars = rs.getInt(5);
 				int threeStars = rs.getInt(4);
-				int fourStars = rs.getInt(5);
-				int fiveStars = rs.getInt(6);
-				average = (oneStars + twoStars * 2 + threeStars * 3 + fourStars * 4 + fiveStars * 5)
-						/(oneStars + twoStars + threeStars + fourStars + fiveStars) * 2;
+				int fourStars = rs.getInt(3);
+				int fiveStars = rs.getInt(2);
+				temp = (oneStars + twoStars * 2 + threeStars * 3 + fourStars * 4 + fiveStars * 5) * 2
+						/(oneStars + twoStars + threeStars + fourStars + fiveStars);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 		 
+		} 
+		return temp;
 	}
 	
 	public int getQuantitySold() {

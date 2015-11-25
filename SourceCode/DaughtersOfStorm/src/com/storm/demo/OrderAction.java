@@ -55,6 +55,7 @@ public class OrderAction extends ActionSupport implements SessionAware{
 		 Connection conn = ConnectionDB.getConnection();
 	     try {	       
 	       userId = (int) sessionmap.get("userId");
+	       productCode = (int)sessionmap.get("productCode");
 	       String sql = "insert  into  orders (orderdate, status,comments,userId) values(?,?,?,?)";
 	       PreparedStatement ps = conn.prepareStatement(sql);
 	       ps.setString(1,orderDate);
@@ -64,13 +65,11 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	       ps.executeUpdate();
 
 	       ResultSet rs = ps.executeQuery("select max(orderNumber) as last from orders");
-	       int last_id = rs.next()? rs.getInt(1):1;
+	       int orderNumber = rs.next()? rs.getInt(1):1;
 	       
-	       sql = "INSERT INTO orderdetails"
-	       		+ "(orderNumber,productCode,quantityOrdered,recipientName,recipientPhoneNumber,recipientAddress) "
-	       		+ "VALUES (?, ?, ?, ?, ?, ?)";
+	       sql = "INSERT INTO orderdetails VALUES (?, ?, ?, ?, ?, ?)";
     	   ps = conn.prepareStatement(sql);
-    	   ps.setInt(1, last_id);
+    	   ps.setInt(1, orderNumber);
     	   ps.setInt(2, productCode);
     	   ps.setInt(3,quantity);
     	   ps.setString(4,recipientName);
