@@ -21,7 +21,7 @@
 <body>
   <jsp:include page="header.jsp" />
 
-  <div class="container">
+  <div class="content">
   <form action="submitOrder" method="post">
     <div class = "row" style = "padding: 10px">
       <div class= "col-md-6 ">
@@ -66,22 +66,21 @@
             </select>
           </div>
         </div>
+         <p class = "cus-Info"> Customer's information </p>
+		  <div class="row">
+		    <div class= "form-group col-md-10">
+		      <input type="text" class="form-control" placeholder="Your full name" name="recipientName" required><br>
+		      <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
+		      <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
+		    </div>
+  </div> 
       </div>
       <div class = " col-md-6">
-        <img id="order-picture" src="<s:property value="imgUrl" />" style="width:300px;hight:13
-        00px" >
+        <img id="order-picture" src="<s:property value="imgUrl" />">
       </div>
     </div>  
-  <p class = "cus-Info"> Customer's information </p>
-  <div class="row">
-    <div class= "col-md-6 form-group ">
-      <input type="text" class="form-control" placeholder="Your full name" name="recipientName" required><br>
-      <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
-      <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
-    </div>
-  </div> 
+ 
 
-  <br><br>
   <div class="posiOfButton">
     
     <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">
