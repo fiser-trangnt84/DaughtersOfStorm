@@ -67,13 +67,16 @@
 			<result name="error">%{currentPage}</result>
 		</action>
         <action name="order" class="com.storm.demo.OrderAction">
-        	<result name="success">/order.jsp</result>
+        	<result name="success">order.jsp</result>
+        	<result name="error">order.jsp</result>
         </action>
-        <action name="order1" class="com.storm.demo.OrderAction" method="execute1">
-        	<result name="success"></result>
+        <action name="showInforOrder" class="com.storm.demo.OrderAction" method="showInforOrder">
+        <result name="success">order.jsp</result>
+        	<result name="error">order.jsp</result>
         </action>
-        <action name="order2" class="com.storm.demo.OrderAction" method="execute2">
+        <action name="submitOrder" class="com.storm.demo.OrderAction" method="submitOrder">
         	<result name="success">/order.jsp</result>
+        	<result name="error">order.jsp</result>
         </action>
    </package>
 </struts>
