@@ -2,30 +2,35 @@ package com.storm.demo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import java.sql.Connection;
 
 import com.storm.bean.Product;
 import com.opensymphony.xwork2.ActionSupport;
-public class DetailAction extends ActionSupport {
+public class DetailAction extends ActionSupport implements SessionAware{
 
 	private static final long serialVersionUID = 1L;
-	private int productId;
+	private int productCode;
 	private String proName;
 	private int proPrice;
 	private String urlImg;
 	private String design;
 	private int quantitySold;
 	private double average;
-	
+	private Map<String, Object> sessionMap;
 	public String execute(){
 		String ret = SUCCESS;
 	    Connection conn = null;
 
 	      try {
+	    	sessionMap.put("productCode", productCode);
 		    conn = ConnectionDB.getConnection();
 	        String sql = "SELECT * FROM products WHERE productCode = ?";
 	        PreparedStatement ps = conn.prepareStatement(sql);
-	        ps.setInt(1, productId);
+	        ps.setInt(1, productCode);
 	        ResultSet rs = ps.executeQuery();
 	        Product p = new Product();
 	        while (rs.next()) {
@@ -50,7 +55,7 @@ public class DetailAction extends ActionSupport {
 	}
 	
 	public void averageReviews(Connection conn){
-		String sql = "SELECT * FROM votes WHERE productCode =" + productId;
+		String sql = "SELECT * FROM votes WHERE productCode =" + productCode;
 		 PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(sql);
@@ -110,12 +115,12 @@ public class DetailAction extends ActionSupport {
 		this.proPrice = proPrice;
 	}
 
-	public int getProductId() {
-		return productId;
+	public int getProductCode() {
+		return productCode;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setProductCode(int productCode) {
+		this.productCode = productCode;
 	}
 
 	public double getAverage() {
@@ -124,5 +129,11 @@ public class DetailAction extends ActionSupport {
 
 	public void setAverage(double average) {
 		this.average = average;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		this.sessionMap = arg0;
 	}
 }
