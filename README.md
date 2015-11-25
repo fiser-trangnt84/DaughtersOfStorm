@@ -1,5 +1,5 @@
 Team: DaughtersOfStorm 
-Project: Website about shopping online - Storm
+<br> Project: Website about shopping online - Storm <br>
 Member: 
 - Nguyen Thi Trang (trangnt84)
 - Doan Thi Hien
