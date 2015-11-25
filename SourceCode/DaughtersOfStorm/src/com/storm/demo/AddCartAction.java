@@ -30,7 +30,9 @@ public class AddCartAction extends ActionSupport implements SessionAware {
         	ResultSet rs = ps.executeQuery();
         	if (rs.next()){
         		int pd = rs.getInt("productCode");
-        		if(pd == productCode) return ret;
+        		if(pd != 0 && pd == productCode) {
+        			return ret;
+        		}
         	}
         	
     		sql = "INSERT INTO usercarts(cartId, productCode, userId)"
