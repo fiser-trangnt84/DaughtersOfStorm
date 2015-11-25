@@ -58,7 +58,7 @@
 					</div>
 					<div class="col-md-3">
 						<a id="name" href="<s:url namespace='/' action='detailProduct'>
-							  <s:param name="productId"><s:property value="productCode" /></s:param>
+							  <s:param name="productCode"><s:property value="productCode" /></s:param>
 						    </s:url>"><strong><s:property value="productName"/></strong></a>						 	
 						<p class="price"><s:property value="buyPrice"/>$</p>
 						<p class="state">
@@ -81,7 +81,7 @@
 					<div class="col-md-2">
 						<a class = "btn" href="
 						 	<s:url namespace='/' action='order'>
-							  <s:param name="productId"><s:property value="productCode"/></s:param>
+							  <s:param name="productCode"><s:property value="productCode"/></s:param>
 						    </s:url>
 						">Buy Now
 					 	</a>

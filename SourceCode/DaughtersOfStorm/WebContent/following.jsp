@@ -80,7 +80,7 @@
 					<div class="col-md-2">
 						<a class="btn" href="
 						 	<s:url namespace='/' action='order'>
-							  <s:param name="productId"><s:property value="productCode"/></s:param>
+							  <s:param name="productCode"><s:property value="productCode"/></s:param>
 						    </s:url>
 						">Buy Now
 					 	</a>
