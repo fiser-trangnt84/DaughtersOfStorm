@@ -16,58 +16,31 @@
   <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
   <script src="js/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    //Hide div w/id extra
-     $("#repci").css("display","none");
-    $("#form-repci").click(function(){
-      $("#repci").show("fast");
-    });
-    // Add onclick handler to checkbox w/id checkme
-     $("#checkme").click(function(){
-  
-    // If checked
-    if ($("#checkme").is(":checked"))
-    {
-      //show the hidden div
-      $("#repci").hide("fast");
-    }
-    else
-    {
-      //otherwise, hide it
-      $("#repci").show("fast");
-    }
-    });
-  });
-   
-   
-  </script>
+  <!-- <script src="js/order.js"></script> -->
   </head>
 <body>
   <jsp:include page="header.jsp" />
 
   <div class="container">
+  <form action="showInforOrder" method="post">
     <div class = "row" style = "padding: 10px">
       <div class= "col-md-5 ">
-        <span class="info" style="width:20px">Product: <s:property value="productName" />
-         <br> <span class="info" style="margin-left: 0px">
-          Price: </span>
-        <s:property value="buyPrice" /> $
+        <span class="info" style="width:20px">Product: <s:property value="productName" /></span>
         <br>
         <div class="row">
           <div class="col-md-4" >
             <label class = "info" >Quantity:</label>
           </div>
           <div class="col-md-8 input-quantity" >
-            <input class="form-control" type="text" style ="position: left" <s:property value="quantity"/>></input>
+            <input class="form-control" type="text" style ="position: left" name="quantity" required></input>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4"  >
-            <label class = "info size " >Size:</label>
+            <label class = "info size ">Size:</label>
           </div>
-          <div class="col-md-8 resultOfSize" <s:property value="size"/>>
-            <select class="form-control" >
+          <div class="col-md-8 resultOfSize" >
+            <select class="form-control" name="productSize">
               <option>S</option>
               <option>M</option>
               <option>L</option>
@@ -79,8 +52,8 @@
           <div class=" col-md-4"  >
             <label class = "info size " >Color:</label>
           </div>
-          <div class="col-md-8 resultOfSize" <s:property value="color"/>>
-            <select class="form-control" >
+          <div class="col-md-8 resultOfSize">
+            <select class="form-control"  name="productColor">
               <option style = "background-Color: #80CCFF">Blue</option>
               <option style = "background-Color:  #FFCCCC">Pink</option>
               <option style = "background-Color:  rgba(22, 25, 27, 0.75);">Dark gray</option>
@@ -88,39 +61,36 @@
             </select>
           </div>
         </div>
-       <p class ="cus-Info"> Customer's information </p>
+      
+      </div>
+    </div>  
+  <p class = "cus-Info"> Customer's information </p>
   <div class="row">
     <div class= "col-md-6 form-group ">
-      <input type="text" class="form-control" id="email" placeholder="Your full name" <s:property value="recipientName"/>><br>
-      <input type="text" class="form-control" id="pwd" placeholder="Phone number" <s:property value="recipientPhoneNumber"/>><br>
-      <input type="text" class="form-control" id="pwd" placeholder="Address" <s:property value="recipientAddress"/>>
+      <input type="text" class="form-control" placeholder="Your full name" name="recipientName" required><br>
+      <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
+      <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
     </div>
   </div>
-      </div>
+  </div>
       <div class = " col-md-7">
         <img id="order-picture" src="<s:property value="imgUrl" />" style="width:300px;hight:13
         00px" >
       </div>
     </div>  
- 
-  
 
   <br><br>
-  <div class="posiOfButton" href = <s:action name="order1"/>>
+  <div class="posiOfButton">
     
-    <button type="button" class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">
-    Submit</button> 
+    <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">
   </div>
-
+</form>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog"  >
-    <a href = "
-                    <s:url namespace='/' action='order2'>
-                        <s:param name="productCode"><s:property value="productId" /></s:param>
-                    </s:url>" > </a>
     <div class="modal-dialog">
     
       <!-- Modal content-->
+      <form action="submitOrder" method="post">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -135,9 +105,9 @@
               <label class ="infor-details">Product:  <s:property value="productName" /></label><br>
               <label class ="infor-details">Color: <s:property value="productColor" /></label><br>
               <label class ="infor-details">Size: <s:property value="productSize" /></label><br> 
-              <label class ="infor-details">Price: <s:property value="buyPrice" /></label><br>
+              <label class ="infor-details">Price: <s:property value="total" />$</label><br>
               <label class ="infor-details">Fee Ship: 1$</label><br>
-              <label class ="infor-details">Total Payment: <s:property value="buyPrice + 1" />$</label>
+              <label class ="infor-details">Total Payment: <s:property value="total + 1" />$</label>
             </div>
             <div class="col-sm-6"  >
               <img id="order-picture" src="<s:property value="imgUrl" />" >
@@ -146,10 +116,11 @@
         </div>
         <div class="modal-footer">
           <div class= "footer-button ">
-            <button type="button" class="btn btn-x btn-success btn-lg" data-dismiss="modal" >Confirm</button>
+            <input type="submit" value="Confirm" class="btn btn-x btn-success btn-lg" data-dismiss="modal" >
           </div>
         </div>
       </div>
+      </form>
     </div>
     </div>
   </div>

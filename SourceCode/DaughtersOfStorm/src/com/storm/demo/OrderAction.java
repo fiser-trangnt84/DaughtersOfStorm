@@ -4,178 +4,108 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
-//import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
-
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 @SuppressWarnings("serial")
 public class OrderAction extends ActionSupport implements SessionAware{
-
-	/**
-	 * 
-	 */
-	// private static final long serialVersionUID = 1L;
 	private String productName;
 	private int buyPrice;
-	String imgUrl;
-	int quantity;
-	private String size;
-	private String color;
+	private int total;
+	private String imgUrl;
+	private int quantity;
+	private String productSize;
+	private String productColor;
 	private int productCode;
 	private String orderDate;
 	private int orderNumber;
 	private String recipientName;
 	private String recipientPhoneNumber;
 	private String recipientAddress;
-	private String userId;
+	private int userId;
 	private Map<String, Object> sessionmap;
+	Connection conn = null;
 	
 	
-	public String execute() {
-		
-		Connection conn = ConnectionDB.getConnection();
-		
+	public String execute() {		
+		conn = ConnectionDB.getConnection();
 		try {
-			Statement ps = conn.createStatement();
-			String sql = "SELECT productname,buyprice,images FROM products WHERE productcode="+ productCode;
-			ResultSet rs = ps.executeQuery(sql);
-
+			
+				productCode = (int) sessionmap.get("productCode");
+			
+			String sql = "SELECT * FROM products WHERE productcode ="+ productCode;
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				productName = rs.getString("productName");
 				buyPrice = rs.getInt("buyPrice");
 				imgUrl = rs.getString("images");
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 
 		}
-		finally {
-			 if (conn != null) {
-			 try {
-			// conn.close();
-			 } catch (Exception e) {
-			 e.printStackTrace();
-			 }
-			 }
-		 }
-		
 		return "success";
 
 	}
 
-	public String execute1() {
-		  
-	     //int id = Integer.parseInt("ProductCode");
-	     Connection conn = ConnectionDB.getConnection();
+	public String submitOrder() {
 	     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		 Date date = new Date();
 		 orderDate = dateFormat.format(date);
-	     System.out.println(orderDate);
-	     int last_id = 0;
-	     int id = 0;
-	    
-	     try {
+		 if (!sessionmap.containsKey("userId")){
+				addActionError("You have to login to order!");
+				return "error";
+		}
+		 
+	     try {	       
+	       userId = (int) sessionmap.get("userId");
+	       String sql = "insert  into  orders (orderdate, status,comments,userId) values(?,?,?,?)";
+	       PreparedStatement ps = conn.prepareStatement(sql);
+	       ps.setString(1,orderDate);
+	       ps.setString(2,"Inprogress");
+	       ps.setString(3, "coming soon");
+	       ps.setInt(4, userId);
+	       ps.executeUpdate();
+
+	       ResultSet rs = ps.executeQuery("select max(orderNumber) as last from orders");
+	       int last_id = rs.next()? rs.getInt(1):1;
 	       
-	       id = (int) sessionmap.get("userId");
-	       String sql0 = "insert  into  orders (orderdate, status,comments,userId) values(?,?,?,?)";
-	       PreparedStatement ps0 = conn.prepareStatement(sql0);
-	       ps0.setString(1,orderDate);
-	       ps0.setString(2,"Inprogress");
-	       ps0.setString(3, "coming soon");
-	       ps0.setInt(4, id);
-	       ps0.executeUpdate();
-	     
-	       
-	       ResultSet rs = ps0.executeQuery("select max(orderNumber) as last from orders");
-	       if(rs.next()){
-	    	   last_id = rs.getInt(1);
-	       }
-	       
-	       String sql1 = "insert into orderdetails(ordernumber,productcode,quantityordered,recipientName,recipientPhoneNumber,recipientAddress) values(?,?,?,?,?,?)";
-    	   PreparedStatement ps1 = conn.prepareStatement(sql1);
-    	   ps1.setInt(1, last_id);
-    	   ps1.setInt(2, productCode);
-    	   ps1.setInt(3,quantity);
-    	   ps1.setString(4,recipientName);
-    	   ps1.setString(5,recipientPhoneNumber);
-    	   ps1.setString(6,recipientAddress);
-    	   ps1.executeUpdate();
-    	   
-    	   
-	    
+	       sql = "INSERT INTO orderdetails"
+	       		+ "(orderNumber,productCode,quantityOrdered,recipientName,recipientPhoneNumber,recipientAddress) "
+	       		+ "VALUES (?, ?, ?, ?, ?, ?)";
+    	   ps = conn.prepareStatement(sql);
+    	   ps.setInt(1, last_id);
+    	   ps.setInt(2, productCode);
+    	   ps.setInt(3,quantity);
+    	   ps.setString(4,recipientName);
+    	   ps.setString(5,recipientPhoneNumber);
+    	   ps.setString(6,recipientAddress);
+    	   ps.executeUpdate();
 	     } catch (Exception e) {
 	       e.printStackTrace();
 	    
-	     } finally {
-	       if (conn != null) {
-	       try {
-	       //conn.close();
-	       } catch (Exception e) {
-	       e.printStackTrace();
-	       }
-	       }
-	     }
+	     } 
 	  return "success";
 	   }
 	
 
 	
-	public String execute2() {
-	  
-    Connection conn = ConnectionDB.getConnection();
+	public String showInforOrder() {
+		setTotal(quantity * buyPrice);
+		System.out.println(total + " " + recipientName);
+		return "success";
+	
+	 }
 
-    try {
-	   Statement ps = conn.createStatement();
-  	   String sql = "select ord.recipientName, ord.recipientPhoneNumber,ord.recipientAddress,p.productName,"
-  	   + "p.productColor,p.productSize,p.buyPrice from products p inner join orderdetails ord"
-  	   + " where p.productCode ="+productCode +"= "+" ord.productCode="+productCode;
-  	   ResultSet rs = ps.executeQuery(sql);
-	       
-    while(rs.next()){
-        recipientName = rs.getString("recipientName");
-        recipientPhoneNumber = rs.getString("recipientPhoneNumber");
-	    recipientAddress = rs.getString("recipientAddress");
-	    productName = rs.getString("productName");
-	    color = rs.getString("productColor");
-	    size = rs.getString("productSize");
-	    buyPrice = rs.getInt("buyPrice");
-	    
-	  
-	 }
-	    
-  
-	   } catch (Exception e) {
-	     e.printStackTrace();
-	  
-	   } finally {
-	     if (conn != null) {
-	     try {
-	     conn.close();
-	     } catch (Exception e) {
-	     e.printStackTrace();
-	     }
-	     }
-	   }
-	   return "success";
-	
-	 }
-	
-	public static void main(String[] args){
-		OrderAction ord = new OrderAction();
-		ord.execute1();
-	}
-	
 	 
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -202,23 +132,7 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
-	public String getSize() {
-		return size;
-	}
-
-	public void setSize(String size) {
-		this.size = size;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
+	
 	public int getOrderNumber() {
 		return orderNumber;
 	}
@@ -277,7 +191,32 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String, Object> arg0) {
 		// TODO Auto-generated method stub
+		this.sessionmap = arg0;
 		
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
+	public String getProductSize() {
+		return productSize;
+	}
+
+	public void setProductSize(String productSize) {
+		this.productSize = productSize;
+	}
+
+	public String getProductColor() {
+		return productColor;
+	}
+
+	public void setProductColor(String productColor) {
+		this.productColor = productColor;
 	}
 
 }
