@@ -21,30 +21,30 @@
 <body>
   <jsp:include page="header.jsp" />
 
-  <div class="content">
+  <div class="container">
   <form action="submitOrder" method="post">
     <div class = "row" style = "padding: 10px">
       <div class= "col-md-6 ">
-        <span class="info" style="width:20px">Product: <s:property value="productName" /></span>
+        <label class="info" style="width:20px">Product:</label><label class= "nameOfProduct info"><s:property value="productName" /></label>
         <br>
         <div class="row">
-          <div class="col-md-4" >
-              <label class = "info" >Price: <s:property value="buyPrice"/> $ / item</label>
+          <div class="col-sm-4" >
+              <label class = "info" >Price: </label><label class = "price"><s:property value="buyPrice"/> $ / item</label>
           </div>
-      </div>
-      <div class="row">
-          <div class="col-md-4" >
-            <label class = "info" >Quantity:</label>
-          </div>
-          <div class="col-md-8 input-quantity" >
-            <input class="form-control" type="text" style ="position: left" name="quantity" required></input>
-          </div>
-        </div>
+      	</div>
+	    <div class="row">
+	       <div class="col-sm-3" >
+	          <label class = "info" >Quantity:</label>
+	       </div>
+	       <div class="col-sm-9 input-quantity" >
+	          <input class="form-control" type="text" style ="position: left" name="quantity" required></input>
+	       </div>
+	    </div>
         <div class="row">
-          <div class="col-md-4"  >
-            <label class = "info size ">Size:</label>
-          </div>
-          <div class="col-md-8 resultOfSize" >
+           <div class="col-sm-3"  >
+           	<label class = "info size ">Size:</label>
+           </div>
+          <div class="col-sm-9 resultOfSize" >
             <select class="form-control" name="productSize">
               <option>S</option>
               <option>M</option>
@@ -54,10 +54,10 @@
           </div>
         </div>
         <div class="row">
-          <div class=" col-md-4"  >
+          <div class=" col-sm-3"  >
             <label class = "info size " >Color:</label>
           </div>
-          <div class="col-md-8 resultOfSize">
+          <div class="col-sm-9 resultOfSize">
             <select class="form-control"  name="productColor">
               <option style = "background-Color: #80CCFF">Blue</option>
               <option style = "background-Color:  #FFCCCC">Pink</option>
@@ -66,24 +66,22 @@
             </select>
           </div>
         </div>
-         <p class = "cus-Info"> Customer's information </p>
-		  <div class="row">
-		    <div class= "form-group col-md-10">
-		      <input type="text" class="form-control" placeholder="Your full name" name="recipientName" required><br>
-		      <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
-		      <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
-		    </div>
-  </div> 
-      </div>
-      <div class = " col-md-6">
-        <img id="order-picture" src="<s:property value="imgUrl" />">
-      </div>
-    </div>  
- 
-
-  <div class="posiOfButton">
-    
+      
+     
+  <p class = "cus-Info"> Customer's information </p>
+  
+    <div class= " form-group input-repci ">
+      <input type="text" class="form-control" placeholder="Recipent's name" name="recipientName" required><br>
+      <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
+      <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
+    </div>
+    <div class="posiOfButton">
     <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">
+  </div>
+    </div>
+     <div class = " col-md-6">
+        <img id="order-picture" src="<s:property value="imgUrl" />" >
+      </div>
   </div>
 </form>
 </div>
