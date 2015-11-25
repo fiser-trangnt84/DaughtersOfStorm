@@ -24,7 +24,7 @@ CREATE TABLE votes (
   4stars int(11) DEFAULT NULL,
   3stars int(11) DEFAULT NULL,
   2stars int(11) DEFAULT NULL,
-  1star int(11) DEFAULT NULL,
+  1stars int(11) DEFAULT NULL,
   productCode int(11) NOT NULL,
   PRIMARY KEY (voteId),
   KEY productCode_pk1_idx (productCode),
@@ -71,7 +71,7 @@ CREATE TABLE favoritelists (
 
 CREATE TABLE orders (
   orderNumber int(11) NOT NULL AUTO_INCREMENT,
-  orderDate date NOT NULL,
+  orderDate text NOT NULL,
   shippedDate date DEFAULT NULL,
   status varchar(15) NOT NULL,
   comments text,
@@ -162,7 +162,7 @@ INSERT INTO sale.votes
 4stars,
 3stars,
 2stars,
-1star,
+1stars,
 productCode)
 VALUES
 (1, 2, 3, 4, 5, 1),
