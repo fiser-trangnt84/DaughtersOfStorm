@@ -22,7 +22,7 @@ footer .row {
 }
 
 footer a {
-	color: #0664C2;
+	color: #85c2bc;
 }
 
 footer .row {
@@ -51,14 +51,86 @@ footer.fa {
 footer .col-md-4 .social {
 	font-size: 18px;
 }
-
 .col-md-4.social {
     text-align: center;
 }
 
-span.phone {
-    font-weight: bold;
-    color: #0664C2;
+p.contact { 
+	font-size: 24px; 
+	margin-bottom: 10px; 
+	line-height: 36px; 
+	color: #4b4b4b; 
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
 }
 
+input[type="text"] { 
+	border-radius: 4px;
+}
+textarea { 
+	height: 50px; 
+	border-radius: 4px;
+}
+.div1 {
+	padding: 10px;
+    max-width: 900px;
+    margin: auto;
+    background-color: #D1E9F3;
+    padding-bottom: 50px;
+}
+input, textarea { 
+	background-color: #F5F5F5; 
+	border: 1px solid transparent ; 
+	padding: 8px; 
+	font-family: Arial; 
+	color: #4b4b4b; 
+	font-size: 14px; 
+	margin-bottom: 15px; 
+	}
+
+
+
+}
+p.word{
+	margin-top:-5px !important;
+}
+
+input#name{ width: 250px;
+margin-left: -15px;}
+input#email {
+in width: 250px;
+margin-left:16px;
+}
+
+
+input[type="text"],textarea {
+    width: 100%;
+}
+
+textarea {
+	height:200px;
+}
+
+.btn-info {
+	margin-right: 100px;
+    float: right;
+}
+
+i.fa.fa-envelope {
+    padding-right: 15px;
+
+}
+.btn-x{
+	font-size: 22px;	
+	width: 100px;	
+	margin-left: 20px;
+}
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+h6.contact {
+	font-size: 50px;
+    color: #5bc0de;
+    padding-bottom: 10px;
+}
+}
 
