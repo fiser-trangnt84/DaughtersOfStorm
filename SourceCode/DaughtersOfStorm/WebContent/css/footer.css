@@ -94,11 +94,11 @@ p.word{
 	margin-top:-5px !important;
 }
 
-input#name{ width: 250px;
+input#name{ width: 270px;
 margin-left: -15px;}
 input#email {
-in width: 250px;
-margin-left:16px;
+in width: 270px;
+margin-left:1px;
 }
 
 
