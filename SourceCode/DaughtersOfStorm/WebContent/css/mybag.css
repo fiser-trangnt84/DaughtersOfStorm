@@ -21,7 +21,9 @@
 .btn:hover {
 	color: white;
 }
-
+a.btn:hover {
+    color: #fff;
+}
 .border img {
 	width: 150px;
 	height: auto;
