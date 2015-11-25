@@ -26,7 +26,7 @@
 	 <div class="col-md-4 itemProduct" >
 	 	<a href="
 		 	<s:url namespace='/' action='detailProduct'>
-			  <s:param name="productId"> <s:property value="productCode" /></s:param>
+			  <s:param name="productCode"> <s:property value="productCode" /></s:param>
 		    </s:url>
 		">
 	 		<img id="images" src="<s:property value="images" />">

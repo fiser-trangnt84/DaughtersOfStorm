@@ -49,7 +49,7 @@
 					<input id="1" type="radio" name="rating" value="1" onclick="callAction(id)">
 					<label for="1"></label>
 					<input id="Medium" value="5">
-					<input name ="productId" value="<s:property value="productId"/>">
+					<input name ="productCode" value="<s:property value="productCode"/>">
 				 </span>
 			</form>
 			</div>
@@ -66,19 +66,19 @@
 				<p class="icon-add">
 			    	<a href="
 				    	<s:url namespace='/' action='addFavorite'>
-			        		<s:param name="productCode"><s:property value="productId"/></s:param>
+			        		<s:param name="productCode"><s:property value="productCode"/></s:param>
 			        	</s:url>
 		        	"><i class="fa fa-bookmark"></i></a>
 			    	<a href="
 				    	<s:url namespace='/' action='addCart'>
-			        		<s:param name="productCode"><s:property value="productId"/></s:param>
+			        		<s:param name="productCode"><s:property value="productCode"/></s:param>
 			        	</s:url>
 		        	"><i class="fa fa-cart-plus"></i></a>
 		    	</p>
 				<p style ="padding-top:45px"></p>
 				<div id="order"><a href = "
           			    <s:url namespace='/' action='order'>
-		                    <s:param name="productCode"><s:property value="productId" /></s:param>
+		                    <s:param name="productCode"><s:property value="productCode" /></s:param>
 		                </s:url>" style="text-decoration: none"> 
 		             <button class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">ORDER</button>
 		             </a>
