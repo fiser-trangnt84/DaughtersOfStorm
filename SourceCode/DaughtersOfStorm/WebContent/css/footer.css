@@ -22,7 +22,7 @@ footer .row {
 }
 
 footer a {
-	color: #85c2bc;
+	color: #0664C2;
 }
 
 footer .row {
@@ -54,6 +54,11 @@ footer .col-md-4 .social {
 
 .col-md-4.social {
     text-align: center;
+}
+
+span.phone {
+    font-weight: bold;
+    color: #0664C2;
 }
 
 
