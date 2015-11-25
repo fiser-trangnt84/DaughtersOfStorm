@@ -2,7 +2,6 @@
     padding-left: 15% !important;
     padding-right: 8% !important;
     padding-bottom: 90px;
-    padding-top: 30px;
 }
 
 .info{
@@ -11,13 +10,17 @@
 	margin-top: 10px;
 }
 .nameOfProduct{
+	font-size: 25px;
+	margin-left: 70px;
 	color:  #0066FF;
 }
 .color{
 	margin-left: 0px;
 }
 .posiOfButton{
-	margin-left: 12%;	
+	margin-top: 60px;
+	margin-bottom: 20px;
+	margin-left: 33%;	
 	z-index: 1;
 }
 .list{
@@ -31,7 +34,7 @@
 .cus-Info{
 	font-style: italic;	
 	font-size: 16px;	
-	color: #5bc0de;
+	color:  #0066FF;
 	padding-top: 30px;
 }
 .posOfDiv{
@@ -64,14 +67,15 @@ input#inputdefault, select.form-control {
 	
 }
 #order-picture{
-	max-height: 400px;
-	max-width: 300px;
+	margin-left: 100px;
+	max-height: 450px;
+	max-width: 300x;
 	padding-top: 10px;
 	z-index: 1;
 	}
 
-.col-md-8.input-quantity {
-    width: 90px;
+.col-sm-9.input-quantity {
+    width:120px;
 }
 
 .province{
@@ -91,11 +95,7 @@ input#inputdefault, select.form-control {
 }
 
 .input-repci{
-	font-weight: bold;
-	margin-top: 10px;
-	margin-bottom: -10px; 
-	border-style: dashed ; 
-	background-Color: #d9b3ff
+	max-width: 700px;
 }
 .footer-button {
 	margin-left: 36% ; 
@@ -105,4 +105,8 @@ input#inputdefault, select.form-control {
 	font-style: italic; 
 	font-size: 16px; 
 	color: #00802b
+}
+.price{
+	margin-left: 15px;
+	font-size: 20px;
 }
