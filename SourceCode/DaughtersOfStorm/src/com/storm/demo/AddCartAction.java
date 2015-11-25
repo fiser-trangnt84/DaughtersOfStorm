@@ -18,7 +18,11 @@ public class AddCartAction extends ActionSupport implements SessionAware {
     
     public String execute(){
         String ret = ERROR;
-        userId = Integer.parseInt(sessionMap.get("userId").toString());
+        if(!sessionMap.containsKey("userId")){
+        	addActionError("You have to login first!");
+        	return ret;
+        }
+        userId = (int) sessionMap.get("userId");
         Connection conn = ConnectionDB.getConnection();
         try{
         	String sql = "SELECT * FROM usercarts WHERE userId = " + userId;

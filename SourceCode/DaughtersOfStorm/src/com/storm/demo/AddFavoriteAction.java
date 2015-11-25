@@ -18,6 +18,10 @@ public class AddFavoriteAction extends ActionSupport implements SessionAware {
     
     public String execute(){
         String ret = ERROR;
+        if(!sessionMap.containsKey("userId")){
+        	addActionError("You have to login first!");
+        	return ret;
+        }
         userId = (int) sessionMap.get("userId");
         Connection conn = ConnectionDB.getConnection();
         try{

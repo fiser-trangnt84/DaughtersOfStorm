@@ -5,8 +5,7 @@
 <struts>
 <constant name="struts.devMode" value="true" />
    <package name="default" extends="struts-default">
-   		<action name="login"
-            class="com.storm.demo.LoginAction">
+   		<action name="login" class="com.storm.demo.LoginAction">
             <result name="success">index.jsp</result>
             <result name="error">index.jsp</result>
         </action>
@@ -21,10 +20,10 @@
         </action>
      	<action name="printListProduct" class="com.storm.demo.ListProductAction" 
             method="execute">
-            <result name="success">/listProducts.jsp</result>
+            <result name="success">listProducts.jsp</result>
       	</action>
       	<action name="detailProduct" class="com.storm.demo.DetailAction" method="execute">
-      		<result name="success">/detailProduct.jsp</result>
+      		<result name="success">detailProduct.jsp</result>
       	</action>
 		<action name="profile" class="com.storm.demo.ProfileAction">
             <result name="success">personal.jsp</result>
@@ -43,11 +42,15 @@
 			<result name="success">following.jsp</result>
 		</action>
        	<action name="addFavorite" class="com.storm.demo.AddFavoriteAction">
-			<result name="success">%{currentPage}</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">detailProduct</param>
+			</result>
 			<result name="error">%{currentPage}</result>
 		</action>
 		<action name="addCart" class="com.storm.demo.AddCartAction">
-			<result name="success">%{currentPage}</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">detailProduct</param>
+			</result>
 			<result name="error">%{currentPage}</result>
 		</action>
 		<action name="deleteCart" class="com.storm.demo.DeleteCartAction">
@@ -63,20 +66,21 @@
 			<result name="error">%{currentPage}</result>
 		</action>
 		<action name="review" class="com.storm.demo.ReviewAction">
-			<result name="success">%{currentPage}</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">detailProduct</param>
+			</result>
 			<result name="error">%{currentPage}</result>
 		</action>
         <action name="order" class="com.storm.demo.OrderAction">
         	<result name="success">order.jsp</result>
-        	<result name="error">order.jsp</result>
-        </action>
-        <action name="showInforOrder" class="com.storm.demo.OrderAction" method="showInforOrder">
-        <result name="success">order.jsp</result>
-        	<result name="error">order.jsp</result>
+        	<result name="error" type="redirectAction">
+				<param name="actionName">detailProduct</param>
+			</result>
         </action>
         <action name="submitOrder" class="com.storm.demo.OrderAction" method="submitOrder">
-        	<result name="success">/order.jsp</result>
-        	<result name="error">order.jsp</result>
+        	<result name="success" type="redirectAction">
+				<param name="actionName">printListProduct</param>
+			</result>
         </action>
    </package>
 </struts>
