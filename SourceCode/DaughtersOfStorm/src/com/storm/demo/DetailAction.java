@@ -26,7 +26,13 @@ public class DetailAction extends ActionSupport implements SessionAware{
 	    Connection conn = null;
 
 	      try {
-	    	sessionMap.put("productCode", productCode);
+	    	if (productCode == 0){
+	    		productCode = (int) sessionMap.get("productCode");
+	    	} else {
+	    		sessionMap.remove("productCode");
+	    		sessionMap.put("productCode", productCode);
+	    	}
+	    	
 		    conn = ConnectionDB.getConnection();
 	        String sql = "SELECT * FROM products WHERE productCode = ?";
 	        PreparedStatement ps = conn.prepareStatement(sql);

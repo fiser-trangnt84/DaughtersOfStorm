@@ -26,15 +26,12 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	private String recipientAddress;
 	private int userId;
 	private Map<String, Object> sessionmap;
-	Connection conn = null;
 	
 	
 	public String execute() {		
-		conn = ConnectionDB.getConnection();
-		try {
-			
-				productCode = (int) sessionmap.get("productCode");
-			
+		Connection conn = ConnectionDB.getConnection();
+		try {			
+			productCode = (int) sessionmap.get("productCode");			
 			String sql = "SELECT * FROM products WHERE productcode ="+ productCode;
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
@@ -55,11 +52,7 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		 Date date = new Date();
 		 orderDate = dateFormat.format(date);
-		 if (!sessionmap.containsKey("userId")){
-				addActionError("You have to login to order!");
-				return "error";
-		}
-		 
+		 Connection conn = ConnectionDB.getConnection();
 	     try {	       
 	       userId = (int) sessionmap.get("userId");
 	       String sql = "insert  into  orders (orderdate, status,comments,userId) values(?,?,?,?)";
@@ -90,17 +83,7 @@ public class OrderAction extends ActionSupport implements SessionAware{
 	     } 
 	  return "success";
 	   }
-	
-
-	
-	public String showInforOrder() {
-		setTotal(quantity * buyPrice);
-		System.out.println(total + " " + recipientName);
-		return "success";
-	
-	 }
-
-	 
+		 
 	public int getUserId() {
 		return userId;
 	}
