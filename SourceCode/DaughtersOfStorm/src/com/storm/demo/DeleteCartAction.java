@@ -2,8 +2,6 @@ package com.storm.demo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-//import java.sql.ResultSet;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
