@@ -22,9 +22,13 @@ footer .row {
 }
 
 footer a {
-	color: #85c2bc;
+	color: #0664C2;
 }
 
+span.phone {
+    font-weight: bold;
+    color: #0664C2;
+}
 footer .row {
 	margin: 0;
 }
@@ -85,23 +89,22 @@ input, textarea {
 	color: #4b4b4b; 
 	font-size: 14px; 
 	margin-bottom: 15px; 
-	}
-
-
-
 }
-p.word{
+
+p.word {
 	margin-top:-5px !important;
 }
 
-input#name{ width: 270px;
-margin-left: -15px;}
-input#email {
-in width: 270px;
-margin-left:1px;
+input#name{ 
+	width: 250px;
+	margin-left: -15px;
 }
 
-
+input#email {
+	width: 250px;
+	margin-left:16px;
+}
+	
 input[type="text"],textarea {
     width: 100%;
 }
@@ -117,13 +120,8 @@ textarea {
 
 i.fa.fa-envelope {
     padding-right: 15px;
+}
 
-}
-.btn-x{
-	font-size: 22px;	
-	width: 100px;	
-	margin-left: 20px;
-}
 ::-webkit-input-placeholder {
    font-style: italic;
 }
@@ -132,5 +130,8 @@ h6.contact {
     color: #5bc0de;
     padding-bottom: 10px;
 }
+
+.modal-content {
+    padding: 20px;
 }
 

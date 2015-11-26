@@ -1,8 +1,8 @@
-
 .content {
 	padding-left: 8%;
 	padding-right: 8%;
 	padding-top: 30px;
+	padding-bottom: 32px;
 }
 
 .row img {
@@ -36,7 +36,6 @@ a.btn:hover {
 	display: block;
 }
 
-
 .border {
 	background-color: #EEF6F8;
 	padding: 10px;
@@ -57,6 +56,7 @@ a.btn:hover {
 .link a:hover, .link a:active, .link a:focus, #linkactive{
 	background-color: rgba(192,192,192,0.3);
 }
+
 #linkactive {
 	text-decoration: underline;
 }
@@ -66,9 +66,11 @@ a.btn:hover {
 	text-align: center;
 	padding: 7px;
 }
+
 .icon {
 	text-align: center;
 }
+
 .fa-trash-o {
 	font-size: 25px;
 	color: #23527c;
