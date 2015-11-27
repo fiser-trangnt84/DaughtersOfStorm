@@ -78,17 +78,17 @@ input.ed {
     border-color: #337ab7 !important;
 }
 .edit{
-	padding-right:250px !important
+	padding-right:220px !important
 	
 }
 .submit {
 	padding-top:18px;
-	padding-right:300px !important;
+	padding-right:200px !important;
 	
 }
 .btn-info{
 	border-color: #337ab7 !important;
 }
 .col-md-9.infor.inforprofile{
-	
+	padding-left:180px;
 }

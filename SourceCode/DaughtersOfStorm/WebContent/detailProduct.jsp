@@ -78,7 +78,7 @@
           			    <s:url namespace='/' action='order'>
 		                    <s:param name="productCode"><s:property value="productCode" /></s:param>
 		                </s:url>" style="text-decoration: none"> 
-		             <button class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">ORDER</button>
+		             <button class="btn btn-info btn-lg btn-x" >ORDER</button>
 		             </a>
 			   </div>
 			</div>

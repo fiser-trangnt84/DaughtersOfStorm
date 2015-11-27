@@ -67,13 +67,13 @@
      
   <p class = "cus-Info"> Customer's information </p>
   
-    <div class= " form-group input-repci ">
+    <div class= "form-group input-repci ">
       <input type="text" class="form-control" placeholder="Recipent's name" name="recipientName" required><br>
       <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
       <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
     </div>
     <div class="posiOfButton">
-    <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x"  data-toggle="modal" data-target="#myModal">
+    <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x">
   </div>
     </div>
      <div class = " col-md-6">
