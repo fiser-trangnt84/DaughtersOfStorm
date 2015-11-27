@@ -11,8 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/details.css">
 	<link rel="stylesheet" type="text/css" href="css/stylelogin.css">
 	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
   	<script src="js/index.js"></script>
