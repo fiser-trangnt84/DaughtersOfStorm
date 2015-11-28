@@ -66,9 +66,6 @@ fieldset {
   color: #fff;
   border-radius: 5px;
 }
-.formholder input[type="submit"]:hover {
-  background: #1bc6a4;
-}
 
 
 .register {
@@ -124,9 +121,6 @@ fieldset {
   border: none;
   color: #fff;
   border-radius: 5px;
-}
-.formregister input[type="submit"]:hover {
-  background: #1bc6a4;
 }
 
 
