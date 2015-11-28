@@ -29,14 +29,8 @@ public class ConnectionDB {
 		ResultSet result = null;
 		try {
 			if(conn == null) createConnection();
-			String sql = "SELECT userId FROM users WHERE email = " + rgt.getEmail();
-			PreparedStatement ps = conn.prepareStatement(sql);  
-			result = ps.executeQuery();
-			// If email exist
-			if (result.next()) return result;
-			//else
-			sql = "INSERT INTO users (username, password, email, status) VALUES(?, ?, ?, ?)";		
-			ps = conn.prepareStatement(sql);
+			String sql = "INSERT INTO users (username, password, email, status) VALUES(?, ?, ?, ?)";		
+			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1,rgt.getUsername());  
 			ps.setString(2,rgt.getPassword());  
 			ps.setString(3,rgt.getEmail()); 
