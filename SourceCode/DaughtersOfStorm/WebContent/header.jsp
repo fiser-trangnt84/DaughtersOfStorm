@@ -1,24 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Storm</title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/fontfamily.css">
+<%@ taglib prefix="s" uri="/struts-tags"%>	
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/stylelogin.css">
-	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  	<script src="js/index.js"></script>
   	<script src="js/jslogin.js"></script>
   	<script src="js/header.js"></script>
-</head>
-<body>
 	<header>
 		<div class="user">
 		
@@ -140,5 +126,3 @@
 		      </ul>
 		</nav>
 	</header>
-</body>
-</html>

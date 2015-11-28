@@ -1079,6 +1079,10 @@ if (typeof jQuery === 'undefined') {
     this.$element.hide()
     this.backdrop(function () {
       that.$body.removeClass('modal-open')
+      setTimeout(function(){
+    	  that.$body.css('padding-right','0px');
+      },500);
+      
       that.resetAdjustments()
       that.resetScrollbar()
       that.$element.trigger('hidden.bs.modal')

@@ -84,14 +84,33 @@
 					 	</a>
 					</div>
 					<div class="col-md-2 icon">
-						<a href="<s:url namespace='/' action='deleteFollowing'>
-			        			<s:param name="productCode"><s:property value="productCode"/></s:param>
-			        			</s:url>">
+						<a href="#" data-toggle="modal" data-target="#<s:property value="productCode"/>">
 			        	<i class="fa fa-trash-o"></i></a>
 					</div>
 					<hr>
+					<div class="modal fade" id="<s:property value="productCode"/>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Delete Product</h4>
+                          </div>
+                          <div class="modal-body">
+                            Are you sure ?
+                          </div>
+                          <div class="modal-footer">
+                            <a href="<s:url namespace='/' action='deleteCart'>
+									<s:param name="productCode"><s:property value="productCode"/></s:param>
+									</s:url>">
+                                <button type="button" class="btn btn-primary">Confirm</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 				</div>
-			</s:iterator>
+				</s:iterator>
 			</div>				
 		</div>
 	</div>

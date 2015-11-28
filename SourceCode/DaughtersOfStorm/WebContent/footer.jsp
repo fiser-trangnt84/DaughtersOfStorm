@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/fontfamily.css">
-</head>
-<body>
 	<footer>
 		<div class="row">
-			<div class="col-md-4 shipping"><a data-toggle="modal" data-target="#myModal"><span>CONTACT US</span></a></div>
+			<div class="col-md-4 shipping"><a data-toggle="modal" data-target="#myModal" style="cursor:pointer"><span>CONTACT US</span></a></div>
 			<div class="col-md-4 social">
 				<a href=""><i class="fa fa-facebook"></i></a>
 				<a href=""><i class="fa fa-twitter"></i></a>
@@ -23,7 +16,7 @@
 				<span class="phone"> 888 888 888</span>
 			</div>
 			 <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  		<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
 		
 		  <!-- Modal content-->
@@ -60,5 +53,3 @@
 
 		</div>
 	</footer>
-</body>
-</html>

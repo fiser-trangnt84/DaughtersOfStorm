@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
- </head>
+  </head>
 <body>
   <jsp:include page="header.jsp" />
 
@@ -67,13 +67,13 @@
      
   <p class = "cus-Info"> Customer's information </p>
   
-    <div class= "form-group input-repci ">
+    <div class= " form-group input-repci ">
       <input type="text" class="form-control" placeholder="Recipent's name" name="recipientName" required><br>
       <input type="text" class="form-control" placeholder="Phone number" name="recipientPhoneNumber" required><br>
       <input type="text" class="form-control" placeholder="Address" name="recipientAddress" required>
     </div>
     <div class="posiOfButton">
-    <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x">
+    <input type="submit" value="Submit" class="btn btn-info btn-lg btn-x" >
   </div>
     </div>
      <div class = " col-md-6">

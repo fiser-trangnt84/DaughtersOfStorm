@@ -86,7 +86,7 @@
   							
   							<div class="submit">
                           		
-                          		<button class="btn btn-info btn-lg btn-x" type="submit" value="Submit">Submit</button>
+                          		<button class="btn btn-info btn-lg btn-x"   type="submit" value="Submit">Submit</button>
                           	</div>
                           
 				</div>
